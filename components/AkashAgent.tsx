@@ -14,13 +14,13 @@ interface GeminiMessage {
   parts: Array<{ text: string }>;
 }
 
-export default function AkashAgent() {
+export default function SaraswatiAgent() {
   const [open, setOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi! I'm Akash 👋 Your personal guide at Practical EduSkills. Ask me anything about courses, placements, fees, or admissions!",
+      content: "Hi! I'm Saraswati 👋 Your personal guide at Practical EduSkills. Ask me anything about courses, placements, fees, or admissions!",
     },
   ]);
   const [input, setInput] = useState('');
@@ -54,7 +54,7 @@ export default function AkashAgent() {
           parts: [{ text: m.content }],
         }));
 
-      const res = await fetch('/api/akash', {
+      const res = await fetch('/api/saraswati', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: geminiHistory }),
@@ -84,7 +84,7 @@ export default function AkashAgent() {
   ];
 
   return (
-    <div className="akash-widget">
+    <div className="saraswati-widget">
       {/* Teaser bubble */}
       <AnimatePresence>
         {showBubble && !open && (
@@ -97,11 +97,11 @@ export default function AkashAgent() {
           >
             <div className="flex items-center gap-2 mb-1">
               <div className="w-6 h-6 rounded-full bg-navy flex items-center justify-center text-xs text-gold font-bold">A</div>
-              <span className="text-navy font-semibold text-xs">Akash — PES Guide</span>
+              <span className="text-navy font-semibold text-xs">Saraswati — PES Guide</span>
               <span className="w-2 h-2 bg-success rounded-full ml-auto animate-pulse" />
             </div>
             <p className="text-text-dark text-xs leading-relaxed">
-              Hi! I&apos;m Akash 👋 Ask me about courses, placements, or fees!
+              Hi! I&apos;m Saraswati 👋 Ask me about courses, placements, or fees!
             </p>
           </motion.div>
         )}
@@ -113,7 +113,7 @@ export default function AkashAgent() {
         className="w-14 h-14 rounded-full bg-navy shadow-2xl flex items-center justify-center border-2 border-gold"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        aria-label="Chat with Akash"
+        aria-label="Chat with Saraswati"
       >
         <AnimatePresence mode="wait">
           {open ? (
@@ -127,7 +127,7 @@ export default function AkashAgent() {
           )}
         </AnimatePresence>
       </motion.button>
-      <p className="text-xs text-text-muted text-center mt-1 font-medium">Ask Akash</p>
+      <p className="text-xs text-text-muted text-center mt-1 font-medium">Ask Saraswati</p>
 
       {/* Chat window */}
       <AnimatePresence>
@@ -144,7 +144,7 @@ export default function AkashAgent() {
             <div className="navy-gradient px-4 py-3 flex items-center gap-3 flex-shrink-0">
               <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center text-navy font-bold text-sm">A</div>
               <div>
-                <div className="text-white font-semibold text-sm">Akash</div>
+                <div className="text-white font-semibold text-sm">Saraswati</div>
                 <div className="text-white/60 text-xs flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-success rounded-full animate-pulse" />
                   {' '}Powered by Gemini AI

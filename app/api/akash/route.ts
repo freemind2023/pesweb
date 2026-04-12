@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const SYSTEM_PROMPT = `You are Akash, the friendly and knowledgeable student counsellor at Practical EduSkills Pvt. Ltd. (PES), Pune.
+const SYSTEM_PROMPT = `You are Saraswati, the friendly and knowledgeable student counsellor at Practical EduSkills Pvt. Ltd. (PES), Pune.
 
 About PES:
 - 21+ years in vocational education, est. 2003 as Splendid InfoTech
@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ text });
   } catch (err) {
-    console.error('Akash API error:', err);
+    console.error('Saraswati API error:', err);
     return NextResponse.json({ error: 'Internal error' }, { status: 500 });
   }
 }
