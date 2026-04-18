@@ -1,19 +1,25 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaInstagram, FaYoutube, FaLinkedin, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { courses } from '@/lib/courses';
+import { useLanguage } from '@/lib/i18n';
+import { t } from '@/lib/translations';
 
 export default function Footer() {
+  const { lang } = useLanguage();
+  const tr = t[lang];
+
   const quickLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/courses', label: 'All Courses' },
-    { href: '/placements', label: 'Placements' },
-    { href: '/events', label: 'Events' },
-    { href: '/faculty', label: 'Faculty' },
-    { href: '/about', label: 'About Us' },
-    { href: '/centres', label: 'Our Centres' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: tr.nav.home },
+    { href: '/courses', label: tr.nav.courses },
+    { href: '/placements', label: tr.nav.placements },
+    { href: '/events', label: tr.nav.events },
+    { href: '/faculty', label: tr.faculty.label },
+    { href: '/about', label: tr.nav.about },
+    { href: '/centres', label: tr.centres.label },
+    { href: '/contact', label: tr.nav.contact },
     { href: '/admissions', label: 'Admissions' },
   ];
 
@@ -24,17 +30,9 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div>
             <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-md mb-4">
-              <Image
-                src="/brand/logo.png"
-                alt="Practical EduSkills"
-                width={44}
-                height={44}
-                className="h-10 w-auto"
-              />
+              <Image src="/brand/logo.png" alt="Practical EduSkills" width={44} height={44} className="h-10 w-auto" />
             </div>
-            <p className="text-white/70 text-sm leading-relaxed mb-5">
-              India&apos;s Most Practical Commerce &amp; Business Education. 21+ years of transforming students into industry-ready professionals.
-            </p>
+            <p className="text-white/70 text-sm leading-relaxed mb-5">{tr.footer.brandDesc}</p>
             <div className="flex items-center gap-3">
               <a href="https://www.instagram.com/practical_eduskills/" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy transition-all">
@@ -61,7 +59,7 @@ export default function Footer() {
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="font-serif text-gold text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-serif text-gold text-lg font-semibold mb-4">{tr.footer.quickLinks}</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -75,7 +73,7 @@ export default function Footer() {
 
           {/* Col 3: Courses */}
           <div>
-            <h4 className="font-serif text-gold text-lg font-semibold mb-4">Our Courses</h4>
+            <h4 className="font-serif text-gold text-lg font-semibold mb-4">{tr.footer.ourCourses}</h4>
             <ul className="space-y-2">
               {courses.map((course) => (
                 <li key={course.slug}>
@@ -89,7 +87,7 @@ export default function Footer() {
 
           {/* Col 4: Contact */}
           <div>
-            <h4 className="font-serif text-gold text-lg font-semibold mb-4">Get in Touch</h4>
+            <h4 className="font-serif text-gold text-lg font-semibold mb-4">{tr.footer.getInTouch}</h4>
             <div className="space-y-4">
               <div className="flex gap-3">
                 <MapPin size={18} className="text-gold flex-shrink-0 mt-0.5" />
@@ -99,23 +97,16 @@ export default function Footer() {
               </div>
               <div className="flex gap-3 items-center">
                 <Phone size={16} className="text-gold flex-shrink-0" />
-                <a href="tel:+919890959990" className="text-white/70 hover:text-gold transition-colors text-sm">
-                  +91-98909-59990
-                </a>
+                <a href="tel:+919890959990" className="text-white/70 hover:text-gold transition-colors text-sm">+91-98909-59990</a>
               </div>
               <div className="flex gap-3 items-center">
                 <Mail size={16} className="text-gold flex-shrink-0" />
-                <a href="mailto:info@practicaleduskills.com" className="text-white/70 hover:text-gold transition-colors text-sm">
-                  info@practicaleduskills.com
-                </a>
+                <a href="mailto:info@practicaleduskills.com" className="text-white/70 hover:text-gold transition-colors text-sm">info@practicaleduskills.com</a>
               </div>
             </div>
             <div className="mt-5">
-              <Link
-                href="/admissions"
-                className="inline-block px-5 py-2.5 bg-gold text-navy font-bold text-sm rounded-lg hover:bg-gold-light transition-colors"
-              >
-                Apply Now →
+              <Link href="/admissions" className="inline-block px-5 py-2.5 bg-gold text-navy font-bold text-sm rounded-lg hover:bg-gold-light transition-colors">
+                {tr.footer.applyNow}
               </Link>
             </div>
           </div>
@@ -125,17 +116,15 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-white/50 text-xs text-center">
-            © 2024 Practical EduSkills Pvt. Ltd. | All Rights Reserved
-          </p>
+          <p className="text-white/50 text-xs text-center">{tr.footer.copyright}</p>
           <div className="flex items-center gap-3 text-white/50 text-xs">
             <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-success rounded-full inline-block" /> ISO Certified
+              <span className="w-2 h-2 bg-success rounded-full inline-block" /> {tr.footer.iso}
             </span>
             <span>|</span>
-            <span>NSDC Skill Centre</span>
+            <span>{tr.footer.nsdc}</span>
             <span>|</span>
-            <span>Est. 2003</span>
+            <span>{tr.footer.est}</span>
           </div>
         </div>
       </div>

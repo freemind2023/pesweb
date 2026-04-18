@@ -1,25 +1,25 @@
+'use client';
 import AdmissionForm from '@/components/AdmissionForm';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Apply Now — Admissions | Practical EduSkills',
-  description: 'Start your application to Practical EduSkills. Fill in the admission form and our team will contact you within 24 hours.',
-};
+import { useLanguage } from '@/lib/i18n';
+import { t } from '@/lib/translations';
 
 export default function AdmissionsPage() {
+  const { lang } = useLanguage();
+  const tr = t[lang].admissions;
+
   return (
     <>
       <section className="navy-gradient pt-32 pb-10 md:pt-40 md:pb-14">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-white text-3xl md:text-4xl font-bold mb-2">Start Your Application</h1>
-          <p className="text-white/70 text-base">Fill in all details. Our team will contact you within 24 hours.</p>
+          <h1 className="font-serif text-white text-3xl md:text-4xl font-bold mb-2">{tr.heading}</h1>
+          <p className="text-white/70 text-base">{tr.sub}</p>
         </div>
       </section>
 
       <div className="max-w-3xl mx-auto px-4 py-10 md:py-14">
         {/* Steps indicator */}
         <div className="flex items-center justify-center gap-2 mb-8 overflow-x-auto">
-          {['Personal', 'Academic', 'Course', 'Guardian'].map((step, i) => (
+          {tr.steps.map((step, i) => (
             <div key={step} className="flex items-center gap-2">
               <div className="flex items-center gap-1.5">
                 <div className="w-6 h-6 rounded-full bg-navy flex items-center justify-center text-gold text-xs font-bold">{i + 1}</div>

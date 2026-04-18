@@ -2,56 +2,33 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { MapPin, Phone } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n';
+import { t } from '@/lib/translations';
 
 const centres = [
-  {
-    name: 'Garware Night College',
-    type: 'NSDC Skill Centre',
-    address: 'Garware Night College, Near Law College Road, Erandwane, Pune – 411004',
-    img: '/brand/centres/garware-college.jpg',
-    mapsLink: 'https://maps.google.com',
-    badge: 'NSDC Certified',
-    badgeColor: 'bg-success',
-  },
-  {
-    name: 'Modern College, Ganesh Khind',
-    type: 'Training Centre',
-    address: 'Modern College of Arts, Science & Commerce, Shivajinagar, Pune – 411005',
-    img: '/brand/centres/modern-college.webp',
-    mapsLink: 'https://maps.google.com',
-    badge: 'Active Centre',
-    badgeColor: 'bg-navy',
-  },
-  {
-    name: 'Practical EduSkills Head Office',
-    type: 'Head Office & Main Centre',
-    address: '3rd Floor, Butte Patil Complex, Warje Malwadi Rd, Erandwane, Pune – 411052',
-    img: '/brand/hero-poster.jpg',
-    mapsLink: 'https://maps.google.com',
-    badge: 'Main Office',
-    badgeColor: 'bg-gold',
-  },
-  {
-    name: 'College of Commerce, Baramati',
-    type: 'Affiliate Centre',
-    address: 'College of Practical B.Com, Baramati, Dist. Pune – 413102',
-    img: '/brand/centres/baramati-college.jpg',
-    mapsLink: 'https://maps.google.com',
-    badge: 'Baramati Campus',
-    badgeColor: 'bg-accent',
-  },
+  { name: 'Garware Night College', type: 'NSDC Skill Centre', address: 'Garware Night College, Near Law College Road, Erandwane, Pune – 411004', img: '/brand/centres/garware-college.jpg', mapsLink: 'https://maps.google.com', badge: 'NSDC Certified', badgeColor: 'bg-success' },
+  { name: 'Modern College, Ganesh Khind', type: 'Training Centre', address: 'Modern College of Arts, Science & Commerce, Shivajinagar, Pune – 411005', img: '/brand/centres/modern-college.webp', mapsLink: 'https://maps.google.com', badge: 'Active Centre', badgeColor: 'bg-navy' },
+  { name: 'Practical EduSkills Head Office', type: 'Head Office & Main Centre', address: '3rd Floor, Butte Patil Complex, Warje Malwadi Rd, Erandwane, Pune – 411052', img: '/brand/hero-poster.jpg', mapsLink: 'https://maps.google.com', badge: 'Main Office', badgeColor: 'bg-gold' },
+  { name: 'College of Commerce, Baramati', type: 'Affiliate Centre', address: 'College of Practical B.Com, Baramati, Dist. Pune – 413102', img: '/brand/centres/baramati-college.jpg', mapsLink: 'https://maps.google.com', badge: 'Baramati Campus', badgeColor: 'bg-accent' },
 ];
 
 export default function CentresPage() {
+  const { lang } = useLanguage();
+  const tr = t[lang].centres;
+
   return (
     <>
       <section className="navy-gradient pt-32 pb-14 md:pt-40 md:pb-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-gold font-semibold text-sm uppercase tracking-widest">Locations</motion.span>
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-gold font-semibold text-sm uppercase tracking-widest">
+            {tr.label}
+          </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="font-serif text-white text-3xl md:text-5xl font-bold mt-2 mb-4">Our Centres</motion.h1>
+            className="font-serif text-white text-3xl md:text-5xl font-bold mt-2 mb-4">
+            {tr.heading}
+          </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-white/70 text-base">
-            4 centres across Pune & Baramati. Find the one nearest to you.
+            {tr.sub}
           </motion.p>
         </div>
       </section>
@@ -79,11 +56,11 @@ export default function CentresPage() {
                   <div className="flex gap-3">
                     <a href={centre.mapsLink} target="_blank" rel="noopener noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-navy text-white text-sm font-semibold rounded-lg hover:bg-navy/80 transition-all">
-                      <MapPin size={14} /> Get Directions
+                      <MapPin size={14} /> {tr.directions}
                     </a>
                     <a href="tel:+919890959990"
                       className="flex-1 flex items-center justify-center gap-2 py-2.5 border-2 border-navy text-navy text-sm font-semibold rounded-lg hover:bg-navy hover:text-white transition-all">
-                      <Phone size={14} /> Call Us
+                      <Phone size={14} /> {tr.call}
                     </a>
                   </div>
                 </div>

@@ -1,6 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useLanguage } from '@/lib/i18n';
+import { t } from '@/lib/translations';
 
 const faculty = [
   { name: 'Mr. Sanmit Shah', role: 'MD & CEO', specialisation: 'Entrepreneurship & Business Leadership', img: '/brand/team/sanmit-shah.jpg' },
@@ -12,15 +14,23 @@ const faculty = [
 ];
 
 export default function FacultyPage() {
+  const { lang } = useLanguage();
+  const tr = t[lang].faculty;
+  const about = t[lang].about;
+
   return (
     <>
       <section className="navy-gradient pt-32 pb-14 md:pt-40 md:pb-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-gold font-semibold text-sm uppercase tracking-widest">Team</motion.span>
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-gold font-semibold text-sm uppercase tracking-widest">
+            {tr.label}
+          </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="font-serif text-white text-3xl md:text-5xl font-bold mt-2 mb-4">Meet Our Faculty</motion.h1>
+            className="font-serif text-white text-3xl md:text-5xl font-bold mt-2 mb-4">
+            {tr.heading}
+          </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-white/70 text-base">
-            Industry experts. Passionate mentors. Your success is their mission.
+            {tr.sub}
           </motion.p>
         </div>
       </section>
@@ -55,12 +65,10 @@ export default function FacultyPage() {
               <Image src="/brand/team/sanmit-shah.jpg" alt="Sanmit Shah" fill className="object-cover" />
             </div>
             <div>
-              <p className="text-text-dark text-sm md:text-base leading-relaxed italic mb-4">
-                &ldquo;At Practical EduSkills, we believe that education should be a bridge to a better career, not just a certificate. Every student who walks through our doors gets our full commitment to their professional success.&rdquo;
-              </p>
+              <p className="text-text-dark text-sm md:text-base leading-relaxed italic mb-4">{tr.mdQuote}</p>
               <div>
-                <div className="font-serif text-navy font-bold">Mr. Sanmit Shah</div>
-                <div className="text-gold text-sm font-medium">MD & CEO, Practical EduSkills Pvt. Ltd.</div>
+                <div className="font-serif text-navy font-bold">{about.mdName}</div>
+                <div className="text-gold text-sm font-medium">{about.mdTitle}, Practical EduSkills Pvt. Ltd.</div>
               </div>
             </div>
           </motion.div>

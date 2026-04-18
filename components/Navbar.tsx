@@ -5,11 +5,16 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { courses } from '@/lib/courses';
+import { useLanguage } from '@/lib/i18n';
+import { t } from '@/lib/translations';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const { lang } = useLanguage();
+  const tr = t[lang];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -18,11 +23,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/placements', label: 'Placements' },
-    { href: '/events', label: 'Events' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: tr.nav.home },
+    { href: '/placements', label: tr.nav.placements },
+    { href: '/events', label: tr.nav.events },
+    { href: '/about', label: tr.nav.about },
+    { href: '/contact', label: tr.nav.contact },
   ];
 
   return (
@@ -57,7 +62,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -71,7 +76,7 @@ export default function Navbar() {
               {/* Courses Dropdown */}
               <div className="relative" onMouseEnter={() => setCoursesOpen(true)} onMouseLeave={() => setCoursesOpen(false)}>
                 <button className="flex items-center gap-1 text-white/90 hover:text-gold transition-colors duration-200 font-sans text-sm font-medium">
-                  Courses <ChevronDown size={14} className={`transition-transform ${coursesOpen ? 'rotate-180' : ''}`} />
+                  {tr.nav.courses} <ChevronDown size={14} className={`transition-transform ${coursesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {coursesOpen && (
@@ -105,7 +110,7 @@ export default function Navbar() {
                           href="/courses"
                           className="flex items-center justify-center py-2 text-navy font-semibold text-sm hover:text-gold transition-colors"
                         >
-                          View All Courses →
+                          {tr.nav.viewAllCourses}
                         </Link>
                       </div>
                     </motion.div>
@@ -114,13 +119,14 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* CTA + Hamburger */}
-            <div className="flex items-center gap-3">
+            {/* Language Switcher + CTA + Hamburger */}
+            <div className="flex items-center gap-2 md:gap-3">
+              <LanguageSwitcher />
               <Link
                 href="/admissions"
                 className="hidden sm:inline-flex items-center px-4 py-2 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-gold-light transition-colors pulse-gold"
               >
-                Enroll Now
+                {tr.nav.enrollNow}
               </Link>
               <button
                 className="lg:hidden text-white p-1"
@@ -152,7 +158,10 @@ export default function Navbar() {
                 <X size={28} />
               </button>
             </div>
-            <div className="flex-1 px-5 py-6 space-y-1">
+            <div className="flex-1 px-5 py-4 space-y-1">
+              {/* Language switcher in mobile menu */}
+              <LanguageSwitcher variant="mobile" />
+
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
@@ -170,7 +179,7 @@ export default function Navbar() {
                 </motion.div>
               ))}
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}>
-                <div className="py-3 text-gold font-semibold text-sm uppercase tracking-wider">Our Courses</div>
+                <div className="py-3 text-gold font-semibold text-sm uppercase tracking-wider">{tr.nav.ourCourses}</div>
                 {courses.map((course, i) => (
                   <motion.div
                     key={course.slug}
@@ -196,13 +205,13 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="block text-center py-3.5 bg-gold text-navy font-bold rounded-xl text-lg pulse-gold"
               >
-                Enroll Now →
+                {tr.nav.enrollNow} →
               </Link>
               <a
-                href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER || '+919890959990'}`}
+                href="tel:+919890959990"
                 className="block text-center py-3 border border-white/20 text-white rounded-xl text-sm"
               >
-                📞 Call Us: +91-98909-59990
+                {tr.nav.callUs}
               </a>
             </div>
           </motion.div>

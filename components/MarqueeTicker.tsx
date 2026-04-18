@@ -1,17 +1,10 @@
-export default function MarqueeTicker() {
-  const items = [
-    '✦ Dubai Placement Opportunity',
-    '✦ 2000+ Students Placed',
-    '✦ 21 Years Legacy',
-    '✦ ISO Certified',
-    '✦ NSDC Skill Centre',
-    '✦ OJT with Stipend',
-    '✦ Industry-Ready Curriculum',
-    '✦ 8 Career Programs',
-    '✦ Evening MBA Batches',
-    '✦ CA Article Fast-Track',
-  ];
+'use client';
+import { useLanguage } from '@/lib/i18n';
+import { t } from '@/lib/translations';
 
+export default function MarqueeTicker() {
+  const { lang } = useLanguage();
+  const items = t[lang].marquee;
   const ticker = items.join('   ');
 
   return (

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import StickyMobileBar from "@/components/StickyMobileBar";
 import AkashAgent from "@/components/AkashAgent";
-import { Toaster } from "react-hot-toast";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "Practical EduSkills — India's Most Practical Commerce & Business Education",
@@ -57,13 +57,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="antialiased">
-        <Toaster position="top-center" toastOptions={{ duration: 4000 }} />
-        <Navbar />
-        <main className="pb-16 lg:pb-0">{children}</main>
-        <Footer />
-        <WhatsAppButton />
-        <StickyMobileBar />
-        <AkashAgent />
+        <Providers>
+          <Navbar />
+          <main className="pb-16 lg:pb-0">{children}</main>
+          <Footer />
+          <WhatsAppButton />
+          <StickyMobileBar />
+          <AkashAgent />
+        </Providers>
       </body>
     </html>
   );

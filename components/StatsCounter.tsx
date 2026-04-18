@@ -1,20 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
-interface StatItem {
-  value: number;
-  suffix: string;
-  label: string;
-  prefix?: string;
-}
-
-const stats: StatItem[] = [
-  { value: 2000, suffix: '+', label: 'Students Placed' },
-  { value: 21, suffix: '+', label: 'Years of Excellence' },
-  { value: 50, suffix: '+', label: 'Hiring Partners' },
-  { value: 15000, suffix: '', prefix: '₹', label: 'Max Monthly Stipend' },
-];
+import { useLanguage } from '@/lib/i18n';
+import { t } from '@/lib/translations';
 
 function CountUp({ value, prefix = '', suffix = '' }: { value: number; prefix?: string; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -42,40 +30,30 @@ function CountUp({ value, prefix = '', suffix = '' }: { value: number; prefix?: 
     return () => clearInterval(timer);
   }, [started, value]);
 
-  return (
-    <span ref={ref}>
-      {prefix}{count >= 1000 ? count.toLocaleString('en-IN') : count}{suffix}
-    </span>
-  );
+  return <span ref={ref}>{prefix}{count >= 1000 ? count.toLocaleString('en-IN') : count}{suffix}</span>;
 }
 
 export default function StatsCounter() {
+  const { lang } = useLanguage();
+  const tr = t[lang].stats;
+
+  const stats = [
+    { value: 2000, suffix: '+', label: tr.s1 },
+    { value: 21, suffix: '+', label: tr.s2 },
+    { value: 50, suffix: '+', label: tr.s3 },
+    { value: 15000, suffix: '', prefix: '₹', label: tr.s4 },
+  ];
+
   return (
     <section className="navy-gradient py-14 md:py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-10"
-        >
-          <h2 className="text-white font-serif text-2xl md:text-3xl font-bold mb-2">
-            Our Numbers Tell the Story
-          </h2>
-          <p className="text-white/60 text-sm md:text-base">
-            Two decades of turning students into professionals
-          </p>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+          <h2 className="text-white font-serif text-2xl md:text-3xl font-bold mb-2">{tr.heading}</h2>
+          <p className="text-white/60 text-sm md:text-base">{tr.sub}</p>
         </motion.div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="text-center"
-            >
+            <motion.div key={stat.label} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
               <div className="stat-number text-4xl md:text-5xl mb-1">
                 <CountUp value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               </div>
@@ -83,21 +61,10 @@ export default function StatsCounter() {
             </motion.div>
           ))}
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="text-center mt-10"
-        >
-          <p className="text-white/60 text-sm mb-4">
-            We have placed students in CA firms, corporates, and international companies
-          </p>
-          <a
-            href="/placements"
-            className="inline-block px-6 py-2.5 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-navy transition-all text-sm"
-          >
-            View Placements →
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="text-center mt-10">
+          <p className="text-white/60 text-sm mb-4">{tr.desc}</p>
+          <a href="/placements" className="inline-block px-6 py-2.5 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-navy transition-all text-sm">
+            {tr.viewBtn}
           </a>
         </motion.div>
       </div>
