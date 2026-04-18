@@ -23,13 +23,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {/* Col 1: Brand */}
           <div>
-            <Image
-              src="/brand/logo.png"
-              alt="Practical EduSkills"
-              width={120}
-              height={60}
-              className="h-14 w-auto mb-4"
-            />
+            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-md mb-4">
+              <Image
+                src="/brand/logo.png"
+                alt="Practical EduSkills"
+                width={44}
+                height={44}
+                className="h-10 w-auto"
+              />
+            </div>
             <p className="text-white/70 text-sm leading-relaxed mb-5">
               India&apos;s Most Practical Commerce &amp; Business Education. 21+ years of transforming students into industry-ready professionals.
             </p>

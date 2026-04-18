@@ -142,18 +142,16 @@ export default function SaraswatiPage() {
             }}
           />
         </div>
-        <div>
+        <div className="flex-1 min-w-0">
           <div className="text-white font-semibold">सरस्वती</div>
           <div className="text-white/50 text-xs flex items-center gap-1">
-            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-            Practical EduSkills · Online
+            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
+            PES Student Guide
           </div>
         </div>
-        <div className="ml-auto">
-          <a href="tel:+919890959990" className="text-yellow-400 text-sm font-semibold hover:text-yellow-300 transition-colors">
-            📞 98909-59990
-          </a>
-        </div>
+        <a href="tel:+919890959990" className="flex-shrink-0 whitespace-nowrap text-yellow-400 text-xs font-semibold hover:text-yellow-300 transition-colors border border-yellow-400/40 rounded-lg px-2 py-1">
+          📞 98909-59990
+        </a>
       </div>
 
       {/* Main area */}
