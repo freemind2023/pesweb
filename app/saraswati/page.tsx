@@ -121,9 +121,9 @@ export default function SaraswatiPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#060E2B] via-[#0A1F5C] to-[#060E2B] flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-[#060E2B] via-[#0A1F5C] to-[#060E2B] flex flex-col pt-16 md:pt-20">
       {/* Top bar */}
-      <div className="flex items-center gap-3 px-4 py-4 border-b border-white/10 flex-shrink-0">
+      <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10 flex-shrink-0">
         <Link href="/" className="text-white/60 hover:text-white transition-colors">
           <ArrowLeft size={20} />
         </Link>
