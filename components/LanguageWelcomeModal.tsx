@@ -39,7 +39,7 @@ export default function LanguageWelcomeModal() {
             className="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center"
           >
             {/* Logo */}
-            <div className="w-20 h-20 rounded-full bg-navy flex items-center justify-center mx-auto mb-5 shadow-lg">
+            <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mx-auto mb-5 shadow-lg border-2 border-gold/30">
               <Image src="/brand/logo.png" alt="PES" width={60} height={60} className="h-14 w-auto" />
             </div>
 
