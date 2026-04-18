@@ -10,6 +10,18 @@ interface Message {
   content: string;
 }
 
+// Extract 10-digit Indian mobile number and name from any text
+function extractContact(text: string): { name: string; phone: string } {
+  const phoneMatch = text.match(/(?:^|\s|\+91[-\s]?)([6-9]\d{9})(?:\s|$|,)/);
+  const phone = phoneMatch ? phoneMatch[1] : '';
+  const name = text
+    .replace(/\+91[-\s]?[6-9]\d{9}/, '')
+    .replace(/[6-9]\d{9}/, '')
+    .replace(/[,\s]+/g, ' ')
+    .trim();
+  return { name, phone };
+}
+
 export default function SaraswatiAgent() {
   const [open, setOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
@@ -21,6 +33,8 @@ export default function SaraswatiAgent() {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [capturedName, setCapturedName] = useState('');
+  const [capturedPhone, setCapturedPhone] = useState('');
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,7 +46,7 @@ export default function SaraswatiAgent() {
     if (open) endRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, open]);
 
-  const saveToSheet = async (userMsg: string, aiMsg: string) => {
+  const saveToSheet = async (userMsg: string, aiMsg: string, name: string, phone: string) => {
     try {
       await fetch('/api/save-chat', {
         method: 'POST',
@@ -40,6 +54,8 @@ export default function SaraswatiAgent() {
         body: JSON.stringify({
           timestamp: new Date().toISOString(),
           source: 'widget',
+          name,
+          phone,
           userMessage: userMsg,
           aiResponse: aiMsg,
         }),
@@ -75,7 +91,15 @@ export default function SaraswatiAgent() {
       const aiText = data.text as string;
 
       setMessages((prev) => [...prev, { role: 'assistant', content: aiText }]);
-      saveToSheet(text, aiText);
+
+      // Extract name/phone from this message and update captured state
+      const { name: extractedName, phone: extractedPhone } = extractContact(text);
+      const finalName = extractedName || capturedName;
+      const finalPhone = extractedPhone || capturedPhone;
+      if (extractedName) setCapturedName(extractedName);
+      if (extractedPhone) setCapturedPhone(extractedPhone);
+
+      saveToSheet(text, aiText, finalName, finalPhone);
     } catch {
       setMessages((prev) => [
         ...prev,
