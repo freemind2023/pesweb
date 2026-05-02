@@ -6,7 +6,8 @@ import { z } from 'zod';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { submitToGoogleSheets } from '@/lib/googleSheets';
-import { Loader2, CheckCircle } from 'lucide-react';
+import { Loader2, CheckCircle, Download } from 'lucide-react';
+import { generateEnrollmentPDF, type EnrollmentPDFData } from '@/lib/generateEnrollmentPDF';
 
 const schema = z.object({
   name: z.string().min(2, 'Full name is required'),
@@ -42,6 +43,8 @@ const courses = [
 export default function AdmissionForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [pdfData, setPdfData] = useState<EnrollmentPDFData | null>(null);
+  const [downloading, setDownloading] = useState(false);
 
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
@@ -50,9 +53,9 @@ export default function AdmissionForm() {
   const onSubmit = async (data: FormData) => {
     setSubmitting(true);
     try {
-      await submitToGoogleSheets({
+      const enriched: EnrollmentPDFData = {
         name: data.name, dob: data.dob, gender: data.gender,
-        phone: `+91${data.phone}`, whatsapp: data.whatsapp || '',
+        phone: `+91${data.phone}`, whatsapp: data.whatsapp ? `+91${data.whatsapp}` : '',
         email: data.email, city: data.city, pincode: data.pincode,
         address: data.address || '', qualification: data.qualification,
         board: data.board || '', passingYear: data.passingYear || '',
@@ -60,8 +63,12 @@ export default function AdmissionForm() {
         stream: data.stream || '', course: data.course,
         heardFrom: data.heardFrom, parentName: data.parentName,
         parentOccupation: data.parentOccupation || '', parentPhone: `+91${data.parentPhone}`,
-      }, 'admission');
+      };
+      await submitToGoogleSheets({ ...enriched }, 'admission');
+      setPdfData(enriched);
       setSubmitted(true);
+      // auto-download PDF
+      await generateEnrollmentPDF(enriched);
     } catch {
       toast.error('Something went wrong. Please call us at +91-98909-59990');
     } finally {
@@ -72,14 +79,35 @@ export default function AdmissionForm() {
   if (submitted) {
     return (
       <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-16 px-4">
+        className="text-center py-12 px-4">
         <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="text-success" size={40} />
         </div>
-        <h2 className="font-serif text-navy text-2xl font-bold mb-2">Application Submitted! 🎉</h2>
+        <h2 className="font-serif text-navy text-2xl font-bold mb-2">Application Submitted!</h2>
         <p className="text-text-muted text-base mb-2">Thank you for applying to Practical EduSkills.</p>
         <p className="text-text-muted text-sm">Our team will contact you within 24 hours to guide you through the next steps.</p>
-        <div className="mt-6 p-4 bg-gold/10 rounded-xl inline-block">
+
+        {pdfData && (
+          <div className="mt-6 p-5 bg-gold/10 rounded-2xl border border-gold/30 inline-block w-full max-w-sm">
+            <p className="text-navy text-sm font-semibold mb-3">Your application copy is ready!</p>
+            <button
+              onClick={async () => {
+                setDownloading(true);
+                try { await generateEnrollmentPDF(pdfData); }
+                finally { setDownloading(false); }
+              }}
+              disabled={downloading}
+              className="w-full flex items-center justify-center gap-2 py-3 bg-navy text-gold font-bold rounded-xl hover:bg-navy/90 transition-all disabled:opacity-70"
+            >
+              {downloading
+                ? <><Loader2 size={18} className="animate-spin" /> Generating PDF...</>
+                : <><Download size={18} /> Download Application PDF</>}
+            </button>
+            <p className="text-text-muted text-xs mt-2">A copy was also auto-downloaded when you submitted.</p>
+          </div>
+        )}
+
+        <div className="mt-4 p-4 bg-bg-light rounded-xl inline-block">
           <p className="text-navy text-sm font-medium">Meanwhile, you can reach us at:</p>
           <a href="tel:+919890959990" className="text-navy font-bold text-lg hover:text-gold">+91-98909-59990</a>
         </div>
