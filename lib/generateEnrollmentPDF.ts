@@ -71,7 +71,7 @@ export async function generateEnrollmentPDF(data: EnrollmentPDFData): Promise<vo
   doc.setFillColor(...GOLD);
   doc.rect(0, 44, PW, 1.5, 'F');
 
-  const logoData = await loadImageAsBase64('/brand/logo-white.png');
+  const logoData = await loadImageAsBase64('/brand/logo.png');
   if (logoData) {
     doc.addImage(logoData, 'PNG', M, 7, 28, 28);
   }
