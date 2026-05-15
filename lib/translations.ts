@@ -3,6 +3,7 @@ export const t = {
     nav: {
       home: 'Home',
       placements: 'Placements',
+      careers: 'Careers',
       events: 'Events',
       about: 'About',
       contact: 'Contact',
@@ -224,6 +225,7 @@ export const t = {
     nav: {
       home: 'मुख्यपान',
       placements: 'प्लेसमेंट',
+      careers: 'करिअर',
       events: 'कार्यक्रम',
       about: 'आमच्याबद्दल',
       contact: 'संपर्क',

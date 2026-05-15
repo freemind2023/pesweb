@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { courses } from '@/lib/courses';
+import { getCareerSlugs } from '@/lib/sanity/careers';
 
 const BASE = 'https://practicaleduskills.com';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -16,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/centres`,            lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/faculty`,            lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/contact`,            lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/careers`,            lastModified: now, changeFrequency: 'weekly',   priority: 0.8 },
   ];
 
   const courseRoutes: MetadataRoute.Sitemap = courses.map((c) => ({
@@ -25,5 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...courseRoutes];
+  const careerSlugs = await getCareerSlugs();
+  const careerRoutes: MetadataRoute.Sitemap = careerSlugs.map(({ slug }) => ({
+    url: `${BASE}/careers/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...courseRoutes, ...careerRoutes];
 }

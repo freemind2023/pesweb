@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -13,6 +14,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const pathname = usePathname();
+  const isStudio = pathname?.startsWith('/studio');
   const { lang } = useLanguage();
   const tr = t[lang];
 
@@ -25,10 +28,13 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: tr.nav.home },
     { href: '/placements', label: tr.nav.placements },
+    { href: '/careers', label: tr.nav.careers },
     { href: '/events', label: tr.nav.events },
     { href: '/about', label: tr.nav.about },
     { href: '/contact', label: tr.nav.contact },
   ];
+
+  if (isStudio) return null;
 
   return (
     <>
