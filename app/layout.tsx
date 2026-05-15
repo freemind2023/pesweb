@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import StickyMobileBar from "@/components/StickyMobileBar";
 import AkashAgent from "@/components/AkashAgent";
 import Providers from "@/components/Providers";
+import GtmTracker from "@/components/gtm-tracker";
+
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+if (!GTM_ID && process.env.NODE_ENV === 'development') {
+  console.warn('[GTM] NEXT_PUBLIC_GTM_ID is not set. Analytics will not load.');
+}
 
 export const metadata: Metadata = {
   title: "Practical EduSkills — India's Most Practical Commerce & Business Education",
@@ -57,6 +64,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="antialiased">
+        {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
+        <GtmTracker />
         <Providers>
           <Navbar />
           <main className="pb-16 lg:pb-0">{children}</main>
