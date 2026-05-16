@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,8 +10,11 @@ import Providers from "@/components/Providers";
 import GtmTracker from "@/components/gtm-tracker";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
-if (!GTM_ID && process.env.NODE_ENV === 'development') {
-  console.warn('[GTM] NEXT_PUBLIC_GTM_ID is not set. Analytics will not load.');
+const GA_ID  = process.env.NEXT_PUBLIC_GA_ID;
+
+if (process.env.NODE_ENV === 'development') {
+  if (!GTM_ID) console.warn('[GTM] NEXT_PUBLIC_GTM_ID is not set.');
+  if (!GA_ID)  console.warn('[GA]  NEXT_PUBLIC_GA_ID is not set.');
 }
 
 export const metadata: Metadata = {
@@ -105,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="antialiased">
         {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
+        {GA_ID  && <GoogleAnalytics gaId={GA_ID} />}
         <GtmTracker />
         <Providers>
           <Navbar />
