@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/centres`,            lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/faculty`,            lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/contact`,            lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/careers`,            lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
   ];
 
   const courseRoutes: MetadataRoute.Sitemap = courses.map((c) => ({

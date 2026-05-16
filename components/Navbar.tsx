@@ -27,6 +27,7 @@ export default function Navbar() {
     { href: '/placements', label: tr.nav.placements },
     { href: '/events', label: tr.nav.events },
     { href: '/about', label: tr.nav.about },
+    { href: '/careers', label: 'Careers' },
     { href: '/contact', label: tr.nav.contact },
   ];
 
