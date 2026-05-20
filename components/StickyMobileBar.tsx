@@ -4,6 +4,7 @@ import { Phone, ClipboardList } from 'lucide-react';
 
 export default function StickyMobileBar() {
   return (
+    <div id="site-sticky-bar">
     <div className="sticky-mobile-bar lg:hidden">
       <div className="flex gap-3">
         <a
@@ -21,6 +22,7 @@ export default function StickyMobileBar() {
           <ClipboardList size={16} /> Enroll Now
         </Link>
       </div>
+    </div>
     </div>
   );
 }

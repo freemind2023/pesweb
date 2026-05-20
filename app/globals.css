@@ -17,6 +17,13 @@
   --accent: #F97316;
 }
 
+/* Hide main-site shell elements on dedicated landing pages */
+body[data-landing] #site-navbar,
+body[data-landing] #site-footer,
+body[data-landing] #site-sticky-bar,
+body[data-landing] #site-akash { display: none !important; }
+body[data-landing] main { padding-bottom: 0 !important; }
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }

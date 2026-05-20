@@ -121,6 +121,7 @@ export default function SaraswatiAgent() {
   ];
 
   return (
+    <div id="site-akash">
     <div className="fixed bottom-6 right-4 z-50 flex flex-col items-end">
       {/* Teaser bubble */}
       <AnimatePresence>
@@ -306,6 +307,7 @@ export default function SaraswatiAgent() {
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
     </div>
   );
 }

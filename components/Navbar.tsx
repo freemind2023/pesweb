@@ -32,7 +32,7 @@ export default function Navbar() {
   ];
 
   return (
-    <>
+    <div id="site-navbar">
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled ? 'bg-navy shadow-lg shadow-navy/20' : 'bg-transparent'
@@ -218,6 +218,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }
