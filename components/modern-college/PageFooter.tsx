@@ -17,7 +17,7 @@ export default function PageFooter() {
                 <Image src="/modern-college/mc-logo.jpg" alt="Modern College" width={44} height={44} className="h-10 w-auto rounded-lg object-contain" />
               </div>
               <div>
-                <p className="text-white font-black text-sm leading-tight">PES' Modern College</p>
+                <p className="text-white font-black text-sm leading-tight">PES&apos; Modern College</p>
                 <p className="text-[#F5B400] text-[10px] font-medium">Ganeshkhind, Pune</p>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function PageFooter() {
               <li>
                 <div className="flex items-start gap-2.5 text-white/60 text-xs">
                   <MapPin size={13} className="text-[#F5B400] mt-0.5 flex-shrink-0" />
-                  <span>PES' Modern College of Arts, Science &amp; Commerce,<br />Ganeshkhind Road, Pune – 411016</span>
+                  <span>PES&apos; Modern College of Arts, Science &amp; Commerce,<br />Ganeshkhind Road, Pune – 411016</span>
                 </div>
               </li>
             </ul>
@@ -96,7 +96,7 @@ export default function PageFooter() {
             <span className="text-white/40 text-[10px]">Affiliated to Savitribai Phule Pune University (SPPU)</span>
           </div>
           <p className="text-white/30 text-[10px]">
-            © {new Date().getFullYear()} PES' Modern College, Ganeshkhind. All rights reserved.
+            © {new Date().getFullYear()} PES&apos; Modern College, Ganeshkhind. All rights reserved.
           </p>
         </div>
       </div>

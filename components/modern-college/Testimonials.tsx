@@ -57,14 +57,14 @@ export default function Testimonials() {
             <div className="flex-1 p-7 md:p-10">
               <Quote size={36} className="text-[#F5B400] mb-4 opacity-70" />
               <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-4">
-                "AEDP is not just a degree program — it is a career launchpad. We built this curriculum with industry, for industry. Every student who walks out of Modern College is ready to contribute from Day 1."
+                &ldquo;AEDP is not just a degree program — it is a career launchpad. We built this curriculum with industry, for industry. Every student who walks out of Modern College is ready to contribute from Day 1.&rdquo;
               </p>
               <p className="text-[#F5B400] text-sm devanagari mb-1">
-                "आमचे ध्येय आहे — प्रत्येक विद्यार्थ्याला रोजगारक्षम बनवणे."
+                &ldquo;आमचे ध्येय आहे — प्रत्येक विद्यार्थ्याला रोजगारक्षम बनवणे.&rdquo;
               </p>
               <div className="mt-4">
                 <p className="text-white font-black text-base">Dr. A. B. Kharat</p>
-                <p className="text-white/60 text-xs">Principal, PES' Modern College of Arts, Science and Commerce, Ganeshkhind, Pune</p>
+                <p className="text-white/60 text-xs">Principal, PES&apos; Modern College of Arts, Science and Commerce, Ganeshkhind, Pune</p>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Testimonials() {
               className="bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-xl text-center">
               <Quote size={28} className="mx-auto mb-4 opacity-30" style={{ color: TESTIMONIALS[idx].color }} />
               <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-3 italic">
-                "{TESTIMONIALS[idx].quote}"
+                &ldquo;{TESTIMONIALS[idx].quote}&rdquo;
               </p>
               <p className="text-gray-400 text-sm devanagari mb-6">{TESTIMONIALS[idx].marathi}</p>
               <div className="flex items-center justify-center gap-3">

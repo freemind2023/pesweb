@@ -64,7 +64,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
               <Image src="/modern-college/mc-logo.jpg" alt="Modern College" width={40} height={40} className="h-9 w-auto rounded-lg object-contain" />
             </div>
             <div className="hidden sm:block leading-tight">
-              <p className="text-white text-xs font-bold">PES' Modern College, Ganeshkhind</p>
+              <p className="text-white text-xs font-bold">PES&apos; Modern College, Ganeshkhind</p>
               <p className="text-[#F5B400] text-[10px] font-medium">Affiliated to SPPU · AEDP Programs</p>
             </div>
           </div>
