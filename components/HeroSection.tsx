@@ -79,7 +79,7 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
+          className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
           <Link href="/admissions"
             className="px-8 py-3.5 bg-gold text-navy font-bold text-base rounded-xl pulse-gold hover:bg-gold-light transition-all">
             {tr.enrollCta}
@@ -87,6 +87,16 @@ export default function HeroSection() {
           <Link href="/courses"
             className="px-8 py-3.5 border-2 border-gold text-white font-semibold text-base rounded-xl hover:bg-gold/10 transition-all backdrop-blur-sm">
             {tr.exploreCta}
+          </Link>
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.95 }}
+          className="flex justify-center mb-8">
+          <Link href="/modern-college"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-sm text-white border border-white/30 hover:border-white/60 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <span className="text-base">🎓</span>
+            Modern College AEDP — Earn While You Learn
+            <span className="text-xs bg-gold text-navy px-2 py-0.5 rounded-full font-black">NEW</span>
           </Link>
         </motion.div>
 
