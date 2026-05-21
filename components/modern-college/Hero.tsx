@@ -162,9 +162,10 @@ export default function Hero({ onApply }: { onApply: () => void }) {
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
                 className="mt-3 rounded-xl overflow-hidden relative shadow-lg" style={{ border: '1.5px solid rgba(255,255,255,0.15)' }}>
-                <Image src="/modern-college/college-gate.webp" alt="Modern College Campus" width={480} height={120} className="w-full h-24 sm:h-28 object-cover object-center" />
-                <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'rgba(11,31,92,0.45)' }}>
-                  <span className="text-white text-xs font-bold drop-shadow-md">Modern College, Ganeshkhind, Pune – 411016</span>
+                <Image src="/modern-college/college-gate.webp" alt="Modern College Campus" width={480} height={260} className="w-full h-52 sm:h-64 object-cover object-center" />
+                <div className="absolute inset-0 flex flex-col items-center justify-end pb-4 px-3" style={{ background: 'linear-gradient(to top, rgba(11,31,92,0.75) 0%, transparent 55%)' }}>
+                  <span className="text-white text-xs font-bold drop-shadow-md text-center">PES&apos; Modern College, Ganeshkhind, Pune – 411016</span>
+                  <span className="text-[#F5B400] text-[10px] font-semibold mt-0.5">Affiliated to SPPU · Est. 1966</span>
                 </div>
               </motion.div>
             </div>
