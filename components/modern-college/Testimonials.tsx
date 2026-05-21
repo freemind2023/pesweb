@@ -47,24 +47,32 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="rounded-3xl overflow-hidden mb-16 shadow-2xl"
           style={{ background: 'linear-gradient(135deg,#0B1F5C,#1a3a8f)' }}>
-          <div className="flex flex-col md:flex-row items-center gap-0">
-            <div className="md:w-64 flex-shrink-0">
-              <div className="relative h-60 md:h-full md:min-h-[280px]">
-                <Image src="/modern-college/dr-kharat.jpg" alt="Dr. Kharat" fill className="object-cover object-top" />
-                <div className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(to top,#0B1F5C,transparent 60%)' }} />
-              </div>
+          {/* Always side-by-side: photo left, quote right */}
+          <div className="flex flex-row items-stretch min-h-[260px]">
+            {/* Photo — fixed width on all screen sizes */}
+            <div className="w-28 sm:w-48 md:w-64 flex-shrink-0 relative">
+              <Image
+                src="/modern-college/dr-kharat.jpg"
+                alt="Dr. Kharat"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width:640px) 112px,(max-width:768px) 192px,256px"
+              />
             </div>
-            <div className="flex-1 p-7 md:p-10">
-              <Quote size={36} className="text-[#F5B400] mb-4 opacity-70" />
-              <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-4">
+            {/* Quote */}
+            <div className="flex-1 p-5 sm:p-7 md:p-10 flex flex-col justify-center">
+              <Quote size={28} className="text-[#F5B400] mb-3 opacity-70" />
+              <p className="text-white text-sm sm:text-base md:text-lg font-medium leading-relaxed mb-3">
                 &ldquo;AEDP is not just a degree program — it is a career launchpad. We built this curriculum with industry, for industry. Every student who walks out of Modern College is ready to contribute from Day 1.&rdquo;
               </p>
-              <p className="text-[#F5B400] text-sm devanagari mb-1">
+              <p className="text-[#F5B400] text-xs sm:text-sm devanagari mb-3">
                 &ldquo;आमचे ध्येय आहे — प्रत्येक विद्यार्थ्याला रोजगारक्षम बनवणे.&rdquo;
               </p>
-              <div className="mt-4">
-                <p className="text-white font-black text-base">Dr. A. B. Kharat</p>
-                <p className="text-white/60 text-xs">Principal, PES&apos; Modern College of Arts, Science and Commerce, Ganeshkhind, Pune</p>
+              <div>
+                <p className="text-white font-black text-sm sm:text-base">Dr. A. B. Kharat</p>
+                <p className="text-white/60 text-[10px] sm:text-xs leading-snug mt-0.5">
+                  Principal, PES&apos; Modern College of Arts, Science and Commerce,<br className="hidden sm:block" /> Ganeshkhind, Pune
+                </p>
               </div>
             </div>
           </div>
