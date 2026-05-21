@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n';
 import { t } from '@/lib/translations';
 
@@ -91,12 +91,28 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.95 }}
-          className="flex justify-center mb-8">
+          className="flex justify-center mb-8 px-2">
           <Link href="/modern-college"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-sm text-white border border-white/30 hover:border-white/60 hover:bg-white/10 transition-all backdrop-blur-sm">
-            <span className="text-base">🎓</span>
-            Modern College AEDP — Earn While You Learn
-            <span className="text-xs bg-gold text-navy px-2 py-0.5 rounded-full font-black">NEW</span>
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            {/* Logos */}
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <div className="bg-white rounded-xl p-1 shadow-lg">
+                <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              </div>
+              <div className="bg-white rounded-xl p-1 shadow-lg">
+                <Image src="/modern-college/mc-logo.jpg" alt="Modern College" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              </div>
+            </div>
+            {/* Text */}
+            <div className="flex-1 text-left min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-white font-black text-sm leading-tight">Modern College AEDP</span>
+                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
+              </div>
+              <p className="text-white/60 text-xs truncate">Earn While You Learn · SPPU Degree · OJT</p>
+            </div>
+            {/* Arrow */}
+            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
 
