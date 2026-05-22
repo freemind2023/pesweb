@@ -9,11 +9,7 @@ export default function LanguageWelcomeModal() {
   const { setLang } = useLanguage();
 
   useEffect(() => {
-    const stored = localStorage.getItem('pes-lang');
-    if (!stored) {
-      const timer = setTimeout(() => setShow(true), 600);
-      return () => clearTimeout(timer);
-    }
+    // modal disabled — language toggle in navbar is used instead
   }, []);
 
   const choose = (l: 'en' | 'mr') => {

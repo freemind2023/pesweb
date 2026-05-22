@@ -2,6 +2,7 @@
 import { useState, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
+import { submitToGoogleSheets } from '@/lib/googleSheets';
 
 const WA_BASE = 'https://wa.me/917972401596?text=';
 const COURSES = ['B.Sc. AI & Business Automation', 'B.Com Accounting & Business Practices'];
@@ -52,7 +53,19 @@ const AdmissionForm = forwardRef<HTMLDivElement>(function AdmissionForm(_, ref) 
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 800));
+    try {
+      await submitToGoogleSheets({
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        city: form.city,
+        course: form.course,
+        stream: form.stream,
+        percentage: form.percentage,
+      }, 'modern-college');
+    } catch {
+      // non-blocking — proceed to WhatsApp even if sheet fails
+    }
     setLoading(false);
     setSubmitted(true);
     window.open(`${WA_BASE}${buildWAMessage(form)}`, '_blank');

@@ -25,7 +25,7 @@ export default function LanguageSwitcher({ variant = 'navbar' }: { variant?: 'na
               lang === 'mr' ? 'bg-gold text-navy' : 'text-white/70 hover:text-white'
             }`}
           >
-            मर
+            मराठी
           </button>
         </div>
       </div>
