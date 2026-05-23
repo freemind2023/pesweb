@@ -1,15 +1,16 @@
 'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-import { ShieldCheck, Award, Briefcase, Zap } from 'lucide-react';
+import { ShieldCheck, Award, Briefcase, Zap, GraduationCap, Building2, FileText, IndianRupee } from 'lucide-react';
 
-const STATS = [
-  { value: 5000, suffix: '+', label: 'Students Enrolled', sub: 'Across Programs', icon: '🎓' },
-  { value: 100, suffix: '+', label: 'Hiring Recruiters', sub: 'Industry Partners', icon: '🏢' },
-  { value: 1.5, suffix: ' Yrs', label: 'OJT Duration', sub: 'Real Work Experience', icon: '💼', decimals: 1 },
-  { value: 12, suffix: '+', label: 'Certifications', sub: 'Industry Recognized', icon: '📜' },
-  { value: 12, suffix: 'K/mo', label: 'Max Stipend', prefix: '₹', label2: '₹8K–₹12K', sub: 'Earn While You Learn', icon: '💰' },
+const STATS: { value: number; suffix: string; label: string; sub: string; Icon: React.ElementType; decimals?: number; prefix?: string; label2?: string }[] = [
+  { value: 5000, suffix: '+',    label: 'Students Enrolled', sub: 'Across Programs',       Icon: GraduationCap },
+  { value: 100,  suffix: '+',    label: 'Hiring Recruiters', sub: 'Industry Partners',      Icon: Building2 },
+  { value: 1.5,  suffix: ' Yrs', label: 'OJT Duration',      sub: 'Real Work Experience',   Icon: Briefcase, decimals: 1 },
+  { value: 12,   suffix: '+',    label: 'Certifications',     sub: 'Industry Recognized',    Icon: FileText },
+  { value: 12,   suffix: 'K/mo', label: 'Max Stipend',        prefix: '₹', label2: '₹8K–₹12K', sub: 'Earn While You Learn', Icon: IndianRupee },
 ];
 
 const BADGES = [
@@ -32,7 +33,11 @@ export default function Stats() {
               viewport={{ once: true }} transition={{ delay: i * 0.1 }}
               className="text-center p-5 rounded-2xl border border-gray-100 hover:border-[#F5B400]/40 hover:shadow-lg transition-all group"
               style={{ background: 'linear-gradient(135deg,#f8f9ff,#fff)' }}>
-              <div className="text-3xl mb-1">{s.icon}</div>
+              <div className="flex justify-center mb-2">
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0B1F5C,#1a3a8f)' }}>
+                  <s.Icon size={16} className="text-[#F5B400]" />
+                </div>
+              </div>
               <div className="font-black text-[#0B1F5C] text-2xl md:text-3xl leading-none">
                 {s.prefix || ''}
                 {inView && (

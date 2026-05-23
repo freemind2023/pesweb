@@ -1,16 +1,17 @@
 'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp } from 'lucide-react';
+import { TrendingUp, Bot, BarChart2, Settings2, Smartphone, BookOpen, FileText, CreditCard, Landmark } from 'lucide-react';
 
-const PATHS = [
-  { title: 'AI Executive', program: 'B.Sc. AI', salary: '₹3–6 LPA', icon: '🤖', color: '#6366F1', bg: '#eef0ff' },
-  { title: 'Data Analyst', program: 'B.Sc. AI', salary: '₹3.5–7 LPA', icon: '📊', color: '#8B5CF6', bg: '#f5f3ff' },
-  { title: 'Business Automation Specialist', program: 'B.Sc. AI', salary: '₹4–8 LPA', icon: '⚙️', color: '#10B981', bg: '#ecfdf5' },
-  { title: 'Digital Marketing Manager', program: 'B.Sc. AI', salary: '₹3–6 LPA', icon: '📱', color: '#F59E0B', bg: '#fffbeb' },
-  { title: 'Accounts Executive', program: 'B.Com', salary: '₹2.5–5 LPA', icon: '📒', color: '#0B1F5C', bg: '#eef3ff' },
-  { title: 'GST Consultant', program: 'B.Com', salary: '₹3–6 LPA', icon: '🧾', color: '#EF4444', bg: '#fef2f2' },
-  { title: 'Finance Executive', program: 'B.Com', salary: '₹3–5.5 LPA', icon: '💳', color: '#14B8A6', bg: '#f0fdfa' },
-  { title: 'CA Article / Tax Analyst', program: 'B.Com', salary: '₹2.5–5 LPA', icon: '⚖️', color: '#F5B400', bg: '#fffbea' },
+const PATHS: { title: string; program: string; salary: string; Icon: React.ElementType; color: string; bg: string }[] = [
+  { title: 'AI Executive',                   program: 'B.Sc. AI', salary: '₹3–6 LPA',   Icon: Bot,        color: '#6366F1', bg: '#eef0ff' },
+  { title: 'Data Analyst',                   program: 'B.Sc. AI', salary: '₹3.5–7 LPA', Icon: BarChart2,  color: '#8B5CF6', bg: '#f5f3ff' },
+  { title: 'Business Automation Specialist', program: 'B.Sc. AI', salary: '₹4–8 LPA',   Icon: Settings2,  color: '#10B981', bg: '#ecfdf5' },
+  { title: 'Digital Marketing Manager',      program: 'B.Sc. AI', salary: '₹3–6 LPA',   Icon: Smartphone, color: '#F59E0B', bg: '#fffbeb' },
+  { title: 'Accounts Executive',             program: 'B.Com',    salary: '₹2.5–5 LPA', Icon: BookOpen,   color: '#0B1F5C', bg: '#eef3ff' },
+  { title: 'GST Consultant',                 program: 'B.Com',    salary: '₹3–6 LPA',   Icon: FileText,   color: '#EF4444', bg: '#fef2f2' },
+  { title: 'Finance Executive',              program: 'B.Com',    salary: '₹3–5.5 LPA', Icon: CreditCard, color: '#14B8A6', bg: '#f0fdfa' },
+  { title: 'CA Article / Tax Analyst',       program: 'B.Com',    salary: '₹2.5–5 LPA', Icon: Landmark,   color: '#F5B400', bg: '#fffbea' },
 ];
 
 export default function Careers() {
@@ -35,9 +36,9 @@ export default function Careers() {
               viewport={{ once: true }} transition={{ delay: i * 0.07 }}
               className="bg-white rounded-2xl p-5 border border-gray-100 hover:shadow-xl transition-all group"
               whileHover={{ y: -4 }}>
-              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform"
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
                 style={{ background: p.bg }}>
-                {p.icon}
+                <p.Icon size={22} style={{ color: p.color }} />
               </div>
               <div className="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold mb-2"
                 style={{ background: p.bg, color: p.color }}>

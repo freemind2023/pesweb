@@ -1,8 +1,8 @@
 'use client';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Zap, DollarSign, Bot, GraduationCap, Check } from 'lucide-react';
 
 const PHRASES = ['YOUR JOURNEY.', 'YOUR SKILLS.', 'YOUR SUCCESS.'];
 const WA = 'https://wa.me/917972401596?text=Hi%2C+I+want+to+know+about+AEDP+admissions+at+Modern+College+Ganeshkhind';
@@ -129,7 +129,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             <div className="flex flex-wrap gap-x-5 gap-y-1">
               {['SPPU Degree', 'OJT + Stipend', '₹8K–12K/month', 'AI Certified', '12+ Certs'].map((t) => (
                 <span key={t} className="text-xs text-white/55 flex items-center gap-1">
-                  <span className="text-[#F5B400]">✓</span> {t}
+                  <Check size={11} className="text-[#F5B400]" /> {t}
                 </span>
               ))}
             </div>
@@ -145,18 +145,18 @@ export default function Hero({ onApply }: { onApply: () => void }) {
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(11,31,92,0.7) 0%,transparent 60%)' }} />
               </div>
 
-              {[
-                { label: '100% Skill Dev', icon: '⚡', top: '12px', left: '-20px', bg: '#F5B400', color: '#0B1F5C', delay: 0.6 },
-                { label: 'OJT + Stipend', icon: '💰', top: '33%', right: '-20px', bg: '#10B981', color: '#fff', delay: 0.8 },
-                { label: 'AI + Business', icon: '🤖', bottom: '80px', left: '-20px', bg: '#6366F1', color: '#fff', delay: 1.0 },
-                { label: 'SPPU Degree', icon: '🎓', bottom: '16px', right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
-              ].map((c) => (
+              {([
+                { label: '100% Skill Dev', Icon: Zap,           top: '12px',  left: '-20px',  bg: '#F5B400', color: '#0B1F5C', delay: 0.6 },
+                { label: 'OJT + Stipend', Icon: DollarSign,     top: '33%',   right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
+                { label: 'AI + Business', Icon: Bot,             bottom: '80px', left: '-20px', bg: '#6366F1', color: '#fff',  delay: 1.0 },
+                { label: 'SPPU Degree',   Icon: GraduationCap,  bottom: '16px', right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
+              ] as { label: string; Icon: React.ElementType; top?: string; left?: string; right?: string; bottom?: string; bg: string; color: string; delay: number }[]).map((c) => (
                 <motion.div key={c.label}
                   initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: c.delay, type: 'spring', stiffness: 200 }}
                   className="absolute flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold shadow-xl whitespace-nowrap z-10"
-                  style={{ background: c.bg, color: c.color, top: c.top, left: (c as { left?: string }).left, right: (c as { right?: string }).right, bottom: (c as { bottom?: string }).bottom, border: '1px solid rgba(255,255,255,0.2)' }}>
-                  <span>{c.icon}</span>{c.label}
+                  style={{ background: c.bg, color: c.color, top: c.top, left: c.left, right: c.right, bottom: c.bottom, border: '1px solid rgba(255,255,255,0.2)' }}>
+                  <c.Icon size={13} />{c.label}
                 </motion.div>
               ))}
 

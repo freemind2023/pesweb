@@ -2,6 +2,7 @@
 import { useEffect, useRef, useCallback } from 'react';
 import UrgencyBanner from '@/components/modern-college/UrgencyBanner';
 import Hero from '@/components/modern-college/Hero';
+import SPPURecognition from '@/components/modern-college/SPPURecognition';
 import Stats from '@/components/modern-college/Stats';
 import Programs from '@/components/modern-college/Programs';
 import Timeline from '@/components/modern-college/Timeline';
@@ -29,6 +30,7 @@ export default function ModernCollegePage() {
     <main>
       <UrgencyBanner />
       <Hero onApply={scrollToForm} />
+      <SPPURecognition />
       <Stats />
       <Programs onApply={scrollToForm} />
       <Timeline />
