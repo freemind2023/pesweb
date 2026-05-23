@@ -3,6 +3,7 @@ import { useState, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { submitToGoogleSheets } from '@/lib/googleSheets';
+import toast from 'react-hot-toast';
 
 const WA_BASE = 'https://wa.me/917972401596?text=';
 const COURSES = ['B.Sc. AI & Business Automation', 'B.Com Accounting & Business Practices'];
@@ -54,7 +55,7 @@ const AdmissionForm = forwardRef<HTMLDivElement>(function AdmissionForm(_, ref) 
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setLoading(true);
     try {
-      await submitToGoogleSheets({
+      const result = await submitToGoogleSheets({
         name: form.name,
         phone: form.phone,
         email: form.email,
@@ -63,8 +64,11 @@ const AdmissionForm = forwardRef<HTMLDivElement>(function AdmissionForm(_, ref) 
         stream: form.stream,
         percentage: form.percentage,
       }, 'modern-college');
+      if (result?.error) {
+        toast.error('Could not save your details. Please call +91 79724 01596.');
+      }
     } catch {
-      // non-blocking — proceed to WhatsApp even if sheet fails
+      toast.error('Could not save your details. Please call +91 79724 01596.');
     }
     setLoading(false);
     setSubmitted(true);
