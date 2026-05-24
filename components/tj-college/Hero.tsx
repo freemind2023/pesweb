@@ -138,17 +138,24 @@ export default function Hero({ onApply }: { onApply: () => void }) {
           <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="relative flex justify-center">
             <div className="relative w-full max-w-md">
+
+              {/* TOP — TJ College campus photo */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ border: '2px solid rgba(255,255,255,0.12)' }}>
-                <Image src="/tj-college/tj-bsc.png" alt="TJ College BSc AEDP" width={480} height={380}
-                  className="w-full h-[300px] md:h-[380px] object-cover" priority />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(11,31,92,0.7) 0%,transparent 60%)' }} />
+                <Image src="/tj-college/tj-campus.png" alt="Tikaram Jagannath College Campus" width={480} height={300}
+                  className="w-full h-[260px] md:h-[320px] object-cover object-center" priority />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(11,31,92,0.72) 0%,transparent 55%)' }} />
+                <div className="absolute bottom-0 left-0 right-0 px-4 pb-4">
+                  <span className="text-white text-xs font-bold drop-shadow-md">Tikaram Jagannath College, Kirkee</span><br />
+                  <span className="text-[#F5B400] text-[10px] font-semibold">491, Elphinstone Road · Pune – 411003</span>
+                </div>
               </div>
 
+              {/* Floating badges — anchored to the top card */}
               {([
                 { label: '100% Skill Dev', Icon: Zap,           top: '12px',  left: '-20px',  bg: '#F5B400', color: '#0B1F5C', delay: 0.6 },
                 { label: 'OJT + Stipend', Icon: DollarSign,     top: '33%',   right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
-                { label: 'AI + Business', Icon: Bot,             bottom: '80px', left: '-20px', bg: '#6366F1', color: '#fff',  delay: 1.0 },
-                { label: 'SPPU Degree',   Icon: GraduationCap,  bottom: '16px', right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
+                { label: 'AI + Business', Icon: Bot,             top: '60%',   left: '-20px',  bg: '#6366F1', color: '#fff',    delay: 1.0 },
+                { label: 'SPPU Degree',   Icon: GraduationCap,  top: '60%',   right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
               ] as { label: string; Icon: React.ElementType; top?: string; left?: string; right?: string; bottom?: string; bg: string; color: string; delay: number }[]).map((c) => (
                 <motion.div key={c.label}
                   initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}
@@ -159,14 +166,39 @@ export default function Hero({ onApply }: { onApply: () => void }) {
                 </motion.div>
               ))}
 
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
+              {/* MIDDLE — SPPU campus photo */}
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}
                 className="mt-3 rounded-xl overflow-hidden relative shadow-lg" style={{ border: '1.5px solid rgba(255,255,255,0.15)' }}>
-                <Image src="/tj-college/tj1.png" alt="TJ College BCom AEDP" width={480} height={260} className="w-full h-52 sm:h-64 object-cover object-center" />
-                <div className="absolute inset-0 flex flex-col items-center justify-end pb-4 px-3" style={{ background: 'linear-gradient(to top, rgba(11,31,92,0.75) 0%, transparent 55%)' }}>
-                  <span className="text-white text-xs font-bold drop-shadow-md text-center">Tikaram Jagannath College, 491 Elphinstone Road, Kirkee – 411003</span>
-                  <span className="text-[#F5B400] text-[10px] font-semibold mt-0.5">Affiliated to SPPU · tjcollege.org</span>
+                <Image src="/tj-college/sppu-campus.jpg" alt="Savitribai Phule Pune University" width={480} height={200}
+                  className="w-full h-40 sm:h-48 object-cover object-center" />
+                <div className="absolute inset-0 flex flex-col items-center justify-end pb-3 px-3"
+                  style={{ background: 'linear-gradient(to top, rgba(11,31,92,0.8) 0%, transparent 50%)' }}>
+                  <span className="text-white text-xs font-bold drop-shadow-md text-center">Savitribai Phule Pune University (SPPU)</span>
+                  <span className="text-[#F5B400] text-[10px] font-semibold mt-0.5">Govt. University · Degree Valid Pan-India</span>
                 </div>
               </motion.div>
+
+              {/* BOTTOM — BSc + BCom program images side by side */}
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
+                className="mt-3 grid grid-cols-2 gap-2">
+                <div className="rounded-xl overflow-hidden relative shadow-lg" style={{ border: '1.5px solid rgba(255,255,255,0.15)' }}>
+                  <Image src="/tj-college/tj-bsc.png" alt="BSc AI & Business Automation" width={240} height={140}
+                    className="w-full h-28 object-cover object-top" />
+                  <div className="absolute inset-0 flex items-end pb-2 px-2"
+                    style={{ background: 'linear-gradient(to top, rgba(99,102,241,0.85) 0%, transparent 55%)' }}>
+                    <span className="text-white text-[10px] font-bold leading-tight">B.Sc. AI & Automation</span>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden relative shadow-lg" style={{ border: '1.5px solid rgba(255,255,255,0.15)' }}>
+                  <Image src="/tj-college/tj1.png" alt="BCom Accounting & Business Practices" width={240} height={140}
+                    className="w-full h-28 object-cover object-top" />
+                  <div className="absolute inset-0 flex items-end pb-2 px-2"
+                    style={{ background: 'linear-gradient(to top, rgba(11,31,92,0.85) 0%, transparent 55%)' }}>
+                    <span className="text-white text-[10px] font-bold leading-tight">B.Com AEDP</span>
+                  </div>
+                </div>
+              </motion.div>
+
             </div>
           </motion.div>
         </div>
