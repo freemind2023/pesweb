@@ -132,6 +132,26 @@ export default function HeroSection() {
             </div>
             <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
+          {/* Dample College — Practical B.COM */}
+          <Link href="/dample-college"
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <div className="bg-white rounded-xl p-1 shadow-lg">
+                <Image src="/dample-college/dample-logo.png" alt="Maharashtriya Mandal" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-1 shadow-lg">
+                <Image src="/brand/logo-white.png" alt="PES" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              </div>
+            </div>
+            <div className="flex-1 text-left min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-white font-black text-sm leading-tight">Practical B.COM</span>
+                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
+              </div>
+              <p className="text-white/60 text-xs truncate">Fintech & Digital Accounting · 2 Yrs OJT · Earn While You Learn</p>
+            </div>
+            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
