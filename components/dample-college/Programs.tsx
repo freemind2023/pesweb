@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CheckCircle, ArrowRight, Award, Briefcase, TrendingUp, Clock } from 'lucide-react';
 
-const WA = 'https://wa.me/917972401596?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
+const WA = 'https://wa.me/919049793232?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
 
 const TOOLS = [
   { name: 'ZOHO', color: '#e74c3c' },

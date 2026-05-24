@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Phone, MessageCircle, MapPin, Globe, Share2, Users, Video } from 'lucide-react';
 
-const WA = 'https://wa.me/917972401596?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
+const WA = 'https://wa.me/919049793232?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
 
 export default function PageFooter() {
   return (
@@ -66,8 +66,8 @@ export default function PageFooter() {
             <h3 className="text-[#F5B400] font-bold text-xs uppercase tracking-widest mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+917972401596" className="flex items-start gap-2.5 text-white/60 hover:text-white transition-colors text-xs">
-                  <Phone size={13} className="text-[#F5B400] mt-0.5 flex-shrink-0" /> +91 79724 01596
+                <a href="tel:+919049793232" className="flex items-start gap-2.5 text-white/60 hover:text-white transition-colors text-xs">
+                  <Phone size={13} className="text-[#F5B400] mt-0.5 flex-shrink-0" /> +91 90497 93232
                 </a>
               </li>
               <li>
@@ -92,7 +92,7 @@ export default function PageFooter() {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <Image src="/brand/logo-white.png" alt="PES" width={24} height={24} className="h-6 w-auto rounded opacity-70" />
+            <Image src="/brand/peslogo.png" alt="PES" width={24} height={24} className="h-6 w-auto rounded" />
             <span className="text-white/40 text-[10px]">Powered by Practical EduSkills (PES) · Experiential Education</span>
           </div>
           <p className="text-white/30 text-[10px]">

@@ -5,7 +5,7 @@ import { MessageCircle, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { submitToGoogleSheets } from '@/lib/googleSheets';
 import toast from 'react-hot-toast';
 
-const WA_BASE = 'https://wa.me/917972401596?text=';
+const WA_BASE = 'https://wa.me/919049793232?text=';
 const STREAMS = ['Commerce', 'Arts', 'Science', 'Other'];
 
 interface FormData {
@@ -51,9 +51,9 @@ const AdmissionForm = forwardRef<HTMLDivElement>(function AdmissionForm(_, ref) 
         city: form.city, course: 'Practical B.COM – Fintech & Digital Accounting',
         stream: form.stream, percentage: form.percentage,
       }, 'dample-college');
-      if (result?.error) toast.error('Could not save your details. Please call +91 79724 01596.');
+      if (result?.error) toast.error('Could not save your details. Please call +91 90497 93232.');
     } catch {
-      toast.error('Could not save your details. Please call +91 79724 01596.');
+      toast.error('Could not save your details. Please call +91 90497 93232.');
     }
     setLoading(false);
     setSubmitted(true);

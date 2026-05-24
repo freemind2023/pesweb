@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Calculator, TrendingUp, Laptop, Check } from 'lucide-react';
 
 const PHRASES = ['YOUR CAREER.', 'YOUR SKILLS.', 'YOUR SUCCESS.'];
-const WA = 'https://wa.me/917972401596?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
+const WA = 'https://wa.me/919049793232?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
 const PARTICLES = Array.from({ length: 36 }, (_, i) => ({
   id: i, x: Math.random() * 100, y: Math.random() * 100,
   s: Math.random() * 3 + 1, d: Math.random() * 10 + 7, dl: Math.random() * 4,
@@ -54,8 +54,8 @@ export default function Hero({ onApply }: { onApply: () => void }) {
                 className="h-9 w-auto rounded-lg object-contain" />
             </div>
             <div className="w-px h-8 bg-white/20 hidden sm:block" />
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-1.5 shadow-lg flex-shrink-0">
-              <Image src="/brand/logo-white.png" alt="PES" width={40} height={40}
+            <div className="bg-white rounded-xl p-1.5 shadow-lg flex-shrink-0">
+              <Image src="/brand/peslogo.png" alt="PES" width={40} height={40}
                 className="h-9 w-auto rounded-lg object-contain" />
             </div>
             <div className="hidden sm:block leading-tight">
@@ -64,8 +64,8 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <a href="tel:+917972401596" className="hidden md:flex items-center gap-1.5 text-white/70 text-sm hover:text-[#F5B400] transition-colors">
-              <Phone size={13} className="text-[#F5B400]" /> +91 79724 01596
+            <a href="tel:+919049793232" className="hidden md:flex items-center gap-1.5 text-white/70 text-sm hover:text-[#F5B400] transition-colors">
+              <Phone size={13} className="text-[#F5B400]" /> +91 90497 93232
             </a>
             <a href={WA} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white text-xs font-bold"

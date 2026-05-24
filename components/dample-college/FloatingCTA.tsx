@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, ArrowRight, X } from 'lucide-react';
 
-const WA = 'https://wa.me/917972401596?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
+const WA = 'https://wa.me/919049793232?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
 
 export default function FloatingCTA({ onApply }: { onApply: () => void }) {
   const [showBar, setShowBar] = useState(false);
