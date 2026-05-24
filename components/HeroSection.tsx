@@ -161,6 +161,25 @@ export default function HeroSection() {
               <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
+          {/* Baramati — PES Flagship */}
+          <Link href="/baramati"
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <div className="flex-shrink-0 relative w-14 h-14 rounded-xl overflow-hidden shadow-lg">
+              <Image src="/brand/centres/baramati-college.jpg" alt="Baramati" fill className="object-cover object-center" />
+              <div className="absolute inset-0" style={{ background: 'rgba(11,31,92,0.35)' }} />
+            </div>
+            <div className="w-8 h-8 rounded-xl flex-shrink-0 bg-white shadow-lg flex items-center justify-center -ml-1">
+              <Image src="/brand/peslogo.png" alt="PES" width={28} height={28} className="h-7 w-7 object-contain" />
+            </div>
+            <div className="flex-1 text-left min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-white font-black text-sm leading-tight">Practical B.COM · Baramati</span>
+                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
+              </div>
+              <p className="text-white/60 text-xs truncate">PES Flagship · Fintech & Digital Accounting · 2 Yrs OJT</p>
+            </div>
+            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
