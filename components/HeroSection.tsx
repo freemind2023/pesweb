@@ -134,32 +134,23 @@ export default function HeroSection() {
           </Link>
           {/* Dample College — Practical B.COM */}
           <Link href="/dample-college"
-            className="group w-full max-w-sm sm:max-w-md rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm overflow-hidden">
-            {/* Brochure image strip */}
-            <div className="relative w-full h-24 overflow-hidden">
-              <Image src="/dample-college/dample-brochure.png" alt="Practical B.COM" fill
-                className="object-cover object-top" />
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(7,18,50,0.55) 0%, transparent 60%)' }} />
-              <div className="absolute inset-0 flex items-center px-3 gap-2">
-                <div className="bg-white rounded-xl p-1 shadow-lg flex-shrink-0">
-                  <Image src="/dample-college/dample-logo.png" alt="Maharashtriya Mandal" width={32} height={32} className="h-8 w-8 rounded-lg object-contain" />
-                </div>
-                <div className="bg-white rounded-xl p-1 shadow-lg flex-shrink-0">
-                  <Image src="/brand/peslogo.png" alt="PES" width={32} height={32} className="h-8 w-8 rounded-lg object-contain" />
-                </div>
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <div className="bg-white rounded-xl p-1 shadow-lg">
+                <Image src="/dample-college/dample-logo.png" alt="Maharashtriya Mandal" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              </div>
+              <div className="bg-white rounded-xl p-1 shadow-lg">
+                <Image src="/brand/peslogo.png" alt="PES" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
               </div>
             </div>
-            {/* Text row */}
-            <div className="flex items-center gap-3 px-3 py-2.5">
-              <div className="flex-1 text-left min-w-0">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <span className="text-white font-black text-sm leading-tight">Practical B.COM</span>
-                  <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
-                </div>
-                <p className="text-white/60 text-xs truncate">Fintech & Digital Accounting · 2 Yrs OJT · Earn While You Learn</p>
+            <div className="flex-1 text-left min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-white font-black text-sm leading-tight">Practical B.COM</span>
+                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+              <p className="text-white/60 text-xs truncate">Fintech & Digital Accounting · 2 Yrs OJT · Earn While You Learn</p>
             </div>
+            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
           {/* Baramati — PES Flagship */}
           <Link href="/baramati"

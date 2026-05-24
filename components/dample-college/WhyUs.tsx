@@ -1,9 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Briefcase, Calculator, Award, DollarSign, Users, Zap, Laptop, GraduationCap } from 'lucide-react';
+import { Briefcase, Calculator, Award, IndianRupee, Users, Zap, Laptop, GraduationCap } from 'lucide-react';
 
 const CARDS = [
-  { icon: DollarSign, color: '#10B981', bg: '#ecfdf5', title: 'Earn While You Learn', marathi: 'शिकताना कमवा', desc: '₹8,000–₹10,000 monthly stipend during 2-year OJT — real salary, real work from SY B.Com.' },
+  { icon: IndianRupee, color: '#10B981', bg: '#ecfdf5', title: 'Earn While You Learn', marathi: 'शिकताना कमवा', desc: '₹8,000–₹10,000 monthly stipend during 2-year OJT — real salary, real work from SY B.Com.' },
   { icon: Laptop,     color: '#6366F1', bg: '#eef0ff', title: 'Live Tool Training',    marathi: 'प्रत्यक्ष साधनांचे प्रशिक्षण', desc: 'ZOHO, Tally Prime, Odoo, GST portal, Advanced Excel — tools real companies use daily.' },
   { icon: Award,      color: '#F5B400', bg: '#fffbea', title: '6+ Certifications',     marathi: '६+ प्रमाणपत्रे', desc: 'Industry-recognized certs in Tally, GST, Odoo, Excel & more — add weight to your resume.' },
   { icon: Calculator, color: '#0B1F5C', bg: '#eef3ff', title: 'Fintech & Digital Accounting', marathi: 'फिनटेक लेखाकार', desc: 'Learn how modern accounting works — digital, automated, and AI-assisted.' },

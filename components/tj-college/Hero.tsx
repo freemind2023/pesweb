@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Zap, DollarSign, Bot, GraduationCap, Check } from 'lucide-react';
+import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Zap, IndianRupee, Bot, GraduationCap, Check } from 'lucide-react';
 
 const PHRASES = ['YOUR JOURNEY.', 'YOUR SKILLS.', 'YOUR SUCCESS.'];
 const WA = 'https://wa.me/917666676358?text=Hi%2C+I+want+to+know+about+AEDP+admissions+at+TJ+College+Kirkee';
@@ -153,7 +153,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
               {/* Floating badges — anchored to the top card */}
               {([
                 { label: '100% Skill Dev', Icon: Zap,           top: '12px',  left: '-20px',  bg: '#F5B400', color: '#0B1F5C', delay: 0.6 },
-                { label: 'OJT + Stipend', Icon: DollarSign,     top: '33%',   right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
+                { label: 'OJT + Stipend', Icon: IndianRupee,    top: '33%',   right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
                 { label: 'AI + Business', Icon: Bot,             top: '60%',   left: '-20px',  bg: '#6366F1', color: '#fff',    delay: 1.0 },
                 { label: 'SPPU Degree',   Icon: GraduationCap,  top: '60%',   right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
               ] as { label: string; Icon: React.ElementType; top?: string; left?: string; right?: string; bottom?: string; bg: string; color: string; delay: number }[]).map((c) => (

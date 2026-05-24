@@ -79,9 +79,9 @@ export default function SPPURecognition() {
                 fontFamily: "'DM Sans',sans-serif",
               }}
             >
-              A Degree Backed by the<br />
+              A Degree Authorised and<br />
               <span style={{ color: '#0B1F5C' }}>
-                Authority of Savitribai Phule<br className="hidden md:block" /> Pune University
+                Awarded by Savitribai Phule<br className="hidden md:block" /> Pune University
               </span>
             </h2>
 

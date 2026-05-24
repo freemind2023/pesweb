@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 const TESTIMONIALS = [
   {
     name: 'Rahul Patil',
-    role: 'B.Com AEDP Graduate, 2024',
+    role: 'B.Com Graduate, 2024',
     quote: 'I cleared my GST certification and got placed as a Finance Executive within 2 weeks of graduating. The SPPU degree gave me credibility and the skills gave me the job.',
     marathi: 'पदवीनंतर लगेच नोकरी मिळाली!',
     initials: 'RP',
@@ -14,7 +14,7 @@ const TESTIMONIALS = [
   },
   {
     name: 'Aditya Joshi',
-    role: 'B.Com AEDP Student, Year 3',
+    role: 'B.Com Student, Year 3',
     quote: 'By the time I complete my degree I will already have 1.5 years of real work experience, a valid SPPU certificate, and 12 industry certifications. No other college in Pune offers this.',
     marathi: 'डिग्री + अनुभव + सर्टिफिकेट — सगळं एकत्र!',
     initials: 'AJ',
@@ -22,7 +22,7 @@ const TESTIMONIALS = [
   },
   {
     name: 'Meghna Desai',
-    role: 'Parent, B.Com AEDP Program',
+    role: 'Parent, B.Com Program',
     quote: 'My daughter earns a stipend during her OJT and has already cleared her Tally and GST certifications. Knowing the degree is from SPPU gave us complete confidence in the program.',
     marathi: 'शिकताना कमाई — यापेक्षा काय हवे?',
     initials: 'MD',

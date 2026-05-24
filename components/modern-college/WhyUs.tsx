@@ -1,10 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Briefcase, Brain, Award, DollarSign, Users, Zap, GraduationCap, Building2 } from 'lucide-react';
+import { Briefcase, Brain, Award, IndianRupee, Users, Zap, GraduationCap, Building2 } from 'lucide-react';
 
 const CARDS = [
   {
-    icon: DollarSign, color: '#10B981', bg: '#ecfdf5',
+    icon: IndianRupee, color: '#10B981', bg: '#ecfdf5',
     title: 'Earn While You Learn',
     marathi: 'शिकताना कमवा',
     desc: '₹8,000–₹12,000 monthly stipend during 1.5-year OJT — real salary, real work.',

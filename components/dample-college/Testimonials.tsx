@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const TESTIMONIALS = [
   {
-    name: 'Priya Sharma', role: 'Practical B.COM Graduate, 2024', initials: 'PS', color: '#0B1F5C',
+    name: 'Priya Jadhav', role: 'Practical B.COM Graduate, 2024', initials: 'PJ', color: '#0B1F5C',
     quote: 'I already knew Tally, GST filing, and Odoo before I graduated. My employer was surprised — they said I was more job-ready than most MBAs they interviewed.',
     marathi: 'पदवीपूर्वीच नोकरीसाठी तयार झाले!',
   },
