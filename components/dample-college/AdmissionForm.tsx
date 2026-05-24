@@ -8,6 +8,16 @@ import toast from 'react-hot-toast';
 const WA_BASE = 'https://wa.me/919049793232?text=';
 const STREAMS = ['Commerce', 'Arts', 'Science', 'Other'];
 
+function Field({ label, id, error, children }: { label: string; id: string; error?: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <label htmlFor={id} className="block text-xs font-bold text-[#0B1F5C] mb-1">{label}</label>
+      {children}
+      {error && <p className="text-red-500 text-[10px] mt-0.5">{error}</p>}
+    </div>
+  );
+}
+
 interface FormData {
   name: string; phone: string; email: string; city: string; stream: string; percentage: string;
 }
@@ -58,16 +68,6 @@ const AdmissionForm = forwardRef<HTMLDivElement>(function AdmissionForm(_, ref) 
     setLoading(false);
     setSubmitted(true);
     window.open(`${WA_BASE}${buildWAMessage(form)}`, '_blank');
-  }
-
-  function Field({ label, id, error, children }: { label: string; id: string; error?: string; children: React.ReactNode }) {
-    return (
-      <div>
-        <label htmlFor={id} className="block text-xs font-bold text-[#0B1F5C] mb-1">{label}</label>
-        {children}
-        {error && <p className="text-red-500 text-[10px] mt-0.5">{error}</p>}
-      </div>
-    );
   }
 
   const inputCls = (err?: string) =>
