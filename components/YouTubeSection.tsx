@@ -3,22 +3,19 @@ import { motion } from 'framer-motion';
 import { FaYoutube } from 'react-icons/fa';
 import { ExternalLink } from 'lucide-react';
 
-// ✅ Replace these video IDs with actual videos from @practicaleduskills2338
-// How to get: Open any video on your channel → copy the "v=" value from the URL
-const videos = [
-  { id: 'REPLACE_VIDEO_ID_1', title: 'PES Student Success Story' },
-  { id: 'REPLACE_VIDEO_ID_2', title: 'Dubai Placement Experience' },
-  { id: 'REPLACE_VIDEO_ID_3', title: 'OJT Party Celebration 2024' },
-];
-
-const hasRealVideos = videos.every(v => !v.id.startsWith('REPLACE'));
+const SHORT = {
+  id: 'Z8usP9ePhTk',
+  title: 'Life at PES — Student Experience',
+};
 
 const CHANNEL_URL = 'https://www.youtube.com/@practicaleduskills2338';
+const SHORT_URL = `https://www.youtube.com/shorts/${SHORT.id}`;
 
 export default function YouTubeSection() {
   return (
     <section className="py-14 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,74 +31,54 @@ export default function YouTubeSection() {
           </p>
         </motion.div>
 
-        {hasRealVideos ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-            {videos.map((video, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
-              >
-                <div className="relative aspect-video">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-                <div className="p-3 bg-bg-light">
-                  <p className="text-navy font-medium text-sm">{video.title}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        ) : (
-          /* Placeholder shown until real video IDs are added */
+        {/* Short Video — portrait embed */}
+        <div className="flex flex-col items-center gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-8"
+            className="w-full max-w-xs rounded-2xl overflow-hidden shadow-2xl"
           >
+            {/* 9:16 aspect ratio for Shorts */}
+            <div className="relative w-full" style={{ paddingBottom: '177.77%' }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${SHORT.id}?rel=0&modestbranding=1`}
+                title={SHORT.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+            <div className="px-4 py-3 bg-navy flex items-center gap-2">
+              <FaYoutube size={18} className="text-red-500 shrink-0" />
+              <p className="text-white font-medium text-sm truncate">{SHORT.title}</p>
+            </div>
+          </motion.div>
+
+          {/* CTA buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-3"
+          >
+            <a
+              href={SHORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-colors text-sm"
+            >
+              <FaYoutube size={18} /> Watch on YouTube <ExternalLink size={14} />
+            </a>
             <a
               href={CHANNEL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center gap-5 bg-gradient-to-br from-navy to-navy-dark rounded-2xl p-12 md:p-16 border border-gold/20 group hover:border-gold/50 transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 border-2 border-red-600 text-red-600 font-bold rounded-xl hover:bg-red-50 transition-colors text-sm"
             >
-              <div className="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                <FaYoutube size={40} color="white" />
-              </div>
-              <div className="text-center">
-                <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-1">Watch on YouTube</p>
-                <h3 className="text-white font-serif text-2xl md:text-3xl font-bold mb-2">
-                  Practical EduSkills
-                </h3>
-                <p className="text-white/60 text-sm mb-4">
-                  Student success stories • Dubai placements • OJT celebrations • Campus life
-                </p>
-                <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-red-600 text-white font-bold rounded-xl group-hover:bg-red-500 transition-colors text-sm">
-                  <FaYoutube size={16} /> Visit Our Channel <ExternalLink size={14} />
-                </span>
-              </div>
+              <FaYoutube size={18} /> Subscribe to Our Channel
             </a>
           </motion.div>
-        )}
-
-        <div className="text-center">
-          <a
-            href={CHANNEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-colors"
-          >
-            <FaYoutube size={20} /> Subscribe to Our Channel
-          </a>
         </div>
       </div>
     </section>

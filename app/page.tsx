@@ -5,6 +5,7 @@ import CoursesSection from '@/components/CoursesSection';
 import StatsCounter from '@/components/StatsCounter';
 import EventGallery from '@/components/EventGallery';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
+import YouTubeSection from '@/components/YouTubeSection';
 import AssociationsSection from '@/components/AssociationsSection';
 import InquiryForm from '@/components/InquiryForm';
 
@@ -18,6 +19,7 @@ export default function Home() {
       <StatsCounter />
       <EventGallery limit={6} showViewAll />
       <TestimonialCarousel />
+      <YouTubeSection />
       <AssociationsSection />
       <InquiryForm />
     </>
