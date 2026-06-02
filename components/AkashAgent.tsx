@@ -122,7 +122,7 @@ export default function SaraswatiAgent() {
 
   return (
     <div id="site-akash">
-    <div className="fixed bottom-6 right-4 z-50 flex flex-col items-end">
+    <div className="fixed bottom-20 right-4 z-50 flex flex-col items-end md:bottom-6">
       {/* Teaser bubble */}
       <AnimatePresence>
         {showBubble && !open && (

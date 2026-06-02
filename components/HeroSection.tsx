@@ -30,7 +30,7 @@ export default function HeroSection() {
   const tr = t[lang].hero;
 
   const floatingStats = [
-    { value: '2000+', label: tr.placed },
+    { value: '2500+', label: tr.placed },
     { value: '21+', label: tr.years },
     { value: '8', label: tr.courses },
     { value: '4', label: tr.centres },
@@ -91,7 +91,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.95 }}
-          className="flex flex-col items-center gap-2 mb-8 px-2">
+          className="flex flex-col items-center gap-2 mb-4 px-2">
           {/* Modern College */}
           <Link href="/modern-college"
             className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
@@ -108,7 +108,7 @@ export default function HeroSection() {
                 <span className="text-white font-black text-sm leading-tight">Modern College AEDP</span>
                 <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">Earn While You Learn · SPPU Degree · OJT</p>
+              <p className="text-white/60 text-xs truncate">SPPU Degree · Earn While You Learn · Apprenticeship</p>
             </div>
             <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -128,7 +128,7 @@ export default function HeroSection() {
                 <span className="text-white font-black text-sm leading-tight">TJ College AEDP</span>
                 <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">Kirkee, Pune · Earn While You Learn · SPPU Degree</p>
+              <p className="text-white/60 text-xs truncate">Kirkee, Pune · SPPU Degree · Apprenticeship</p>
             </div>
             <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -148,7 +148,7 @@ export default function HeroSection() {
                 <span className="text-white font-black text-sm leading-tight">Practical B.COM</span>
                 <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">Fintech & Digital Accounting · 2 Yrs OJT · Earn While You Learn</p>
+              <p className="text-white/60 text-xs truncate">Fintech & Digital Accounting · Apprenticeship · Earn While Learn</p>
             </div>
             <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -167,7 +167,7 @@ export default function HeroSection() {
                 <span className="text-white font-black text-sm leading-tight">Practical B.COM · Baramati</span>
                 <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">PES Flagship · Fintech & Digital Accounting · 2 Yrs OJT</p>
+              <p className="text-white/60 text-xs truncate">PES Flagship · Fintech & Digital Accounting · Baramati</p>
             </div>
             <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
