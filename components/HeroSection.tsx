@@ -48,138 +48,142 @@ export default function HeroSection() {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-60" />
       <div className="absolute bottom-24 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20">
-        <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="flex justify-center mb-6">
-          <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-2xl shadow-black/40 ring-4 ring-gold/30">
-            <Image src="/brand/logo.png" alt="Practical EduSkills Logo" width={100} height={100} className="h-20 w-auto" priority />
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-14 sm:pt-20 pb-6">
+        {/* Logo — smaller on mobile */}
+        <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="flex justify-center mb-3 sm:mb-6">
+          <div className="w-16 h-16 sm:w-28 sm:h-28 rounded-full bg-white flex items-center justify-center shadow-2xl shadow-black/40 ring-4 ring-gold/30">
+            <Image src="/brand/logo.png" alt="Practical EduSkills Logo" width={100} height={100} className="h-12 sm:h-20 w-auto" priority />
           </div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
-          className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 text-gold px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+          className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 text-gold px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-6 backdrop-blur-sm">
           {tr.badge}
         </motion.div>
 
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
-          className="devanagari text-gold text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight">
+          className="devanagari text-gold text-2xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2 leading-tight">
           {tr.headline1}
         </motion.h1>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
-          className="devanagari text-gold text-2xl sm:text-3xl md:text-4xl font-bold mb-5">
+          className="devanagari text-gold text-xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-5">
           {tr.headline2}
         </motion.h1>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
-          className="text-white text-base sm:text-lg md:text-xl mb-2 font-medium">
+          className="text-white text-sm sm:text-lg md:text-xl mb-1 font-medium">
           {tr.subheading}
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
-          className="text-white/80 text-sm sm:text-base mb-8">
+          className="text-white/80 text-xs sm:text-base mb-4 sm:mb-8">
           {tr.tagline}
         </motion.p>
 
+        {/* CTA Buttons */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+          className="flex flex-row gap-2 justify-center mb-3 sm:mb-4">
           <Link href="/admissions"
-            className="px-8 py-3.5 bg-gold text-navy font-bold text-base rounded-xl pulse-gold hover:bg-gold-light transition-all">
+            className="px-5 py-2.5 sm:px-8 sm:py-3.5 bg-gold text-navy font-bold text-sm sm:text-base rounded-xl pulse-gold hover:bg-gold-light transition-all">
             {tr.enrollCta}
           </Link>
           <Link href="/courses"
-            className="px-8 py-3.5 border-2 border-gold text-white font-semibold text-base rounded-xl hover:bg-gold/10 transition-all backdrop-blur-sm">
+            className="px-5 py-2.5 sm:px-8 sm:py-3.5 border-2 border-gold text-white font-semibold text-sm sm:text-base rounded-xl hover:bg-gold/10 transition-all backdrop-blur-sm">
             {tr.exploreCta}
           </Link>
         </motion.div>
 
+        {/* Course Cards */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.95 }}
-          className="flex flex-col items-center gap-2 mb-4 px-2">
+          className="flex flex-col items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 px-0">
           {/* Modern College */}
           <Link href="/modern-college"
-            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <div className="bg-white rounded-xl p-1 shadow-lg">
-                <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <div className="flex items-center gap-1.5 flex-shrink-0">
+              <div className="bg-white rounded-lg p-0.5 shadow-lg">
+                <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={30} height={30} className="h-7 w-7 sm:h-9 sm:w-9 rounded-md object-contain" />
               </div>
-              <div className="bg-white rounded-xl p-1 shadow-lg">
-                <Image src="/modern-college/mc-logo.jpg" alt="Modern College" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              <div className="bg-white rounded-lg p-0.5 shadow-lg">
+                <Image src="/modern-college/mc-logo.jpg" alt="Modern College" width={30} height={30} className="h-7 w-7 sm:h-9 sm:w-9 rounded-md object-contain" />
               </div>
             </div>
             <div className="flex-1 text-left min-w-0">
-              <div className="flex items-center gap-2 mb-0.5">
-                <span className="text-white font-black text-sm leading-tight">Modern College AEDP</span>
-                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
+              <div className="flex items-center gap-1.5 mb-0">
+                <span className="text-white font-black text-xs sm:text-sm leading-tight">Modern College AEDP</span>
+                <span className="text-[9px] sm:text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">SPPU Degree · Earn While You Learn · Apprenticeship</p>
+              <p className="text-white/60 text-[10px] sm:text-xs truncate">SPPU Degree · Earn While You Learn · Apprenticeship</p>
             </div>
-            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={14} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
           {/* TJ College */}
           <Link href="/tj-college"
-            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <div className="bg-white rounded-xl p-1 shadow-lg">
-                <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <div className="flex items-center gap-1.5 flex-shrink-0">
+              <div className="bg-white rounded-lg p-0.5 shadow-lg">
+                <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={30} height={30} className="h-7 w-7 sm:h-9 sm:w-9 rounded-md object-contain" />
               </div>
-              <div className="bg-white rounded-xl p-1 shadow-lg">
-                <Image src="/tj-college/tj-logo.png" alt="TJ College" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              <div className="bg-white rounded-lg p-0.5 shadow-lg">
+                <Image src="/tj-college/tj-logo.png" alt="TJ College" width={30} height={30} className="h-7 w-7 sm:h-9 sm:w-9 rounded-md object-contain" />
               </div>
             </div>
             <div className="flex-1 text-left min-w-0">
-              <div className="flex items-center gap-2 mb-0.5">
-                <span className="text-white font-black text-sm leading-tight">TJ College AEDP</span>
-                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
+              <div className="flex items-center gap-1.5 mb-0">
+                <span className="text-white font-black text-xs sm:text-sm leading-tight">TJ College AEDP</span>
+                <span className="text-[9px] sm:text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">Kirkee, Pune · SPPU Degree · Apprenticeship</p>
+              <p className="text-white/60 text-[10px] sm:text-xs truncate">Kirkee, Pune · SPPU Degree · Apprenticeship</p>
             </div>
-            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={14} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
-          {/* Dample College — Practical B.COM */}
+          {/* Dample College */}
           <Link href="/dample-college"
-            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <div className="bg-white rounded-xl p-1 shadow-lg">
-                <Image src="/dample-college/dample-logo.png" alt="Maharashtriya Mandal" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <div className="flex items-center gap-1.5 flex-shrink-0">
+              <div className="bg-white rounded-lg p-0.5 shadow-lg">
+                <Image src="/dample-college/dample-logo.png" alt="Maharashtriya Mandal" width={30} height={30} className="h-7 w-7 sm:h-9 sm:w-9 rounded-md object-contain" />
               </div>
-              <div className="bg-white rounded-xl p-1 shadow-lg">
-                <Image src="/brand/peslogo.png" alt="PES" width={38} height={38} className="h-9 w-9 rounded-lg object-contain" />
+              <div className="bg-white rounded-lg p-0.5 shadow-lg">
+                <Image src="/brand/peslogo.png" alt="PES" width={30} height={30} className="h-7 w-7 sm:h-9 sm:w-9 rounded-md object-contain" />
               </div>
             </div>
             <div className="flex-1 text-left min-w-0">
-              <div className="flex items-center gap-2 mb-0.5">
-                <span className="text-white font-black text-sm leading-tight">Practical B.COM</span>
-                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
+              <div className="flex items-center gap-1.5 mb-0">
+                <span className="text-white font-black text-xs sm:text-sm leading-tight">Practical B.COM</span>
+                <span className="text-[9px] sm:text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">Fintech & Digital Accounting · Apprenticeship · Earn While Learn</p>
+              <p className="text-white/60 text-[10px] sm:text-xs truncate">Fintech & Digital Accounting · Apprenticeship</p>
             </div>
-            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={14} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
-          {/* Baramati — PES Flagship */}
+          {/* Baramati */}
           <Link href="/baramati"
-            className="group w-full max-w-sm sm:max-w-md flex items-center gap-3 p-3 rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
-            <div className="flex-shrink-0 relative w-14 h-14 rounded-xl overflow-hidden shadow-lg">
+            className="group w-full max-w-sm sm:max-w-md flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
+            <div className="flex-shrink-0 relative w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
               <Image src="/brand/centres/baramati-college.jpg" alt="Baramati" fill className="object-cover object-center" />
               <div className="absolute inset-0" style={{ background: 'rgba(11,31,92,0.35)' }} />
             </div>
-            <div className="w-8 h-8 rounded-xl flex-shrink-0 bg-white shadow-lg flex items-center justify-center -ml-1">
-              <Image src="/brand/peslogo.png" alt="PES" width={28} height={28} className="h-7 w-7 object-contain" />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl flex-shrink-0 bg-white shadow-lg flex items-center justify-center -ml-1">
+              <Image src="/brand/peslogo.png" alt="PES" width={24} height={24} className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
             </div>
             <div className="flex-1 text-left min-w-0">
-              <div className="flex items-center gap-2 mb-0.5">
-                <span className="text-white font-black text-sm leading-tight">Practical B.COM · Baramati</span>
-                <span className="text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
+              <div className="flex items-center gap-1.5 mb-0">
+                <span className="text-white font-black text-xs sm:text-sm leading-tight">Practical B.COM · Baramati</span>
+                <span className="text-[9px] sm:text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">NEW</span>
               </div>
-              <p className="text-white/60 text-xs truncate">PES Flagship · Fintech & Digital Accounting · Baramati</p>
+              <p className="text-white/60 text-[10px] sm:text-xs truncate">PES Flagship · Fintech & Digital Accounting</p>
             </div>
-            <ArrowRight size={16} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={14} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
 
+        {/* Stats */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
-          className="grid grid-cols-4 gap-3 max-w-lg mx-auto">
+          className="grid grid-cols-4 gap-2 sm:gap-3 max-w-lg mx-auto">
           {floatingStats.map((stat, i) => (
             <motion.div key={stat.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1 + i * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 text-center">
-              <div className="text-gold font-serif font-bold text-xl md:text-2xl">{stat.value}</div>
-              <div className="text-white/70 text-xs mt-0.5">{stat.label}</div>
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-2 sm:p-3 text-center">
+              <div className="text-gold font-serif font-bold text-base sm:text-xl md:text-2xl">{stat.value}</div>
+              <div className="text-white/70 text-[10px] sm:text-xs mt-0.5">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

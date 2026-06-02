@@ -130,7 +130,7 @@ export default function SaraswatiAgent() {
             initial={{ opacity: 0, x: 20, scale: 0.8 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 20, scale: 0.8 }}
-            className="mb-3 bg-white rounded-2xl rounded-br-sm shadow-xl p-3 w-56 border border-yellow-200 cursor-pointer"
+            className="mb-3 bg-white rounded-2xl rounded-br-sm shadow-xl p-3 w-56 border border-yellow-200 cursor-pointer hidden sm:block"
             onClick={() => { setOpen(true); setShowBubble(false); }}
           >
             <div className="flex items-center gap-2 mb-1">
