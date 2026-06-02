@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AEDP Programs 2025–26 | PES\' Modern College, Ganeshkhind, Pune',
+  title: 'AEDP Programs 2026–27 | PES\' Modern College, Ganeshkhind, Pune',
   description: 'Earn while you learn! Join B.Sc. AI & Business Automation or B.Com AEDP at Modern College Ganeshkhind. SPPU degree + 1.5 years paid OJT (₹8K–₹12K/month) + 12+ industry certifications. Limited seats — apply now.',
   keywords: [
     'Modern College Ganeshkhind',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'degree with job training Pune',
   ],
   openGraph: {
-    title: 'AEDP 2025–26 | Modern College Ganeshkhind — Earn While You Learn',
+    title: 'AEDP 2026–27 | Modern College Ganeshkhind — Earn While You Learn',
     description: 'SPPU degree + 1.5 years paid OJT (₹8K–₹12K/mo) + 12+ certs. B.Sc. AI & Business Automation | B.Com AEDP. Apply now!',
     url: 'https://practicaleduskills.com/modern-college',
     siteName: 'PES Modern College AEDP',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AEDP 2025–26 | Modern College Ganeshkhind — Earn While You Learn',
+    title: 'AEDP 2026–27 | Modern College Ganeshkhind — Earn While You Learn',
     description: 'SPPU degree + 1.5 years paid OJT (₹8K–₹12K/mo) + 12+ certifications. B.Sc. AI | B.Com AEDP.',
   },
   alternates: {

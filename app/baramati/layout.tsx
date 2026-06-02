@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Practical B.COM 2025–26 | College of Practical Commerce & Management, Baramati',
+  title: 'Practical B.COM 2026–27 | College of Practical Commerce & Management, Baramati',
   description: 'PES\'s own flagship centre in Baramati! Join Practical B.COM – Fintech & Digital Accounting. 2 years paid OJT (₹8K–₹10K/month) + 6+ industry certifications. ZOHO, Tally, Odoo, GST. Pencil Square Building, Vidyanagari MIDC, Baramati.',
   keywords: [
     'Practical BCom Baramati',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'commerce college Baramati',
   ],
   openGraph: {
-    title: 'Practical B.COM 2025–26 | PES Flagship Centre, Baramati — Earn While You Learn',
+    title: 'Practical B.COM 2026–27 | PES Flagship Centre, Baramati — Earn While You Learn',
     description: '2 years paid OJT (₹8K–₹10K/mo) + 6+ certs. Practical B.COM – Fintech & Digital Accounting. PES\'s own college in Baramati.',
     url: 'https://practicaleduskills.com/baramati',
     siteName: 'PES Practical B.COM Baramati',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Practical B.COM 2025–26 | PES Flagship, Baramati — Earn While You Learn',
+    title: 'Practical B.COM 2026–27 | PES Flagship, Baramati — Earn While You Learn',
     description: '2 years paid OJT (₹8K–₹10K/mo) + 6+ certifications. Fintech & Digital Accounting. Baramati.',
   },
   alternates: {

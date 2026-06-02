@@ -6,15 +6,15 @@ import { ChevronDown } from 'lucide-react';
 const FAQS = [
   {
     q: 'What is AEDP and how is it different from a regular degree?',
-    a: 'AEDP (Applied Education and Development Program) is an SPPU-affiliated degree that combines classroom learning with 1.5 years of paid On-the-Job Training (OJT). Unlike regular degrees, students work with real companies and earn a monthly stipend of ₹8,000–₹12,000 — all while completing their degree.',
+    a: 'AEDP (Applied Education and Development Program) is an SPPU-affiliated degree that combines classroom learning with 1.5 years of paid On-the-Job Training (Apprenticeship). Unlike regular degrees, students work with real companies and earn a monthly stipend of ₹8,000–₹12,000 — all while completing their degree.',
   },
   {
     q: 'Is the degree valid for higher studies like MBA or MSc?',
     a: 'Yes. AEDP degrees are fully affiliated to Savitribai Phule Pune University (SPPU), a recognized state university. The degree is valid for all government and private higher education admissions, including MBA, MSc, and other PG programs.',
   },
   {
-    q: 'When does OJT start and how does the stipend work?',
-    a: 'OJT begins in Year 2 and continues through Year 3 (totalling 1.5 years). Students are placed with industry partners and receive ₹8,000–₹12,000 per month directly from the company — this is not a scholarship, it is a real salary for real work.',
+    q: 'When does Apprenticeship start and how does the stipend work?',
+    a: 'Apprenticeship begins in Year 2 and continues through Year 3 (totalling 1.5 years). Students are placed with industry partners and receive ₹8,000–₹12,000 per month directly from the company — this is not a scholarship, it is a real salary for real work.',
   },
   {
     q: 'What are the admission requirements?',
@@ -38,7 +38,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-14 md:py-20 bg-white">
+    <section className="py-8 md:py-12 bg-white">
       <div className="max-w-3xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-10">

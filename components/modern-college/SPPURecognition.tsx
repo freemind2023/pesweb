@@ -22,7 +22,7 @@ export default function SPPURecognition() {
         style={{ background: 'radial-gradient(ellipse at right,#F5B400,transparent 70%)' }}
       />
 
-      <div className="relative max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <div className="relative max-w-6xl mx-auto px-4 py-8 md:py-10">
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
           {/* SPPU Logo */}
@@ -68,7 +68,7 @@ export default function SPPURecognition() {
               className="font-bold text-xs uppercase tracking-widest mb-3"
               style={{ color: '#F5B400' }}
             >
-              Official University Recognition
+              SPPU Affiliated — Govt. University Degree
             </p>
 
             <h2
@@ -79,9 +79,9 @@ export default function SPPURecognition() {
                 fontFamily: "'DM Sans',sans-serif",
               }}
             >
-              A Degree Authorised and<br />
+              A Degree Recognised and<br />
               <span style={{ color: '#0B1F5C' }}>
-                Awarded by Savitribai Phule<br className="hidden md:block" /> Pune University
+                Conferred by Savitribai Phule<br className="hidden md:block" /> Pune University
               </span>
             </h2>
 

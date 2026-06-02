@@ -7,7 +7,7 @@ const CARDS = [
     icon: IndianRupee, color: '#10B981', bg: '#ecfdf5',
     title: 'Earn While You Learn',
     marathi: 'शिकताना कमवा',
-    desc: '₹8,000–₹12,000 monthly stipend during 1.5-year OJT — real salary, real work.',
+    desc: '₹8,000–₹12,000 monthly stipend during 1.5-year Apprenticeship — real salary, real work.',
   },
   {
     icon: Brain, color: '#6366F1', bg: '#eef0ff',
@@ -55,7 +55,7 @@ const CARDS = [
 
 export default function WhyUs() {
   return (
-    <section className="py-14 md:py-20 bg-white">
+    <section className="py-8 md:py-12 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-12">

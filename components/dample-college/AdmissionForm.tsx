@@ -97,7 +97,7 @@ const AdmissionForm = forwardRef<HTMLDivElement>(function AdmissionForm(_, ref) 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-10">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[#0B1F5C] text-xs font-bold mb-3"
-            style={{ background: '#F5B400' }}>2025–26 Admissions Open</span>
+            style={{ background: '#F5B400' }}>2026–27 Admissions Open</span>
           <h2 className="text-white text-3xl md:text-4xl font-black">Apply Now — It&apos;s Free</h2>
           <p className="text-white/60 text-sm mt-2">Fill in your details and our counsellor will reach you within 24 hours.</p>
         </motion.div>

@@ -17,7 +17,7 @@ export default function LanguageSwitcher({ variant = 'navbar' }: { variant?: 'na
               lang === 'en' ? 'bg-gold text-navy' : 'text-white/70 hover:text-white'
             }`}
           >
-            EN
+            English
           </button>
           <button
             onClick={() => setLang('mr')}
@@ -43,7 +43,7 @@ export default function LanguageSwitcher({ variant = 'navbar' }: { variant?: 'na
             : 'text-white/70 hover:text-white'
         }`}
       >
-        EN
+        English
       </button>
       <button
         onClick={() => setLang('mr')}
@@ -54,7 +54,7 @@ export default function LanguageSwitcher({ variant = 'navbar' }: { variant?: 'na
             : 'text-white/70 hover:text-white'
         }`}
       >
-        मर
+        मराठी
       </button>
     </div>
   );

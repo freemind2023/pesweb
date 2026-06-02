@@ -32,14 +32,14 @@ const SUBJECTS = [
 const OUTCOMES = ['Fintech Executive', 'Tax Consultant', 'Accounts Manager', 'Digital Accountant', 'ERP Specialist', 'Freelance Bookkeeper'];
 const HIGHLIGHTS = [
   { icon: Clock,      text: '3-Year B.COM' },
-  { icon: Briefcase,  text: '2 Yrs OJT' },
+  { icon: Briefcase,  text: '2 Yrs Apprenticeship' },
   { icon: Award,      text: '6+ Certifications' },
   { icon: TrendingUp, text: '₹8K–10K/mo Stipend' },
 ];
 
 export default function Programs({ onApply }: { onApply: () => void }) {
   return (
-    <section className="py-14 md:py-24 relative overflow-hidden"
+    <section className="py-8 md:py-14 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg,#f0f4ff 0%,#f8f9ff 50%,#eef3ff 100%)' }}>
 
       <div className="relative max-w-6xl mx-auto px-4">
@@ -51,7 +51,7 @@ export default function Programs({ onApply }: { onApply: () => void }) {
           <h2 className="text-[#0B1F5C] text-3xl md:text-4xl font-black mt-1">Practical B.COM</h2>
           <p className="text-[#0B1F5C] font-bold text-lg mt-1">Fintech & Digital Accounting</p>
           <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">
-            Not a regular B.COM — a job-ready program built around live tools, real projects & 2 years of paid OJT, right here in Baramati.
+            Not a regular B.COM — a job-ready program built around live tools, real projects & 2 years of paid Apprenticeship, right here in Baramati.
           </p>
 
           {/* PES logo bar */}
@@ -153,11 +153,11 @@ export default function Programs({ onApply }: { onApply: () => void }) {
                 <span><strong className="text-[#0B1F5C]">Eligibility:</strong> Open to Commerce & Arts students who have passed 12th (HSC)</span>
               </div>
 
-              {/* OJT highlight */}
+              {/* Apprenticeship highlight */}
               <div className="p-4 rounded-2xl border-2 border-[#10B981]/30" style={{ background: '#ecfdf5' }}>
-                <p className="text-[#10B981] font-black text-sm mb-1">🎯 SY B.Com पासूनच OJT सुरू!</p>
+                <p className="text-[#10B981] font-black text-sm mb-1">🎯 SY B.Com पासूनच Apprenticeship सुरू!</p>
                 <p className="text-gray-600 text-xs leading-relaxed">
-                  OJT starts from Second Year — 2 full years of real work experience + ₹8,000–10,000/month stipend.
+                  Apprenticeship starts from Second Year — 2 full years of real work experience + ₹8,000–10,000/month stipend.
                 </p>
               </div>
 

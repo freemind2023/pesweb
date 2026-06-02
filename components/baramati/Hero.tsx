@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Calculator, TrendingUp, Laptop, Check, Star } from 'lucide-react';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const PHRASES = ['YOUR CAREER.', 'YOUR SKILLS.', 'YOUR SUCCESS.'];
 const WA = 'https://wa.me/919689348709?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+College+of+Practical+Commerce+Baramati';
@@ -62,6 +63,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
+            <LanguageSwitcher variant="navbar" />
             <a href="tel:+919689348709" className="hidden md:flex items-center gap-1.5 text-white/70 text-sm hover:text-[#F5B400] transition-colors">
               <Phone size={13} className="text-[#F5B400]" /> +91 96893 48709
             </a>
@@ -83,8 +85,12 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[#F5B400] text-xs font-bold mb-4 border border-[#F5B400]/30"
               style={{ background: 'rgba(245,180,0,0.15)' }}>
-              <Sparkles size={12} className="animate-pulse" /> 2025–26 ADMISSIONS OPEN · BARAMATI
+              <Sparkles size={12} className="animate-pulse" /> 2026–27 ADMISSIONS OPEN · BARAMATI
             </motion.span>
+
+            <p className="text-white/50 text-xs font-semibold tracking-wide mb-2 uppercase">
+              Practical Skills. Real Stipend. Guaranteed Career.
+            </p>
 
             <h1 className="font-black text-white mb-2 leading-none"
               style={{ fontSize: 'clamp(2rem,5vw,3.5rem)', fontFamily: "'DM Sans',sans-serif" }}>
@@ -92,16 +98,16 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </h1>
 
             <p className="text-lg sm:text-2xl font-bold text-[#F5B400] mb-3 devanagari">
-              शिका · कमवा · यशस्वी व्हा — बारामती
+              शिका · कमवा · Apprenticeship करा · यशस्वी व्हा — बारामती
             </p>
 
             <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-2 max-w-lg">
               PES&apos;s own flagship centre — the most practical B.COM combining Fintech,
-              Digital Accounting & 2 years paid OJT, right here in{' '}
+              Digital Accounting & 2 years paid Apprenticeship, right here in{' '}
               <span className="text-white font-semibold">Baramati.</span>
             </p>
             <p className="text-white/50 text-xs mb-1 border-l-2 border-[#F5B400] pl-3">
-              Practical B.COM · Fintech & Digital Accounting · 2 Years OJT
+              Practical B.COM · Fintech & Digital Accounting · 2 Years Apprenticeship
             </p>
             <p className="text-white/40 text-[10px] mb-6 pl-3">
               📍 Pencil Square Building, Vidyanagari MIDC, Near Mahindra Showroom, Baramati
@@ -120,7 +126,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </div>
 
             <div className="flex flex-wrap gap-x-5 gap-y-1">
-              {['Job Ready Skills', 'OJT + Stipend', '₹8K–10K/month', '6+ Certifications', 'PES Flagship'].map((t) => (
+              {['Job Ready Skills', 'Apprenticeship + Stipend', '₹8K–10K/month', '6+ Certifications', 'PES Flagship'].map((t) => (
                 <span key={t} className="text-xs text-white/55 flex items-center gap-1">
                   <Check size={11} className="text-[#F5B400]" /> {t}
                 </span>
@@ -158,7 +164,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
               {/* Floating badges */}
               {([
                 { label: 'Job Ready',     Icon: Check,        top: '16%', left: '-20px',  bg: '#F5B400', color: '#0B1F5C', delay: 0.6 },
-                { label: 'OJT + Stipend', Icon: TrendingUp,   top: '38%', right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
+                { label: 'Apprenticeship + Stipend', Icon: TrendingUp,   top: '38%', right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
                 { label: 'Fintech Skills',Icon: Laptop,       top: '60%', left: '-20px',  bg: '#6366F1', color: '#fff',    delay: 1.0 },
                 { label: '₹8K–10K/mo',   Icon: Calculator,   top: '60%', right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
               ] as { label: string; Icon: React.ElementType; top: string; left?: string; right?: string; bg: string; color: string; delay: number }[]).map((c) => (
@@ -180,7 +186,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
                 </div>
                 <div>
                   <p className="text-white text-xs font-black">Powered by Practical EduSkills</p>
-                  <p className="text-white/50 text-[10px] mt-0.5">21+ years · 2000+ students placed · 100+ hiring partners</p>
+                  <p className="text-white/50 text-[10px] mt-0.5">21+ years · 2500+ students trained · 100+ hiring partners</p>
                   <p className="text-[#F5B400] text-[10px] font-semibold mt-0.5">📞 +91 96893 48709 · Baramati Centre</p>
                 </div>
               </motion.div>

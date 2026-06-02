@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Briefcase, Calculator, Award, IndianRupee, Users, Zap, Laptop, GraduationCap } from 'lucide-react';
 
 const CARDS = [
-  { icon: IndianRupee, color: '#10B981', bg: '#ecfdf5', title: 'Earn While You Learn', marathi: 'शिकताना कमवा', desc: '₹8,000–₹10,000 monthly stipend during 2-year OJT — real salary, real work from SY B.Com.' },
+  { icon: IndianRupee, color: '#10B981', bg: '#ecfdf5', title: 'Earn While You Learn', marathi: 'शिकताना कमवा', desc: '₹8,000–₹10,000 monthly stipend during 2-year Apprenticeship — real salary, real work from SY B.Com.' },
   { icon: Laptop,     color: '#6366F1', bg: '#eef0ff', title: 'Live Tool Training',    marathi: 'प्रत्यक्ष साधनांचे प्रशिक्षण', desc: 'ZOHO, Tally Prime, Odoo, GST portal, Advanced Excel — tools real companies use daily.' },
   { icon: Award,      color: '#F5B400', bg: '#fffbea', title: '6+ Certifications',     marathi: '६+ प्रमाणपत्रे', desc: 'Industry-recognized certs in Tally, GST, Odoo, Excel & more — add weight to your resume.' },
   { icon: Calculator, color: '#0B1F5C', bg: '#eef3ff', title: 'Fintech & Digital Accounting', marathi: 'फिनटेक लेखाकार', desc: 'Learn how modern accounting works — digital, automated, and AI-assisted.' },
@@ -15,7 +15,7 @@ const CARDS = [
 
 export default function WhyUs() {
   return (
-    <section className="py-14 md:py-20 bg-white">
+    <section className="py-8 md:py-12 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-12">

@@ -22,7 +22,7 @@ export default function PageFooter() {
               </div>
             </div>
             <p className="text-white/60 text-xs leading-relaxed mb-4">
-              SPPU-affiliated college offering industry-integrated AEDP programs that combine degree education with paid OJT and AI skills.
+              SPPU-affiliated college offering industry-integrated AEDP programs that combine degree education with paid Apprenticeship and AI skills.
             </p>
             <div className="flex gap-3">
               {[
@@ -46,7 +46,7 @@ export default function PageFooter() {
               {[
                 'B.Sc. AI & Business Automation',
                 'B.Com Accounting & Business Practices',
-                '3-Year Program with OJT',
+                '3-Year Program with Apprenticeship',
                 '12+ Industry Certifications',
                 'SPPU Affiliated Degree',
               ].map((item) => (

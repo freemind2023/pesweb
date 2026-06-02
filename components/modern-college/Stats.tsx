@@ -6,9 +6,9 @@ import { useInView } from 'react-intersection-observer';
 import { ShieldCheck, Award, Briefcase, Zap, GraduationCap, Building2, FileText, IndianRupee } from 'lucide-react';
 
 const STATS: { value: number; suffix: string; label: string; sub: string; Icon: React.ElementType; decimals?: number; prefix?: string; label2?: string }[] = [
-  { value: 5000, suffix: '+',    label: 'Students Enrolled', sub: 'Across Programs',       Icon: GraduationCap },
+  { value: 2500, suffix: '+',    label: 'Students Trained',  sub: 'Across Programs',       Icon: GraduationCap },
   { value: 100,  suffix: '+',    label: 'Hiring Recruiters', sub: 'Industry Partners',      Icon: Building2 },
-  { value: 1.5,  suffix: ' Yrs', label: 'OJT Duration',      sub: 'Real Work Experience',   Icon: Briefcase, decimals: 1 },
+  { value: 1.5,  suffix: ' Yrs', label: 'Apprenticeship Duration',      sub: 'Real Work Experience',   Icon: Briefcase, decimals: 1 },
   { value: 12,   suffix: '+',    label: 'Certifications',     sub: 'Industry Recognized',    Icon: FileText },
   { value: 12,   suffix: 'K/mo', label: 'Max Stipend',        prefix: '₹', label2: '₹8K–₹12K', sub: 'Earn While You Learn', Icon: IndianRupee },
 ];
@@ -16,14 +16,14 @@ const STATS: { value: number; suffix: string; label: string; sub: string; Icon: 
 const BADGES = [
   { icon: ShieldCheck, label: 'SPPU Affiliated', sub: 'Govt. University Degree' },
   { icon: Award, label: 'ISO Certified', sub: 'Quality Education' },
-  { icon: Briefcase, label: 'Earn While Learn', sub: 'OJT + Stipend' },
+  { icon: Briefcase, label: 'Earn While Learn', sub: 'Apprenticeship + Stipend' },
   { icon: Zap, label: 'AI Ready Curriculum', sub: 'Future-Proof Skills' },
 ];
 
 export default function Stats() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
   return (
-    <section className="py-14 md:py-20 bg-white" ref={ref}>
+    <section className="py-8 md:py-12 bg-white" ref={ref}>
       <div className="max-w-6xl mx-auto px-4">
         {/* Counters */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">

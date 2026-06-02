@@ -10,8 +10,8 @@ const YEARS = [
   },
   {
     year: 'Year 02', title: 'Growth & Exposure', icon: Briefcase, color: '#F5B400',
-    marathi: 'वाढ आणि अनुभव', desc: 'Step into the real world with OJT and paid internships.',
-    points: ['OJT (On-the-Job Training)', '₹8,000–₹12,000 Monthly Stipend', 'Real Industry Work', 'Confidence & Leadership', 'Resume Building'],
+    marathi: 'वाढ आणि अनुभव', desc: 'Step into the real world with Apprenticeship and paid internships.',
+    points: ['Apprenticeship (On-the-Job Training)', '₹8,000–₹12,000 Monthly Stipend', 'Real Industry Work', 'Confidence & Leadership', 'Resume Building'],
   },
   {
     year: 'Year 03', title: 'Career Ready', icon: Trophy, color: '#10B981',
@@ -22,7 +22,7 @@ const YEARS = [
 
 export default function Timeline() {
   return (
-    <section className="py-14 md:py-20 bg-white overflow-hidden">
+    <section className="py-8 md:py-12 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-14">

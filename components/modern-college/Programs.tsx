@@ -66,7 +66,7 @@ const PROGRAMS = [
 
 export default function Programs({ onApply }: { onApply: () => void }) {
   return (
-    <section className="py-14 md:py-24 relative overflow-hidden" style={{ background: 'linear-gradient(135deg,#f0f4ff 0%,#f8f9ff 50%,#eef3ff 100%)' }}>
+    <section className="py-8 md:py-14 relative overflow-hidden" style={{ background: 'linear-gradient(135deg,#f0f4ff 0%,#f8f9ff 50%,#eef3ff 100%)' }}>
 
       {/* Background trust strip — MC + SPPU building */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">

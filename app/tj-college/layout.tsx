@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AEDP Programs 2025–26 | Tikaram Jagannath College, Kirkee, Pune',
+  title: 'AEDP Programs 2026–27 | Tikaram Jagannath College, Kirkee, Pune',
   description: 'Earn while you learn! Join B.Sc. AI & Business Automation or B.Com AEDP at TJ College Kirkee. SPPU degree + 1.5 years paid OJT (₹8K–₹12K/month) + 12+ industry certifications. Limited seats — apply now.',
   keywords: [
     'TJ College Kirkee',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'degree with job training Pune',
   ],
   openGraph: {
-    title: 'AEDP 2025–26 | TJ College Kirkee — Earn While You Learn',
+    title: 'AEDP 2026–27 | TJ College Kirkee — Earn While You Learn',
     description: 'SPPU degree + 1.5 years paid OJT (₹8K–₹12K/mo) + 12+ certs. B.Sc. AI & Business Automation | B.Com AEDP. Apply now!',
     url: 'https://practicaleduskills.com/tj-college',
     siteName: 'PES TJ College AEDP',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AEDP 2025–26 | TJ College Kirkee — Earn While You Learn',
+    title: 'AEDP 2026–27 | TJ College Kirkee — Earn While You Learn',
     description: 'SPPU degree + 1.5 years paid OJT (₹8K–₹12K/mo) + 12+ certifications. B.Sc. AI | B.Com AEDP.',
   },
   alternates: {

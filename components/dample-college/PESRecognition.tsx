@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, BadgeCheck, BookOpen } from 'lucide-react';
 
 const TRUST_POINTS = [
-  { icon: ShieldCheck, text: '21+ Years of Excellence', sub: 'Trusted by 2000+ students' },
+  { icon: ShieldCheck, text: '21+ Years of Excellence', sub: 'Trusted by 2500+ students' },
   { icon: BadgeCheck,  text: 'Industry-Recognized',     sub: 'Certifications accepted everywhere' },
   { icon: BookOpen,    text: 'Practical First',          sub: 'Learn by doing, not just theory' },
 ];
@@ -17,7 +17,7 @@ export default function PESRecognition() {
       <div className="absolute right-0 top-0 w-1/2 h-full opacity-[0.04]"
         style={{ background: 'radial-gradient(ellipse at right,#F5B400,transparent 70%)' }} />
 
-      <div className="relative max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <div className="relative max-w-6xl mx-auto px-4 py-8 md:py-10">
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
           {/* PES Logo */}

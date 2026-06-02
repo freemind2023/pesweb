@@ -6,9 +6,9 @@ import { useInView } from 'react-intersection-observer';
 import { ShieldCheck, Award, Briefcase, Zap, GraduationCap, Building2, FileText, IndianRupee } from 'lucide-react';
 
 const STATS = [
-  { value: 2000, suffix: '+',    label: 'Students Placed',  sub: 'Across PES Programs',    Icon: GraduationCap },
+  { value: 2500, suffix: '+',    label: 'Students Trained',  sub: 'Across PES Programs',    Icon: GraduationCap },
   { value: 100,  suffix: '+',    label: 'Hiring Partners',  sub: 'Industry Recruiters',    Icon: Building2 },
-  { value: 2,    suffix: ' Yrs', label: 'OJT Duration',     sub: 'From SY B.Com',          Icon: Briefcase, decimals: 0 },
+  { value: 2,    suffix: ' Yrs', label: 'Apprenticeship Duration',     sub: 'From SY B.Com',          Icon: Briefcase, decimals: 0 },
   { value: 6,    suffix: '+',    label: 'Certifications',   sub: 'Industry Recognized',    Icon: FileText },
   { value: 10,   suffix: 'K/mo', label: 'Max Stipend',      sub: 'Earn While You Learn',   Icon: IndianRupee, prefix: '₹' },
 ];
@@ -16,14 +16,14 @@ const STATS = [
 const BADGES = [
   { icon: ShieldCheck, label: 'PES Certified',       sub: '21+ Yrs of Excellence' },
   { icon: Award,       label: 'Job Ready Program',   sub: '100% Skill Development' },
-  { icon: Briefcase,   label: 'Earn While Learn',    sub: 'OJT + ₹8K–10K/month' },
+  { icon: Briefcase,   label: 'Earn While Learn',    sub: 'Apprenticeship + ₹8K–10K/month' },
   { icon: Zap,         label: 'Live Tool Training',  sub: 'Tally, ZOHO, Odoo & more' },
 ];
 
 export default function Stats() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
   return (
-    <section className="py-14 md:py-20 bg-white" ref={ref}>
+    <section className="py-8 md:py-12 bg-white" ref={ref}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
           {STATS.map((s, i) => (

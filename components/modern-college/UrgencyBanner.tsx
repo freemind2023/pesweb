@@ -15,7 +15,7 @@ export default function UrgencyBanner() {
     >
       <AlertCircle size={14} className="flex-shrink-0" />
       <span className="devanagari">मर्यादित जागा —</span>
-      <span>Limited Admissions Open 2025–26 | Apply Before Seats Fill!</span>
+      <span>Limited Admissions Open 2026–27 | Apply Before Seats Fill!</span>
       <button
         onClick={() => setVisible(false)}
         className="absolute right-3 top-1/2 -translate-y-1/2 opacity-60 hover:opacity-100"

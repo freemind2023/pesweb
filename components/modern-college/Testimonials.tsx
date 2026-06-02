@@ -40,7 +40,7 @@ export default function Testimonials() {
   const next = () => setIdx((i) => (i + 1) % TESTIMONIALS.length);
 
   return (
-    <section className="py-14 md:py-20 bg-white overflow-hidden">
+    <section className="py-8 md:py-12 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         {/* Dr. Kharat Featured Quote */}
         <motion.div

@@ -6,11 +6,11 @@ import { ChevronDown } from 'lucide-react';
 const FAQS = [
   {
     q: 'What is Practical B.COM – Fintech & Digital Accounting?',
-    a: 'Practical B.COM is a 3-year B.COM program where students learn live industry tools — ZOHO, Tally Prime, Odoo ERP, GST filing, Advanced Excel — alongside their regular syllabus. Unlike a regular B.COM, this program gives you 2 years of paid On-the-Job Training (OJT) starting from Second Year, so you graduate with real experience.',
+    a: 'Practical B.COM is a 3-year B.COM program where students learn live industry tools — ZOHO, Tally Prime, Odoo ERP, GST filing, Advanced Excel — alongside their regular syllabus. Unlike a regular B.COM, this program gives you 2 years of paid On-the-Job Training (Apprenticeship) starting from Second Year, so you graduate with real experience.',
   },
   {
-    q: 'When does OJT start and how does the stipend work?',
-    a: 'OJT (On-the-Job Training) starts from SY B.Com (Second Year). Students are placed with industry partners and receive ₹8,000–₹10,000 per month — this is a real salary for real work, not a scholarship. By the time you graduate, you will have 2 full years of work experience on your resume.',
+    q: 'When does Apprenticeship start and how does the stipend work?',
+    a: 'Apprenticeship (On-the-Job Training) starts from SY B.Com (Second Year). Students are placed with industry partners and receive ₹8,000–₹10,000 per month — this is a real salary for real work, not a scholarship. By the time you graduate, you will have 2 full years of work experience on your resume.',
   },
   {
     q: 'What tools and software will I learn?',
@@ -34,7 +34,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-14 md:py-20 bg-white">
+    <section className="py-8 md:py-12 bg-white">
       <div className="max-w-3xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-12">

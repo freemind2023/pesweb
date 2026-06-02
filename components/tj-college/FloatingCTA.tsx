@@ -37,7 +37,7 @@ export default function FloatingCTA({ onApply }: { onApply: () => void }) {
             className="fixed bottom-0 left-0 right-0 z-40 px-4 py-3 flex items-center gap-3 shadow-2xl"
             style={{ background: 'linear-gradient(135deg,#071232,#0B1F5C)', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
             <div className="flex-1 min-w-0">
-              <p className="text-white font-black text-sm truncate">2025–26 Admissions Open!</p>
+              <p className="text-white font-black text-sm truncate">2026–27 Admissions Open!</p>
               <p className="text-white/50 text-[10px] truncate">Limited seats — Apply before they fill</p>
             </div>
             <button onClick={onApply}

@@ -48,7 +48,7 @@ export default function PageFooter() {
               {[
                 'Practical B.COM – 3 Year Program',
                 'Fintech & Digital Accounting',
-                '2 Years OJT from SY B.Com',
+                '2 Years Apprenticeship from SY B.Com',
                 '₹8K–10K/month Stipend',
                 '6+ Industry Certifications',
                 'ZOHO · Tally · Odoo · GST',

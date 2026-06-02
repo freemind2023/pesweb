@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Calculator, TrendingUp, Laptop, Check } from 'lucide-react';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const PHRASES = ['YOUR CAREER.', 'YOUR SKILLS.', 'YOUR SUCCESS.'];
 const WA = 'https://wa.me/919049793232?text=Hi%2C+I+want+to+know+about+Practical+BCom+at+Maharashtriya+Mandal+College';
@@ -64,6 +65,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
+            <LanguageSwitcher variant="navbar" />
             <a href="tel:+919049793232" className="hidden md:flex items-center gap-1.5 text-white/70 text-sm hover:text-[#F5B400] transition-colors">
               <Phone size={13} className="text-[#F5B400]" /> +91 90497 93232
             </a>
@@ -85,8 +87,12 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[#F5B400] text-xs font-bold mb-4 border border-[#F5B400]/30"
               style={{ background: 'rgba(245,180,0,0.15)' }}>
-              <Sparkles size={12} className="animate-pulse" /> 2025–26 ADMISSIONS OPEN
+              <Sparkles size={12} className="animate-pulse" /> 2026–27 ADMISSIONS OPEN
             </motion.span>
+
+            <p className="text-white/50 text-xs font-semibold tracking-wide mb-2 uppercase">
+              India&apos;s Most Practical B.COM — Work While You Study
+            </p>
 
             <h1 className="font-black text-white mb-2 leading-none"
               style={{ fontSize: 'clamp(2rem,5vw,3.5rem)', fontFamily: "'DM Sans',sans-serif" }}>
@@ -94,15 +100,15 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </h1>
 
             <p className="text-lg sm:text-2xl font-bold text-[#F5B400] mb-3 devanagari">
-              शिका · कमवा · यशस्वी व्हा
+              शिका · कमवा · Apprenticeship करा · यशस्वी व्हा
             </p>
 
             <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-2 max-w-lg">
-              India&apos;s most practical B.COM — combining Fintech, Digital Accounting & real OJT with live industry tools at{' '}
+              India&apos;s most practical B.COM — combining Fintech, Digital Accounting & real Apprenticeship with live industry tools at{' '}
               <span className="text-white font-semibold">Maharashtriya Mandal College Of Commerce, Pune.</span>
             </p>
             <p className="text-white/50 text-xs mb-6 border-l-2 border-[#F5B400] pl-3">
-              Practical B.COM &nbsp;·&nbsp; Fintech & Digital Accounting &nbsp;·&nbsp; 2 Years OJT
+              Practical B.COM &nbsp;·&nbsp; Fintech & Digital Accounting &nbsp;·&nbsp; 2 Years Apprenticeship
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -118,7 +124,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </div>
 
             <div className="flex flex-wrap gap-x-5 gap-y-1">
-              {['Job Ready Skills', 'OJT + Stipend', '₹8K–10K/month', '6+ Certifications', 'Live Tools'].map((t) => (
+              {['Job Ready Skills', 'Apprenticeship + Stipend', '₹8K–10K/month', '6+ Certifications', 'Live Tools'].map((t) => (
                 <span key={t} className="text-xs text-white/55 flex items-center gap-1">
                   <Check size={11} className="text-[#F5B400]" /> {t}
                 </span>
@@ -145,7 +151,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
               {/* Floating badges */}
               {([
                 { label: 'Job Ready', Icon: Check,        top: '12px',  left: '-20px',  bg: '#F5B400', color: '#0B1F5C', delay: 0.6 },
-                { label: 'OJT + Stipend', Icon: TrendingUp, top: '35%',  right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
+                { label: 'Apprenticeship + Stipend', Icon: TrendingUp, top: '35%',  right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
                 { label: 'Fintech Skills', Icon: Laptop,   top: '62%',   left: '-20px',  bg: '#6366F1', color: '#fff',    delay: 1.0 },
                 { label: '₹8K–10K/mo', Icon: Calculator,  top: '62%',   right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
               ] as { label: string; Icon: React.ElementType; top?: string; left?: string; right?: string; bg: string; color: string; delay: number }[]).map((c) => (

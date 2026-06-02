@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Zap, IndianRupee, Bot, GraduationCap, Check } from 'lucide-react';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const PHRASES = ['YOUR JOURNEY.', 'YOUR SKILLS.', 'YOUR SUCCESS.'];
 const WA = 'https://wa.me/917972401596?text=Hi%2C+I+want+to+know+about+AEDP+admissions+at+Modern+College+Ganeshkhind';
@@ -69,6 +70,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
+            <LanguageSwitcher variant="navbar" />
             <a href="tel:+917972401596" className="hidden md:flex items-center gap-1.5 text-white/70 text-sm hover:text-[#F5B400] transition-colors">
               <Phone size={13} className="text-[#F5B400]" /> +91 79724 01596
             </a>
@@ -94,15 +96,19 @@ export default function Hero({ onApply }: { onApply: () => void }) {
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[#F5B400] text-xs font-bold mb-4 border border-[#F5B400]/30"
               style={{ background: 'rgba(245,180,0,0.15)' }}
             >
-              <Sparkles size={12} className="animate-pulse" /> 2025–26 ADMISSIONS OPEN
+              <Sparkles size={12} className="animate-pulse" /> 2026–27 ADMISSIONS OPEN
             </motion.span>
+
+            <p className="text-white/50 text-xs font-semibold tracking-wide mb-2 uppercase">
+              Where Your Degree Comes with a Monthly Salary
+            </p>
 
             <h1 className="font-black text-white mb-2 leading-none" style={{ fontSize: 'clamp(2rem,5vw,3.5rem)', fontFamily: "'DM Sans',sans-serif" }}>
               {text}<span className="text-[#F5B400] animate-pulse">|</span>
             </h1>
 
             <p className="text-lg sm:text-2xl font-bold text-[#F5B400] mb-3 devanagari">
-              पदवी + कौशल्य + OJT = उज्ज्वल भविष्य
+              Degree मिळवा · Skills शिका · Apprenticeship करा · Job पक्की!
             </p>
 
             <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-2 max-w-lg">
@@ -127,7 +133,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </div>
 
             <div className="flex flex-wrap gap-x-5 gap-y-1">
-              {['SPPU Degree', 'OJT + Stipend', '₹8K–12K/month', 'AI Certified', '12+ Certs'].map((t) => (
+              {['SPPU Degree', 'Apprenticeship + Stipend', '₹8K–12K/month', 'AI Certified', '12+ Certs'].map((t) => (
                 <span key={t} className="text-xs text-white/55 flex items-center gap-1">
                   <Check size={11} className="text-[#F5B400]" /> {t}
                 </span>
@@ -147,7 +153,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
 
               {([
                 { label: '100% Skill Dev', Icon: Zap,           top: '12px',  left: '-20px',  bg: '#F5B400', color: '#0B1F5C', delay: 0.6 },
-                { label: 'OJT + Stipend', Icon: IndianRupee,    top: '33%',   right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
+                { label: 'Apprenticeship + Stipend', Icon: IndianRupee,    top: '33%',   right: '-20px', bg: '#10B981', color: '#fff',    delay: 0.8 },
                 { label: 'AI + Business', Icon: Bot,             bottom: '80px', left: '-20px', bg: '#6366F1', color: '#fff',  delay: 1.0 },
                 { label: 'SPPU Degree',   Icon: GraduationCap,  bottom: '16px', right: '-20px', bg: '#0B1F5C', color: '#F5B400', delay: 1.2 },
               ] as { label: string; Icon: React.ElementType; top?: string; left?: string; right?: string; bottom?: string; bg: string; color: string; delay: number }[]).map((c) => (

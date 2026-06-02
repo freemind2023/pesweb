@@ -23,7 +23,7 @@ export default function PageFooter() {
               </div>
             </div>
             <p className="text-white/60 text-xs leading-relaxed mb-4">
-              PES&apos;s own flagship centre in Baramati offering Practical B.COM — Fintech & Digital Accounting with 2 years of paid OJT.
+              PES&apos;s own flagship centre in Baramati offering Practical B.COM — Fintech & Digital Accounting with 2 years of paid Apprenticeship.
             </p>
             <div className="flex gap-3">
               {[
@@ -47,7 +47,7 @@ export default function PageFooter() {
               {[
                 'Practical B.COM – 3 Year Program',
                 'Fintech & Digital Accounting',
-                '2 Years OJT from SY B.Com',
+                '2 Years Apprenticeship from SY B.Com',
                 '₹8K–10K/month Stipend',
                 '6+ Industry Certifications',
                 'ZOHO · Tally · Odoo · GST',

@@ -16,7 +16,7 @@ const PATHS: { title: string; program: string; salary: string; Icon: React.Eleme
 
 export default function Careers() {
   return (
-    <section className="py-14 md:py-20" style={{ background: 'linear-gradient(135deg,#f0f4ff,#f8f9ff)' }}>
+    <section className="py-8 md:py-12" style={{ background: 'linear-gradient(135deg,#f0f4ff,#f8f9ff)' }}>
       <div className="max-w-6xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-12">
