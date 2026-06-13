@@ -11,7 +11,7 @@ import WhyUs from '@/components/modern-college/WhyUs';
 import Careers from '@/components/modern-college/Careers';
 import Testimonials from '@/components/tj-college/Testimonials';
 import AdmissionForm from '@/components/tj-college/AdmissionForm';
-import FAQ from '@/components/modern-college/FAQ';
+import FAQ from '@/components/tj-college/FAQ';
 import PageFooter from '@/components/tj-college/PageFooter';
 import FloatingCTA from '@/components/tj-college/FloatingCTA';
 

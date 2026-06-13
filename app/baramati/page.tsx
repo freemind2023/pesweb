@@ -11,7 +11,7 @@ import WhyUs from '@/components/dample-college/WhyUs';
 import Careers from '@/components/dample-college/Careers';
 import Testimonials from '@/components/dample-college/Testimonials';
 import AdmissionForm from '@/components/baramati/AdmissionForm';
-import FAQ from '@/components/dample-college/FAQ';
+import FAQ from '@/components/baramati/FAQ';
 import PageFooter from '@/components/baramati/PageFooter';
 import FloatingCTA from '@/components/baramati/FloatingCTA';
 
