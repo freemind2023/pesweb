@@ -79,6 +79,17 @@ export default function HeroSection() {
           {tr.tagline}
         </motion.p>
 
+        {/* BBA Flagship Promo Button */}
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.72 }}
+          className="flex justify-center mb-3 sm:mb-4">
+          <Link href="/bba"
+            className="group inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold border-2 border-gold bg-gold/15 text-gold hover:bg-gold hover:text-navy transition-all backdrop-blur-sm pulse-gold">
+            <span className="bg-gold text-navy px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black group-hover:bg-navy group-hover:text-gold transition-colors">FLAGSHIP</span>
+            Explore Practical BBA &amp; BBA-IB
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
+
         {/* CTA Buttons */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}
           className="flex flex-row gap-2 justify-center mb-3 sm:mb-4">
@@ -95,25 +106,6 @@ export default function HeroSection() {
         {/* Course Cards */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.95 }}
           className="flex flex-col items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 px-0">
-          {/* BBA Flagship */}
-          <Link href="/bba"
-            className="group w-full max-w-sm sm:max-w-md flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border-2 border-gold/60 hover:border-gold hover:bg-gold/10 transition-all backdrop-blur-sm">
-            <div className="flex-shrink-0 relative w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
-              <Image src="/brand/courses/bba.jpg" alt="Practical BBA" fill className="object-cover object-top" />
-              <div className="absolute inset-0" style={{ background: 'rgba(11,31,92,0.3)' }} />
-            </div>
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl flex-shrink-0 bg-white shadow-lg flex items-center justify-center -ml-1">
-              <Image src="/brand/peslogo.png" alt="PES" width={24} height={24} className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
-            </div>
-            <div className="flex-1 text-left min-w-0">
-              <div className="flex items-center gap-1.5 mb-0">
-                <span className="text-white font-black text-xs sm:text-sm leading-tight">Practical BBA & BBA-IB</span>
-                <span className="text-[9px] sm:text-[10px] bg-gold text-navy px-1.5 py-0.5 rounded-full font-black flex-shrink-0">FLAGSHIP</span>
-              </div>
-              <p className="text-white/60 text-[10px] sm:text-xs truncate">Head Office · 2 Yrs OJT · Global Track</p>
-            </div>
-            <ArrowRight size={14} className="text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-          </Link>
           {/* Modern College */}
           <Link href="/modern-college"
             className="group w-full max-w-sm sm:max-w-md flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/20 hover:border-gold/50 hover:bg-white/10 transition-all backdrop-blur-sm">
