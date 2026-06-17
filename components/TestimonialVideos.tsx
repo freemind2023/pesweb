@@ -1,7 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import { FaYoutube } from 'react-icons/fa';
 import { useLanguage } from '@/lib/i18n';
 
@@ -56,24 +56,27 @@ function ShortCard({ id, index }: { id: string; index: number }) {
   );
 }
 
-function AutoScrollCarousel({ ids }: { ids: string[] }) {
-  const cardW = 183;
-  const gap = 12;
-  const totalW = ids.length * (cardW + gap);
-  const duration = ids.length * 3;
+function ScrollCarousel({ children }: { children: React.ReactNode }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scroll = (dir: number) => scrollRef.current?.scrollBy({ left: dir * 320, behavior: 'smooth' });
 
   return (
-    <div className="overflow-hidden py-2">
-      <motion.div
-        className="flex gap-3 hover:[animation-play-state:paused]"
-        animate={{ x: [0, -totalW] }}
-        transition={{ x: { duration, repeat: Infinity, ease: 'linear' } }}
-        style={{ width: totalW * 2 }}
-      >
-        {[...ids, ...ids].map((id, i) => (
-          <ShortCard key={`${id}-${i}`} id={id} index={0} />
-        ))}
-      </motion.div>
+    <div className="relative">
+      <button onClick={() => scroll(-1)}
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center shadow-xl bg-white/90 hover:bg-white transition-colors -ml-2 sm:ml-0"
+        aria-label="Scroll left">
+        <ChevronLeft size={20} className="text-[#0B1F5C]" />
+      </button>
+      <div ref={scrollRef}
+        className="flex gap-3 overflow-x-auto scroll-smooth px-6 py-2 scrollbar-hide"
+        style={{ scrollSnapType: 'x mandatory' }}>
+        {children}
+      </div>
+      <button onClick={() => scroll(1)}
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center shadow-xl bg-white/90 hover:bg-white transition-colors -mr-2 sm:mr-0"
+        aria-label="Scroll right">
+        <ChevronRight size={20} className="text-[#0B1F5C]" />
+      </button>
     </div>
   );
 }
@@ -86,18 +89,22 @@ export default function TestimonialVideos() {
 
   return (
     <section className="py-10 md:py-14 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-center mb-8">
-            <span className="inline-flex items-center gap-2 text-red-400 font-bold text-xs uppercase tracking-widest mb-2">
-              <FaYoutube size={14} /> {studentLabel}
-            </span>
-            <h2 className="text-[#0B1F5C] font-black text-2xl md:text-3xl">{studentH}</h2>
-            <p className="text-gray-500 text-sm mt-1">{studentSub}</p>
-          </motion.div>
+      <div className="max-w-6xl mx-auto px-4">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          className="text-center mb-8">
+          <span className="inline-flex items-center gap-2 text-red-400 font-bold text-xs uppercase tracking-widest mb-2">
+            <FaYoutube size={14} /> {studentLabel}
+          </span>
+          <h2 className="text-[#0B1F5C] font-black text-2xl md:text-3xl">{studentH}</h2>
+          <p className="text-gray-500 text-sm mt-1">{studentSub}</p>
+        </motion.div>
 
-          <AutoScrollCarousel ids={STUDENT_VIDEOS} />
-        </div>
-      </section>
+        <ScrollCarousel>
+          {STUDENT_VIDEOS.map((id, i) => (
+            <ShortCard key={id} id={id} index={i} />
+          ))}
+        </ScrollCarousel>
+      </div>
+    </section>
   );
 }
