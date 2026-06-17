@@ -4,7 +4,7 @@ import WhyPES from '@/components/WhyPES';
 import CoursesSection from '@/components/CoursesSection';
 import StatsCounter from '@/components/StatsCounter';
 import EventGallery from '@/components/EventGallery';
-import TestimonialCarousel from '@/components/TestimonialCarousel';
+import TestimonialVideos from '@/components/TestimonialVideos';
 import YouTubeSection from '@/components/YouTubeSection';
 import AssociationsSection from '@/components/AssociationsSection';
 import InquiryForm from '@/components/InquiryForm';
@@ -36,7 +36,7 @@ export default function Home() {
       <CoursesSection />
       <StatsCounter />
       <EventGallery limit={6} showViewAll />
-      <TestimonialCarousel />
+      <TestimonialVideos />
       <YouTubeSection />
       <AssociationsSection />
       <InquiryForm />

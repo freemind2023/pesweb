@@ -9,7 +9,7 @@ import Programs from '@/components/tj-college/Programs';
 import Timeline from '@/components/modern-college/Timeline';
 import WhyUs from '@/components/modern-college/WhyUs';
 import Careers from '@/components/modern-college/Careers';
-import Testimonials from '@/components/tj-college/Testimonials';
+import TestimonialVideos from '@/components/TestimonialVideos';
 import AdmissionForm from '@/components/tj-college/AdmissionForm';
 import FAQ from '@/components/tj-college/FAQ';
 import PageFooter from '@/components/tj-college/PageFooter';
@@ -49,7 +49,7 @@ export default function TJCollegePage() {
       <Timeline />
       <WhyUs />
       <Careers />
-      <Testimonials />
+      <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />
       <PageFooter />

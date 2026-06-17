@@ -9,7 +9,7 @@ import Programs from '@/components/baramati/Programs';
 import Timeline from '@/components/modern-college/Timeline';
 import WhyUs from '@/components/dample-college/WhyUs';
 import Careers from '@/components/dample-college/Careers';
-import Testimonials from '@/components/dample-college/Testimonials';
+import TestimonialVideos from '@/components/TestimonialVideos';
 import AdmissionForm from '@/components/baramati/AdmissionForm';
 import FAQ from '@/components/baramati/FAQ';
 import PageFooter from '@/components/baramati/PageFooter';
@@ -49,7 +49,7 @@ export default function BaramatiPage() {
       <Timeline />
       <WhyUs />
       <Careers />
-      <Testimonials />
+      <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />
       <PageFooter />

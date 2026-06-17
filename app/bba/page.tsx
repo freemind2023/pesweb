@@ -11,7 +11,7 @@ import LearnBeyond from '@/components/bba/LearnBeyond';
 import Timeline from '@/components/bba/Timeline';
 import Achievements from '@/components/bba/Achievements';
 import Careers from '@/components/bba/Careers';
-import Testimonials from '@/components/bba/Testimonials';
+import TestimonialVideos from '@/components/TestimonialVideos';
 import AdmissionForm from '@/components/bba/AdmissionForm';
 import FAQ from '@/components/bba/FAQ';
 import PageFooter from '@/components/bba/PageFooter';
@@ -57,7 +57,7 @@ export default function BBAPage() {
       <Timeline />
       <Achievements />
       <Careers />
-      <Testimonials />
+      <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />
       <PageFooter />

@@ -9,7 +9,7 @@ import Programs from '@/components/modern-college/Programs';
 import Timeline from '@/components/modern-college/Timeline';
 import WhyUs from '@/components/modern-college/WhyUs';
 import Careers from '@/components/modern-college/Careers';
-import Testimonials from '@/components/modern-college/Testimonials';
+import TestimonialVideos from '@/components/TestimonialVideos';
 import AdmissionForm from '@/components/modern-college/AdmissionForm';
 import FAQ from '@/components/modern-college/FAQ';
 import PageFooter from '@/components/modern-college/PageFooter';
@@ -49,7 +49,7 @@ export default function ModernCollegePage() {
       <Timeline />
       <WhyUs />
       <Careers />
-      <Testimonials />
+      <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />
       <PageFooter />

@@ -9,7 +9,7 @@ import Programs from '@/components/dample-college/Programs';
 import Timeline from '@/components/modern-college/Timeline';
 import WhyUs from '@/components/dample-college/WhyUs';
 import Careers from '@/components/dample-college/Careers';
-import Testimonials from '@/components/dample-college/Testimonials';
+import TestimonialVideos from '@/components/TestimonialVideos';
 import AdmissionForm from '@/components/dample-college/AdmissionForm';
 import FAQ from '@/components/dample-college/FAQ';
 import PageFooter from '@/components/dample-college/PageFooter';
@@ -49,7 +49,7 @@ export default function DampleCollegePage() {
       <Timeline />
       <WhyUs />
       <Careers />
-      <Testimonials />
+      <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />
       <PageFooter />
