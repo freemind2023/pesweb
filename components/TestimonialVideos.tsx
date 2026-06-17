@@ -1,7 +1,7 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
 import { FaYoutube } from 'react-icons/fa';
 import { useLanguage } from '@/lib/i18n';
 
@@ -56,27 +56,24 @@ function ShortCard({ id, index }: { id: string; index: number }) {
   );
 }
 
-function ScrollCarousel({ children }: { children: React.ReactNode }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const scroll = (dir: number) => scrollRef.current?.scrollBy({ left: dir * 320, behavior: 'smooth' });
+function AutoScrollCarousel({ ids }: { ids: string[] }) {
+  const cardW = 183;
+  const gap = 12;
+  const totalW = ids.length * (cardW + gap);
+  const duration = ids.length * 3;
 
   return (
-    <div className="relative">
-      <button onClick={() => scroll(-1)}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center shadow-xl bg-white/90 hover:bg-white transition-colors -ml-2 sm:ml-0"
-        aria-label="Scroll left">
-        <ChevronLeft size={20} className="text-[#0B1F5C]" />
-      </button>
-      <div ref={scrollRef}
-        className="flex gap-3 overflow-x-auto scroll-smooth px-6 py-2 scrollbar-hide"
-        style={{ scrollSnapType: 'x mandatory' }}>
-        {children}
-      </div>
-      <button onClick={() => scroll(1)}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center shadow-xl bg-white/90 hover:bg-white transition-colors -mr-2 sm:mr-0"
-        aria-label="Scroll right">
-        <ChevronRight size={20} className="text-[#0B1F5C]" />
-      </button>
+    <div className="overflow-hidden py-2">
+      <motion.div
+        className="flex gap-3 hover:[animation-play-state:paused]"
+        animate={{ x: [0, -totalW] }}
+        transition={{ x: { duration, repeat: Infinity, ease: 'linear' } }}
+        style={{ width: totalW * 2 }}
+      >
+        {[...ids, ...ids].map((id, i) => (
+          <ShortCard key={`${id}-${i}`} id={id} index={0} />
+        ))}
+      </motion.div>
     </div>
   );
 }
@@ -99,11 +96,7 @@ export default function TestimonialVideos() {
             <p className="text-gray-500 text-sm mt-1">{studentSub}</p>
           </motion.div>
 
-          <ScrollCarousel>
-            {STUDENT_VIDEOS.map((id, i) => (
-              <ShortCard key={id} id={id} index={i} />
-            ))}
-          </ScrollCarousel>
+          <AutoScrollCarousel ids={STUDENT_VIDEOS} />
         </div>
       </section>
   );
