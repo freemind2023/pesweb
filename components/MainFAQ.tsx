@@ -43,7 +43,7 @@ const FAQS_EN = [
   },
   {
     q: 'Is there placement support after graduation?',
-    a: 'Yes. PES has a dedicated placement cell with 50+ hiring partners across India. Resume building, interview coaching, and aptitude training begin from Year 1. Most students receive job offers before graduation. 2000+ students have been placed over 21 years — in CA firms, corporates, and international companies.',
+    a: 'Yes. PES has a dedicated placement cell with 1000+ hiring partners across India. Resume building, interview coaching, and aptitude training begin from Year 1. Most students receive job offers before graduation. 2000+ students have been placed over 21 years — in CA firms, corporates, and international companies.',
   },
   {
     q: 'What are the Dubai placement opportunities?',
@@ -106,7 +106,7 @@ const FAQS_MR = [
   },
   {
     q: 'Placement support मिळतो का?',
-    a: 'हो. PES कडे 50+ hiring partners सह dedicated placement cell आहे. Resume building, interview coaching आणि aptitude training Year 1 पासूनच सुरू होते. बहुतेक विद्यार्थ्यांना पदवी मिळण्याआधीच job offer मिळते. 21 वर्षांत 2000+ विद्यार्थी placed — CA firms, corporates आणि international companies मध्ये.',
+    a: 'हो. PES कडे 1000+ hiring partners सह dedicated placement cell आहे. Resume building, interview coaching आणि aptitude training Year 1 पासूनच सुरू होते. बहुतेक विद्यार्थ्यांना पदवी मिळण्याआधीच job offer मिळते. 21 वर्षांत 2000+ विद्यार्थी placed — CA firms, corporates आणि international companies मध्ये.',
   },
   {
     q: 'Dubai Placement opportunities म्हणजे काय?',

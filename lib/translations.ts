@@ -159,7 +159,7 @@ export const t = {
       h3: 'OJT Stipend During Study',
       h3d: 'Earn ₹8,000–₹15,000/month during your On-the-Job Training in Years 2 & 3.',
       hiringH: 'Our Hiring Partners',
-      hiringSub: '50+ industry partners trust our students',
+      hiringSub: '1000+ industry partners trust our students',
       cta: 'Start Your Success Journey →',
     },
     contact: {
@@ -380,7 +380,7 @@ export const t = {
       h3: 'शिकत असताना OJT Stipend',
       h3d: '2 रे व 3 रे वर्षातील On-the-Job Training दरम्यान ₹8,000–₹15,000/महिना कमवा.',
       hiringH: 'आमचे भरती भागीदार',
-      hiringSub: '50+ उद्योग भागीदार आमच्या विद्यार्थ्यांवर विश्वास ठेवतात',
+      hiringSub: '1000+ उद्योग भागीदार आमच्या विद्यार्थ्यांवर विश्वास ठेवतात',
       cta: 'तुमचा यशाचा प्रवास सुरू करा →',
     },
     contact: {

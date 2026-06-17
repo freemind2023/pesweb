@@ -10,7 +10,7 @@ const STATS: { value: number; suffix: string; label: string; sub: string; Icon: 
   { value: 15,   suffix: '+',    label: 'Functional Subjects', sub: 'Across 2 Semesters',      Icon: GraduationCap },
   { value: 12,   suffix: '+',    label: 'Certifications',      sub: 'Industry Recognized',     Icon: FileText },
   { value: 15,   suffix: 'K/mo', label: 'Stipend Support',     prefix: '₹', sub: 'Earn While You Learn', Icon: IndianRupee },
-  { value: 100,  suffix: '+',    label: 'Hiring Recruiters',   sub: 'Industry Partners',       Icon: Building2 },
+  { value: 1000, suffix: '+',    label: 'Hiring Recruiters',   sub: 'Industry Partners',       Icon: Building2 },
 ];
 
 const BADGES = [

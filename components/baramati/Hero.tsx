@@ -186,7 +186,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
                 </div>
                 <div>
                   <p className="text-white text-xs font-black">Powered by Practical EduSkills</p>
-                  <p className="text-white/50 text-[10px] mt-0.5">21+ years · 2500+ students trained · 100+ hiring partners</p>
+                  <p className="text-white/50 text-[10px] mt-0.5">21+ years · 2500+ students trained · 1000+ hiring partners</p>
                   <p className="text-[#F5B400] text-[10px] font-semibold mt-0.5">📞 +91 96893 48709 · Baramati Centre</p>
                 </div>
               </motion.div>

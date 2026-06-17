@@ -7,7 +7,7 @@ import { ShieldCheck, Award, Briefcase, Zap, GraduationCap, Building2, FileText,
 
 const STATS = [
   { value: 2500, suffix: '+',    label: 'Students Trained',  sub: 'Across PES Programs',    Icon: GraduationCap },
-  { value: 100,  suffix: '+',    label: 'Hiring Partners',  sub: 'Industry Recruiters',    Icon: Building2 },
+  { value: 1000, suffix: '+',    label: 'Hiring Partners',  sub: 'Industry Recruiters',    Icon: Building2 },
   { value: 2,    suffix: ' Yrs', label: 'Apprenticeship Duration',     sub: 'From SY B.Com',          Icon: Briefcase, decimals: 0 },
   { value: 6,    suffix: '+',    label: 'Certifications',   sub: 'Industry Recognized',    Icon: FileText },
   { value: 10,   suffix: 'K/mo', label: 'Max Stipend',      sub: 'Earn While You Learn',   Icon: IndianRupee, prefix: '₹' },

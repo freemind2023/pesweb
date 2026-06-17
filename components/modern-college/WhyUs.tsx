@@ -29,9 +29,9 @@ const CARDS = [
   },
   {
     icon: Briefcase, color: '#EF4444', bg: '#fef2f2',
-    title: '100+ Hiring Partners',
-    marathi: '१०० + कंपन्या',
-    desc: 'Dedicated placement cell with 100+ recruiters actively hiring our students.',
+    title: '1000+ Hiring Partners',
+    marathi: '१०००+ कंपन्या',
+    desc: 'Dedicated placement cell with 1000+ recruiters actively hiring our students.',
   },
   {
     icon: Users, color: '#8B5CF6', bg: '#f5f3ff',

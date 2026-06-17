@@ -40,7 +40,7 @@ export default function StatsCounter() {
   const stats = [
     { value: 2000, suffix: '+', label: tr.s1 },
     { value: 21, suffix: '+', label: tr.s2 },
-    { value: 50, suffix: '+', label: tr.s3 },
+    { value: 1000, suffix: '+', label: tr.s3 },
     { value: 15000, suffix: '', prefix: '₹', label: tr.s4 },
   ];
 

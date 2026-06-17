@@ -7,7 +7,7 @@ import { ShieldCheck, Award, Briefcase, Zap, GraduationCap, Building2, FileText,
 
 const STATS: { value: number; suffix: string; label: string; sub: string; Icon: React.ElementType; decimals?: number; prefix?: string; label2?: string }[] = [
   { value: 2500, suffix: '+',    label: 'Students Trained',  sub: 'Across Programs',       Icon: GraduationCap },
-  { value: 100,  suffix: '+',    label: 'Hiring Recruiters', sub: 'Industry Partners',      Icon: Building2 },
+  { value: 1000, suffix: '+',    label: 'Hiring Recruiters', sub: 'Industry Partners',      Icon: Building2 },
   { value: 1.5,  suffix: ' Yrs', label: 'Apprenticeship Duration',      sub: 'Real Work Experience',   Icon: Briefcase, decimals: 1 },
   { value: 12,   suffix: '+',    label: 'Certifications',     sub: 'Industry Recognized',    Icon: FileText },
   { value: 12,   suffix: 'K/mo', label: 'Max Stipend',        prefix: '₹', label2: '₹8K–₹12K', sub: 'Earn While You Learn', Icon: IndianRupee },

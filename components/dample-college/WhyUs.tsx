@@ -7,7 +7,7 @@ const CARDS = [
   { icon: Laptop,     color: '#6366F1', bg: '#eef0ff', title: 'Live Tool Training',    marathi: 'प्रत्यक्ष साधनांचे प्रशिक्षण', desc: 'ZOHO, Tally Prime, Odoo, GST portal, Advanced Excel — tools real companies use daily.' },
   { icon: Award,      color: '#F5B400', bg: '#fffbea', title: '6+ Certifications',     marathi: '६+ प्रमाणपत्रे', desc: 'Industry-recognized certs in Tally, GST, Odoo, Excel & more — add weight to your resume.' },
   { icon: Calculator, color: '#0B1F5C', bg: '#eef3ff', title: 'Fintech & Digital Accounting', marathi: 'फिनटेक लेखाकार', desc: 'Learn how modern accounting works — digital, automated, and AI-assisted.' },
-  { icon: Briefcase,  color: '#EF4444', bg: '#fef2f2', title: '100+ Hiring Partners', marathi: '१०० + कंपन्या', desc: 'Dedicated placement cell with 100+ recruiters actively hiring Practical B.COM graduates.' },
+  { icon: Briefcase,  color: '#EF4444', bg: '#fef2f2', title: '1000+ Hiring Partners', marathi: '१०००+ कंपन्या', desc: 'Dedicated placement cell with 1000+ recruiters actively hiring Practical B.COM graduates.' },
   { icon: Users,      color: '#8B5CF6', bg: '#f5f3ff', title: 'Personality Development', marathi: 'व्यक्तिमत्व विकास', desc: 'Soft skills, communication, leadership — built into the curriculum from Year 1.' },
   { icon: Zap,        color: '#F59E0B', bg: '#fffbeb', title: 'Industry Mentors',       marathi: 'उद्योग तज्ज्ञ', desc: 'Learn directly from CAs, FinTech executives, and tax professionals — not just textbooks.' },
   { icon: GraduationCap, color: '#14B8A6', bg: '#f0fdfa', title: 'Placement Ready in 3 Years', marathi: '३ वर्षात नोकरी', desc: 'Graduate with job experience, certifications, and a placement offer in hand.' },

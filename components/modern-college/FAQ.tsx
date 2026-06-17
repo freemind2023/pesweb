@@ -39,7 +39,7 @@ const FAQS_EN = [
   },
   {
     q: 'Is there placement support after graduation?',
-    a: 'Yes. PES has a dedicated placement cell with 50+ hiring partners. Resume building, interview coaching, and aptitude training begin from Year 1. Most students receive job offers before graduation. 2000+ students have been placed over 21 years.',
+    a: 'Yes. PES has a dedicated placement cell with 1000+ hiring partners. Resume building, interview coaching, and aptitude training begin from Year 1. Most students receive job offers before graduation. 2000+ students have been placed over 21 years.',
   },
   {
     q: 'Can I pursue MBA or MSc after this degree?',
@@ -90,7 +90,7 @@ const FAQS_MR = [
   },
   {
     q: 'Placement मिळणार का?',
-    a: 'हो. PES कडे 50+ hiring partners आणि dedicated placement cell आहे. Resume building, interview coaching आणि aptitude training Year 1 पासूनच सुरू होते. बहुतेक विद्यार्थ्यांना पदवी मिळण्याआधीच job offer मिळते. 21 वर्षांत 2000+ विद्यार्थी placed.',
+    a: 'हो. PES कडे 1000+ hiring partners आणि dedicated placement cell आहे. Resume building, interview coaching आणि aptitude training Year 1 पासूनच सुरू होते. बहुतेक विद्यार्थ्यांना पदवी मिळण्याआधीच job offer मिळते. 21 वर्षांत 2000+ विद्यार्थी placed.',
   },
   {
     q: 'या पदवीनंतर MBA किंवा MSc करता येईल का?',
