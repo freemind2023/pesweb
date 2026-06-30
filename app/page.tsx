@@ -9,6 +9,7 @@ import AssociationsSection from '@/components/AssociationsSection';
 import InquiryForm from '@/components/InquiryForm';
 import VideoTestimonials from '@/components/VideoTestimonials';
 import MainFAQ from '@/components/MainFAQ';
+import AwardsSection from '@/components/AwardsSection';
 
 const HOME_VIDEOS = [
   { id: 'ELy69gz6Z68', title: 'What is Practical B.Com? by CEO Sanmit Shah', label: 'Sanmit Shah — Founder & CEO explains Practical B.Com' },
@@ -36,6 +37,7 @@ export default function Home() {
       <StatsCounter />
       <EventGallery limit={6} showViewAll />
       <TestimonialVideos />
+      <AwardsSection />
       <AssociationsSection />
       <InquiryForm />
       <MainFAQ />

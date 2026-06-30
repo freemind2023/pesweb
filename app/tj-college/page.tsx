@@ -14,6 +14,7 @@ import AdmissionForm from '@/components/tj-college/AdmissionForm';
 import FAQ from '@/components/tj-college/FAQ';
 import PageFooter from '@/components/tj-college/PageFooter';
 import FloatingCTA from '@/components/tj-college/FloatingCTA';
+import AwardsSection from '@/components/AwardsSection';
 
 const TJ_VIDEOS = [
   { id: 'ELy69gz6Z68', title: 'What is Practical B.Com? by CEO Sanmit Shah', label: 'Sanmit Shah — Founder & CEO explains Practical B.Com' },
@@ -49,6 +50,7 @@ export default function TJCollegePage() {
       <Timeline />
       <WhyUs />
       <Careers />
+      <AwardsSection />
       <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />

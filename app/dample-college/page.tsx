@@ -14,6 +14,7 @@ import AdmissionForm from '@/components/dample-college/AdmissionForm';
 import FAQ from '@/components/dample-college/FAQ';
 import PageFooter from '@/components/dample-college/PageFooter';
 import FloatingCTA from '@/components/dample-college/FloatingCTA';
+import AwardsSection from '@/components/AwardsSection';
 
 const DAMPLE_VIDEOS = [
   { id: 'ELy69gz6Z68', title: 'What is Practical B.Com? by CEO Sanmit Shah', label: 'Sanmit Shah — Founder & CEO explains Practical B.Com' },
@@ -49,6 +50,7 @@ export default function DampleCollegePage() {
       <Timeline />
       <WhyUs />
       <Careers />
+      <AwardsSection />
       <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />

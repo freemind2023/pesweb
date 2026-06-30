@@ -14,6 +14,7 @@ import AdmissionForm from '@/components/modern-college/AdmissionForm';
 import FAQ from '@/components/modern-college/FAQ';
 import PageFooter from '@/components/modern-college/PageFooter';
 import FloatingCTA from '@/components/modern-college/FloatingCTA';
+import AwardsSection from '@/components/AwardsSection';
 
 const MODERN_VIDEOS = [
   { id: 'ELy69gz6Z68', title: 'What is Practical B.Com? by CEO Sanmit Shah', label: 'Sanmit Shah — Founder & CEO explains Practical B.Com' },
@@ -49,6 +50,7 @@ export default function ModernCollegePage() {
       <Timeline />
       <WhyUs />
       <Careers />
+      <AwardsSection />
       <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />

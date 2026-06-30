@@ -14,6 +14,7 @@ import AdmissionForm from '@/components/baramati/AdmissionForm';
 import FAQ from '@/components/baramati/FAQ';
 import PageFooter from '@/components/baramati/PageFooter';
 import FloatingCTA from '@/components/baramati/FloatingCTA';
+import AwardsSection from '@/components/AwardsSection';
 
 const BARAMATI_VIDEOS = [
   { id: '0X6lDB6QXZw', title: 'Testimonial by Nishigandha Bhosale, Baramati', label: 'Nishigandha Bhosale — 1st Year Student, Baramati Campus' },
@@ -49,6 +50,7 @@ export default function BaramatiPage() {
       <Timeline />
       <WhyUs />
       <Careers />
+      <AwardsSection />
       <TestimonialVideos />
       <AdmissionForm ref={formRef} />
       <FAQ />

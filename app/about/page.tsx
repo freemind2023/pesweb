@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import AssociationsSection from '@/components/AssociationsSection';
+import AwardsSection from '@/components/AwardsSection';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n';
 import { t } from '@/lib/translations';
@@ -125,6 +126,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <AwardsSection />
       <AssociationsSection />
 
       <div className="py-10 bg-white text-center">
