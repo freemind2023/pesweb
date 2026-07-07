@@ -79,6 +79,17 @@ export default function HeroSection() {
           {tr.tagline}
         </motion.p>
 
+        {/* Practical MBA Promo Button — for graduate students */}
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.68 }}
+          className="flex justify-center mb-2 sm:mb-3">
+          <Link href="/practical-mba"
+            className="group inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold border-2 border-gold bg-gold/15 text-gold hover:bg-gold hover:text-navy transition-all backdrop-blur-sm pulse-gold">
+            <span className="bg-gold text-navy px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black group-hover:bg-navy group-hover:text-gold transition-colors">FOR GRADUATES</span>
+            Explore Practical MBA Program
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
+
         {/* BBA Flagship Promo Button */}
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.72 }}
           className="flex justify-center mb-3 sm:mb-4">
