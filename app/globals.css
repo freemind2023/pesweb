@@ -76,6 +76,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
   100% { background-position: 200% 0; }
 }
 
+.gold-shine-text {
+  background-size: 250% auto;
+  animation: shimmer 4s linear infinite;
+}
+
 .course-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }

@@ -101,9 +101,34 @@ export default function Hero({ onApply }: { onApply: () => void }) {
               {text}<span className="text-[#F5B400] animate-pulse">|</span>
             </h1>
 
-            <p className="text-lg sm:text-2xl font-bold text-[#F5B400] mb-3">
-              PRACTICAL MBA
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.92 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 0.4, type: 'spring', stiffness: 120 }}
+              className="relative mb-5 -mt-1"
+            >
+              <h2
+                className="font-serif font-black leading-[0.95] tracking-tight inline-block gold-shine-text"
+                style={{
+                  fontSize: 'clamp(2.75rem,8vw,5.75rem)',
+                  fontFamily: "'Playfair Display', serif",
+                  backgroundImage: 'linear-gradient(120deg,#FFE9A8 0%,#FFD43B 25%,#F5B400 55%,#C9A84C 80%,#FFE9A8 100%)',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  filter: 'drop-shadow(0 6px 28px rgba(245,180,0,0.4))',
+                }}
+              >
+                Practical <span className="italic">MBA</span>
+              </h2>
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="h-1 rounded-full mt-1 origin-left"
+                style={{ background: 'linear-gradient(90deg,#F5B400,#FFD43B,transparent)', maxWidth: 260 }}
+              />
+            </motion.div>
 
             <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-2 max-w-lg">
               A future-ready MBA that blends advanced management learning with real corporate experience —
