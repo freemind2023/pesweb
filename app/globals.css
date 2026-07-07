@@ -145,3 +145,31 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
 @layer utilities {
   .text-balance { text-wrap: balance; }
 }
+
+/* Practical MBA — dark/amber "Aura" landing page theme */
+.mba-page { background: #0a0a0a; color: #e8e6e1; font-family: var(--font-mba-sans), sans-serif; }
+.mba-serif { font-family: var(--font-mba-serif), serif; font-weight: 400; }
+.mba-mono { font-family: var(--font-mba-mono), monospace; }
+.mba-grid-bg { background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px; }
+.mba-amber { color: #F5B400; }
+.mba-bg-amber { background: #F5B400; }
+.mba-border-amber { border-color: #F5B400; }
+
+@keyframes mba-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.mba-ticker-track { animation: mba-ticker 60s linear infinite; }
+
+@keyframes mba-pulse-amber { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.mba-amber-pulse { animation: mba-pulse-amber 2s ease-in-out infinite; }
+
+@keyframes mba-scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+.mba-scan { animation: mba-scan 2s linear infinite; }
+
+.mba-grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 50;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence baseFrequency="0.9"/></filter><rect width="100%25" height="100%25" filter="url(%23n)"/></svg>');
+}

@@ -1,18 +1,18 @@
 'use client';
 import { useEffect, useRef, useCallback } from 'react';
-import UrgencyBanner from '@/components/mba/UrgencyBanner';
+import TickerNav from '@/components/mba/TickerNav';
 import Hero from '@/components/mba/Hero';
-import ProgramHighlights from '@/components/mba/ProgramHighlights';
-import OJTProcess from '@/components/mba/OJTProcess';
-import TwoYearJourney from '@/components/mba/TwoYearJourney';
+import GapSection from '@/components/mba/GapSection';
+import ModelSection from '@/components/mba/ModelSection';
+import ProgramSection from '@/components/mba/ProgramSection';
+import JourneySection from '@/components/mba/JourneySection';
+import NumbersSection from '@/components/mba/NumbersSection';
+import RecognitionSection from '@/components/mba/RecognitionSection';
 import WhoCanApply from '@/components/mba/WhoCanApply';
-import AssociationsSection from '@/components/AssociationsSection';
-import AwardsSection from '@/components/AwardsSection';
-import Outcomes from '@/components/mba/Outcomes';
-import AdmissionForm from '@/components/mba/AdmissionForm';
-import FinalCTA from '@/components/mba/FinalCTA';
-import PageFooter from '@/components/mba/PageFooter';
-import FloatingCTA from '@/components/mba/FloatingCTA';
+import ApplySection from '@/components/mba/ApplySection';
+import FinalCall from '@/components/mba/FinalCall';
+import Footer from '@/components/mba/Footer';
+import WhatsAppFAB from '@/components/mba/WhatsAppFAB';
 
 export default function PracticalMBAPage() {
   const formRef = useRef<HTMLDivElement>(null);
@@ -27,20 +27,20 @@ export default function PracticalMBAPage() {
   }, []);
 
   return (
-    <main>
-      <UrgencyBanner />
+    <main className="mba-page mba-grain overflow-x-hidden">
+      <TickerNav onApply={scrollToForm} />
       <Hero onApply={scrollToForm} />
-      <ProgramHighlights />
-      <OJTProcess />
-      <TwoYearJourney />
+      <GapSection />
+      <ModelSection />
+      <ProgramSection />
+      <JourneySection />
+      <NumbersSection />
+      <RecognitionSection />
       <WhoCanApply />
-      <AssociationsSection />
-      <AwardsSection />
-      <Outcomes />
-      <AdmissionForm ref={formRef} />
-      <FinalCTA onApply={scrollToForm} />
-      <PageFooter />
-      <FloatingCTA onApply={scrollToForm} />
+      <ApplySection ref={formRef} />
+      <FinalCall onApply={scrollToForm} />
+      <Footer />
+      <WhatsAppFAB />
     </main>
   );
 }

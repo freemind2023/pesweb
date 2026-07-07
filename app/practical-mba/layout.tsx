@@ -1,4 +1,9 @@
 import type { Metadata } from 'next';
+import { Instrument_Serif, JetBrains_Mono, Inter } from 'next/font/google';
+
+const instrumentSerif = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], variable: '--font-mba-serif' });
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], weight: ['300', '400', '500'], variable: '--font-mba-mono' });
+const inter = Inter({ subsets: ['latin'], weight: ['300', '400', '500', '600'], variable: '--font-mba-sans' });
 
 export const metadata: Metadata = {
   title: 'Practical MBA — Tech-Powered Corporate Management | Practical EduSkills',
@@ -37,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function PracticalMBALayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className={`${instrumentSerif.variable} ${jetbrainsMono.variable} ${inter.variable}`}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -63,6 +68,6 @@ export default function PracticalMBALayout({ children }: { children: React.React
         }}
       />
       {children}
-    </>
+    </div>
   );
 }

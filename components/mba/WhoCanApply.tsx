@@ -1,41 +1,39 @@
-'use client';
-import { motion } from 'framer-motion';
-import { Sprout, Cpu, LineChart } from 'lucide-react';
-
-const STREAMS = [
-  { icon: Sprout, color: '#10B981', bg: '#ecfdf5', title: 'Agriculture Graduates', desc: 'Step into Agri-Business, Supply Chain & Agro-Marketing roles.' },
-  { icon: Cpu, color: '#6366F1', bg: '#eef0ff', title: 'Engineering Graduates', desc: 'Drive Enterprise Systems, Data Dashboards & Project Excellence.' },
-  { icon: LineChart, color: '#F5B400', bg: '#fffbea', title: 'Commerce & Arts Graduates', desc: 'Transform knowledge into automated workflows & digital operations.' },
-];
-
 export default function WhoCanApply() {
   return (
-    <section className="py-14 md:py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="text-center mb-12">
-          <span className="text-[#F5B400] font-bold text-xs uppercase tracking-widest">Open to All Streams</span>
-          <h2 className="text-[#0B1F5C] text-3xl md:text-4xl font-black mt-1">Who Can Apply?</h2>
-          <p className="text-gray-500 text-sm md:text-base mt-3 max-w-xl mx-auto">
-            Transform any academic background into corporate leadership.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
-          {STREAMS.map((s, i) => (
-            <motion.div key={s.title}
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="rounded-2xl p-6 border border-gray-100 text-center hover:shadow-xl transition-all group"
-              whileHover={{ y: -4 }}>
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"
-                style={{ background: s.bg }}>
-                <s.icon size={26} style={{ color: s.color }} />
+    <section className="border-b border-white/5 py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16">
+          <div className="lg:col-span-3">
+            <div className="mba-mono text-xs text-white/40 mb-2">07 / WHO CAN APPLY</div>
+            <div className="mba-amber mba-mono text-xs">────────</div>
+          </div>
+          <div className="lg:col-span-9">
+            <h2 className="mba-serif tracking-tight leading-[0.95] mb-10" style={{ fontSize: 'clamp(2.25rem,6vw,5rem)' }}>
+              Any degree. <br />
+              <span className="mba-amber italic">Open to all streams.</span>
+            </h2>
+            <p className="text-lg text-white/60 max-w-2xl leading-relaxed mb-12">
+              Transform any academic background into corporate leadership. Your graduation stream doesn&apos;t
+              define your career track — your OJT performance does.
+            </p>
+            <div className="grid md:grid-cols-3 gap-px bg-white/5 border border-white/5">
+              <div className="bg-black p-8">
+                <div className="mba-mono text-xs mba-amber mb-3">AGRICULTURE</div>
+                <h3 className="mba-serif text-xl tracking-tight mb-2">Agriculture Graduates</h3>
+                <p className="text-sm text-white/50 leading-relaxed">Step into Agri-Business, Supply Chain & Agro-Marketing.</p>
               </div>
-              <h3 className="text-[#0B1F5C] font-black text-base mb-2">{s.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-            </motion.div>
-          ))}
+              <div className="bg-black p-8">
+                <div className="mba-mono text-xs mba-amber mb-3">ENGINEERING</div>
+                <h3 className="mba-serif text-xl tracking-tight mb-2">Engineering Graduates</h3>
+                <p className="text-sm text-white/50 leading-relaxed">Drive Enterprise Systems, Data Dashboards & Project Excellence.</p>
+              </div>
+              <div className="bg-black p-8">
+                <div className="mba-mono text-xs mba-amber mb-3">COMMERCE & ARTS</div>
+                <h3 className="mba-serif text-xl tracking-tight mb-2">Commerce & Arts Graduates</h3>
+                <p className="text-sm text-white/50 leading-relaxed">Transform knowledge into automated workflows & digital operations.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
