@@ -1,7 +1,5 @@
 'use client';
 import { useEffect, useRef, useCallback } from 'react';
-import IntroVideo from '@/components/mba/IntroVideo';
-import VideoTestimonials from '@/components/VideoTestimonials';
 import UrgencyBanner from '@/components/mba/UrgencyBanner';
 import Hero from '@/components/mba/Hero';
 import ProgramHighlights from '@/components/mba/ProgramHighlights';
@@ -30,16 +28,6 @@ export default function PracticalMBAPage() {
 
   return (
     <main>
-      <IntroVideo />
-      <VideoTestimonials
-        videos={[
-          { id: '9t46OXfGOUQ', title: 'Practical MBA — Student Journey', label: 'Practical MBA · Student Journey' },
-          { id: 'Sh_g_3rLVDc', title: 'Practical MBA — Corporate OJT Experience', label: 'Practical MBA · Corporate OJT Experience' },
-          { id: '7fsb6ZESyzE', title: 'Practical MBA — Why Practical EduSkills', label: 'Practical MBA · Why Practical EduSkills' },
-        ]}
-        heading="More From Our Practical MBA Students"
-        subheading="Real journeys. Real OJT. Real growth."
-      />
       <UrgencyBanner />
       <Hero onApply={scrollToForm} />
       <ProgramHighlights />
