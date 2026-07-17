@@ -13,11 +13,11 @@ const TESTIMONIALS = [
     color: '#0B1F5C',
   },
   {
-    name: 'BBA-IB Student',
-    role: 'Year 3, International Business Track',
+    name: 'Practical BBA Student',
+    role: 'Year 3, International Business Specialisation',
     quote: 'By the time I complete my degree I will already have 2 years of real corporate work experience, cross-cultural negotiation skills, and 12 industry certifications. No other program prepares you for global business like this.',
     marathi: 'डिग्री + अनुभव + ग्लोबल एक्सपोजर — सगळं एकत्र!',
-    initials: 'BI',
+    initials: 'PB',
     color: '#6366F1',
   },
   {

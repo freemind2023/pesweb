@@ -21,11 +21,11 @@ const BBA_VIDEOS = [
   { id: '8Je_bI8HvQY', title: 'Practical BBA — Course Overview (English)', label: 'Practical BBA · Course Overview · English' },
   { id: 'UAhzT6s-MTk', title: 'Practical BBA — Course Overview (Marathi)', label: 'Practical BBA · Course Overview · Marathi' },
   { id: 'OnOJaMk28qQ', title: 'Practical BBA — Ready for Business World Challenges?', label: 'Practical BBA · Industry Readiness' },
-  { id: 'Zbp1Uesl5bA', title: 'Are You Prepared for International Business? — BBA-IB', label: 'Practical BBA-IB · International Business · English' },
-  { id: 'vAegfAJtUMc', title: 'BBA-IB — International Business Program (Marathi)', label: 'Practical BBA-IB · Marathi Version' },
-  { id: 'yP9l4jxiUlw', title: 'Practical BBA-IB — Transforming India (Marathi)', label: 'Practical BBA-IB · Global Ready · Marathi' },
-  { id: 'ytaPuhCjN_Q', title: 'Is Your BBA-IB Equipping You for Global Business?', label: 'Practical BBA-IB · Global Readiness' },
-  { id: 'fCsEanchWy8', title: 'Zee 24 Taas Interview — PES BBA-IB, BBA, BCom', label: 'TV Interview · Sanmit Shah · Zee24Taas' },
+  { id: 'Zbp1Uesl5bA', title: 'Are You Prepared for International Business? — Practical BBA', label: 'Practical BBA · International Business · English' },
+  { id: 'vAegfAJtUMc', title: 'Practical BBA — International Business Program (Marathi)', label: 'Practical BBA · International Business · Marathi Version' },
+  { id: 'yP9l4jxiUlw', title: 'Practical BBA — Transforming India (Marathi)', label: 'Practical BBA · Global Ready · Marathi' },
+  { id: 'ytaPuhCjN_Q', title: 'Is Your Practical BBA Equipping You for Global Business?', label: 'Practical BBA · Global Readiness' },
+  { id: 'fCsEanchWy8', title: 'Zee 24 Taas Interview — PES BBA, BCom', label: 'TV Interview · Sanmit Shah · Zee24Taas' },
 ];
 
 export default function BBAPage() {
@@ -47,7 +47,7 @@ export default function BBAPage() {
       <VideoTestimonials
         videos={BBA_VIDEOS}
         heading="Hear From Students, Faculty & Industry Leaders"
-        subheading="Watch real stories — Practical BBA & BBA-IB, in English and Marathi"
+        subheading="Watch real stories — Practical BBA, in English and Marathi"
       />
       <Stats />
       <Tracks onApply={scrollToForm} />

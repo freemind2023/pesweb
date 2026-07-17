@@ -17,7 +17,7 @@ const BADGES = [
   { icon: ShieldCheck, label: 'SPPU Curriculum', sub: 'University-Aligned Syllabus' },
   { icon: Award, label: 'ISO Certified', sub: 'Quality Education' },
   { icon: Briefcase, label: 'Earn While Learn', sub: 'OJT + Stipend Support' },
-  { icon: Globe2, label: 'Dubai Placement Track', sub: 'BBA-IB Global Pathway' },
+  { icon: Globe2, label: 'Dubai Placement Track', sub: 'International Business Pathway' },
 ];
 
 export default function Stats() {

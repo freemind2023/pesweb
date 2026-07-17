@@ -21,13 +21,12 @@ Practical EduSkills (PES) बद्दल:
 
 उपलब्ध कोर्सेस:
 1. Practical B.Com — 3 वर्षे, 12वी पास, दुबई Placement, OJT Stipend 8,000 ते 15,000 रुपये प्रति महिना.
-2. Practical BBA — 3 वर्षे, 12वी पास, दुबई Placement.
-3. Practical BBA International Business — 3 वर्षे, 12वी पास, दुबई Placement.
-4. Applied MBA — 2 वर्षे, संध्याकाळी बॅच, पदवीधरांसाठी. 5 specialisations: Marketing, Sales, Luxury, BFSI, Finance.
-5. Bridge Course — 6 महिने, B.Com किंवा BBA विद्यार्थ्यांसाठी skill booster.
-6. B.Sc. AI and Digital Automation — 3 वर्षे, 12वी पास, AI आणि automation शिकायला.
-7. Bachelor in Hospitality and Tourism — 3 वर्षे, 12वी पास, हॉटेल्समध्ये OJT.
-8. CA Article Placement — 1 महिना, CA विद्यार्थ्यांसाठी fast-track placement.
+2. Practical BBA / International Business — 3 वर्षे, 12वी पास, दुबई Placement.
+3. Applied MBA — 2 वर्षे, संध्याकाळी बॅच, पदवीधरांसाठी. 5 specialisations: Marketing, Sales, Luxury, BFSI, Finance.
+4. Bridge Course — 6 महिने, B.Com किंवा BBA विद्यार्थ्यांसाठी skill booster.
+5. B.Sc. AI and Digital Automation — 3 वर्षे, 12वी पास, AI आणि automation शिकायला.
+6. Bachelor in Hospitality and Tourism — 3 वर्षे, 12वी पास, हॉटेल्समध्ये OJT.
+7. CA Article Placement — 1 महिना, CA विद्यार्थ्यांसाठी fast-track placement.
 
 खास वैशिष्ट्ये:
 - शिकत असताना दरमहा stipend मिळतो.

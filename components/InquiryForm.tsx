@@ -22,7 +22,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const courseList = [
-  'Practical B.Com', 'Practical BBA', 'Practical BBA–IB', 'Applied MBA',
+  'Practical B.Com', 'Practical BBA', 'Applied MBA',
   'Bridge Course', 'B.Sc. AI & Digital Automation', 'Bachelor in Hospitality & Tourism', 'CA Article Placement',
 ];
 

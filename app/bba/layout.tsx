@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Practical BBA & BBA-IB 2026–27 | Practical EduSkills Head Office, Pune',
-  description: 'Practical BBA — Strategic Operations & Business Administration and Practical BBA-IB — International Business. SPPU-aligned curriculum + 2 years On-the-Job Training + 12+ certifications + stipend support. Apply now at our Pune Head Office.',
+  title: 'Practical BBA 2026–27 | Practical EduSkills Head Office, Pune',
+  description: 'Practical BBA — Strategic Operations, Business Administration & International Business. SPPU-aligned curriculum + 2 years On-the-Job Training + 12+ certifications + stipend support. Apply now at our Pune Head Office.',
   keywords: [
     'Practical BBA Pune',
-    'BBA-IB international business Pune',
+    'BBA international business Pune',
     'BBA with OJT stipend',
     'business administration degree Pune',
     'Practical EduSkills BBA',
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     'international business degree Pune',
   ],
   openGraph: {
-    title: 'Practical BBA & BBA-IB 2026–27 — Earn While You Learn',
-    description: 'SPPU-aligned curriculum + 2 years On-the-Job Training + 12+ certifications + stipend support. Strategic Operations & Business Administration | International Business. Apply now!',
+    title: 'Practical BBA 2026–27 — Earn While You Learn',
+    description: 'SPPU-aligned curriculum + 2 years On-the-Job Training + 12+ certifications + stipend support. Strategic Operations, Business Administration & International Business. Apply now!',
     url: 'https://practicaleduskills.com/bba',
     siteName: 'Practical EduSkills BBA',
     locale: 'en_IN',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Practical BBA & BBA-IB 2026–27 — Earn While You Learn',
+    title: 'Practical BBA 2026–27 — Earn While You Learn',
     description: 'SPPU-aligned curriculum + 2 years OJT + 12+ certifications + stipend support.',
   },
   alternates: {

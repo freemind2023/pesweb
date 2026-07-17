@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CheckCircle, ArrowRight, Award, Briefcase, TrendingUp, Clock } from 'lucide-react';
 
-const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA%2FBBA-IB+admissions+at+Practical+EduSkills+Head+Office';
+const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA+admissions+at+Practical+EduSkills+Head+Office';
 
 const PROGRAMS = [
   {
     title: 'Practical BBA',
-    subtitle: 'Strategic Operations & Business Administration',
+    subtitle: 'Business Administration & International Business',
     short: 'BBA',
     badge: '3 Years · SPPU Curriculum',
     image: '/brand/courses/bba.jpg',
@@ -19,7 +19,7 @@ const PROGRAMS = [
       { icon: Clock, text: '3-Year Program' },
       { icon: Briefcase, text: '2 Yrs OJT' },
       { icon: Award, text: '12+ Certifications' },
-      { icon: TrendingUp, text: 'Stipend Support' },
+      { icon: TrendingUp, text: 'Dubai Placement' },
     ],
     subjects: [
       'Principles of Management',
@@ -28,38 +28,12 @@ const PROGRAMS = [
       'CRM & Customer Lifecycle Management',
       'Business Finance & Reporting',
       'Business Laws & Corporate Compliance',
+      'International Business & Import-Export Essentials',
+      'Cross-Culture Communication & Negotiation',
       'Business Communication & Etiquette',
       'Entrepreneurship & Startup Execution',
     ],
-    outcome: ['HR Executive', 'Marketing Manager', 'Operations Lead', 'CRM Manager', 'Business Analyst'],
-    eligibility: 'Open to all streams who have passed 12th (HSC)',
-  },
-  {
-    title: 'Practical BBA-IB',
-    subtitle: 'International Business',
-    short: 'BBA-IB',
-    badge: '3 Years · Global Track',
-    image: '/brand/courses/bba-ib.jpg',
-    color: '#6366F1',
-    light: '#eef0ff',
-    darkColor: '#4338CA',
-    highlights: [
-      { icon: Clock, text: '3-Year Program' },
-      { icon: Briefcase, text: '2 Yrs OJT' },
-      { icon: Award, text: '12+ Certifications' },
-      { icon: TrendingUp, text: 'Dubai Track' },
-    ],
-    subjects: [
-      'International Business Fundamentals',
-      'Import-Export Essentials',
-      'Cross-Culture Communication & Negotiation',
-      'International Sales & Marketing',
-      'Global Digital Marketing & Data Analytics',
-      'International Business Laws',
-      'Supply Chain Management',
-      'Business Financial Mastery',
-    ],
-    outcome: ['Import-Export Manager', 'International Sales Executive', 'Supply Chain Specialist', 'Global Trade Analyst'],
+    outcome: ['HR Executive', 'Marketing Manager', 'Operations Lead', 'CRM Manager', 'Business Analyst', 'Import-Export Manager', 'Global Trade Analyst'],
     eligibility: 'Open to all streams who have passed 12th (HSC)',
   },
 ];
@@ -78,15 +52,15 @@ export default function Tracks({ onApply }: { onApply: () => void }) {
 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-14">
-          <span className="text-[#F5B400] font-bold text-xs uppercase tracking-widest">Choose Your Track</span>
-          <h2 className="text-[#0B1F5C] text-3xl md:text-4xl font-black mt-1">Practical BBA Programs</h2>
+          <span className="text-[#F5B400] font-bold text-xs uppercase tracking-widest">The Program</span>
+          <h2 className="text-[#0B1F5C] text-3xl md:text-4xl font-black mt-1">Practical BBA</h2>
           <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">
             Smart Learning. Strong Foundation. Successful Career — aligned with Savitribai Phule Pune University (SPPU) guidelines.
           </p>
         </motion.div>
 
-        {/* Program cards */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-16">
+        {/* Program card */}
+        <div className="grid grid-cols-1 max-w-xl mx-auto gap-8 mb-16">
           {PROGRAMS.map((p, i) => (
             <motion.div key={p.short}
               initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}

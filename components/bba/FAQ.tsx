@@ -10,8 +10,8 @@ const FAQS_EN = [
     a: 'Practical BBA — Strategic Operations & Business Administration is a skill-oriented undergraduate program at our Head Office, Pune. Unlike a regular BBA which is mostly theory, this program blends SPPU-aligned academics with 2 full years of On-the-Job Training (OJT), 12+ industry certifications, and functional specialization in Marketing, HR, CRM, Operations, or Analytics.',
   },
   {
-    q: 'What is the difference between Practical BBA and Practical BBA-IB?',
-    a: 'Practical BBA focuses on core business functions — Management, Marketing, HR, CRM, and Analytics — preparing you for domestic corporate roles. Practical BBA-IB (International Business) adds Import-Export, Cross-Culture Negotiation, Global Digital Marketing, and International Business Laws — preparing you for global trade and Dubai placement opportunities.',
+    q: 'Does Practical BBA cover International Business too?',
+    a: 'Yes. Practical BBA is a single program that combines core business functions — Management, Marketing, HR, CRM, and Analytics — with an International Business specialisation covering Import-Export, Cross-Culture Negotiation, Global Digital Marketing, and International Business Laws — preparing you for both domestic corporate roles and global trade / Dubai placement opportunities.',
   },
   {
     q: 'What is the difference between Internship, OJT, and Apprenticeship?',
@@ -19,15 +19,15 @@ const FAQS_EN = [
   },
   {
     q: 'Which stream students can apply?',
-    a: 'Any student who has passed 12th (HSC) from any stream — Science, Commerce, or Arts — can apply for Practical BBA or BBA-IB. No entrance exam is required.',
+    a: 'Any student who has passed 12th (HSC) from any stream — Science, Commerce, or Arts — can apply for Practical BBA. No entrance exam is required.',
   },
   {
     q: 'When does OJT start and is there a stipend?',
     a: 'On-the-Job Training begins in Year 2 and continues through Year 3 — 2 full years of industry immersion within your chosen corporate track. Students earn stipend support during this period, learning and earning at the same time.',
   },
   {
-    q: 'What jobs can I get after Practical BBA or BBA-IB?',
-    a: 'Practical BBA graduates: HR Executive, Marketing Manager, Operations Coordinator, CRM Manager, Business Analyst (₹2.5–7 LPA). Practical BBA-IB graduates: Import-Export Manager, International Sales Executive, Global Trade Analyst, Supply Chain Specialist (₹3–7 LPA) — with Dubai placement pathway for top performers.',
+    q: 'What jobs can I get after Practical BBA?',
+    a: 'Practical BBA graduates go on to roles like HR Executive, Marketing Manager, Operations Coordinator, CRM Manager, Business Analyst, Import-Export Manager, International Sales Executive, and Global Trade Analyst (₹2.5–7 LPA) — with a Dubai placement pathway for top performers.',
   },
   {
     q: 'What certifications and tools will I learn?',
@@ -43,7 +43,7 @@ const FAQS_EN = [
   },
   {
     q: 'Where is the PES Training Centre for Practical BBA?',
-    a: 'Practical BBA and BBA-IB are run at our Practical EduSkills Head Office: 3rd Floor, Butte Patil Complex, Warje Malwadi Rd, Erandwane, Pune – 411052. Call or WhatsApp 98909 59990 for exact directions.',
+    a: 'Practical BBA is run at our Practical EduSkills Head Office: 3rd Floor, Butte Patil Complex, Warje Malwadi Rd, Erandwane, Pune – 411052. Call or WhatsApp 98909 59990 for exact directions.',
   },
 ];
 
@@ -53,8 +53,8 @@ const FAQS_MR = [
     a: 'Practical BBA — Strategic Operations & Business Administration हा आमच्या Head Office, Pune येथे चालणारा skill-oriented undergraduate program आहे. सामान्य BBA मध्ये फक्त theory असते, तर या program मध्ये SPPU-संलग्न अभ्यासक्रमासोबत 2 पूर्ण वर्षांचे On-the-Job Training (OJT), 12+ industry certifications आणि Marketing, HR, CRM, Operations किंवा Analytics मधील functional specialization समाविष्ट आहे.',
   },
   {
-    q: 'Practical BBA आणि Practical BBA-IB यांच्यात काय फरक आहे?',
-    a: 'Practical BBA मध्ये core business functions — Management, Marketing, HR, CRM आणि Analytics — यावर भर असतो, जो domestic corporate roles साठी तयार करतो. Practical BBA-IB (International Business) मध्ये Import-Export, Cross-Culture Negotiation, Global Digital Marketing आणि International Business Laws समाविष्ट आहे — जे global trade आणि Dubai placement संधींसाठी तयार करते.',
+    q: 'Practical BBA मध्ये International Business पण शिकवले जाते का?',
+    a: 'हो. Practical BBA हा एकच program आहे ज्यात core business functions — Management, Marketing, HR, CRM आणि Analytics — यासोबत International Business specialisation — Import-Export, Cross-Culture Negotiation, Global Digital Marketing आणि International Business Laws — समाविष्ट आहे, जे domestic corporate roles आणि global trade / Dubai placement दोन्हीसाठी तयार करते.',
   },
   {
     q: 'Internship, OJT आणि Apprenticeship यांच्यात काय फरक आहे?',
@@ -62,15 +62,15 @@ const FAQS_MR = [
   },
   {
     q: 'कुठल्या शाखेचे विद्यार्थी प्रवेश घेऊ शकतात?',
-    a: 'Science, Commerce किंवा Arts — कुठल्याही शाखेतून 12वी (HSC) उत्तीर्ण विद्यार्थी Practical BBA किंवा BBA-IB साठी अर्ज करू शकतात. कोणताही entrance exam नाही.',
+    a: 'Science, Commerce किंवा Arts — कुठल्याही शाखेतून 12वी (HSC) उत्तीर्ण विद्यार्थी Practical BBA साठी अर्ज करू शकतात. कोणताही entrance exam नाही.',
   },
   {
     q: 'OJT कधी सुरू होतो आणि stipend मिळतो का?',
     a: 'On-the-Job Training Year 2 पासून सुरू होतो आणि Year 3 पर्यंत चालतो — तुमच्या निवडलेल्या corporate track मध्ये 2 पूर्ण वर्षांचे industry immersion. या काळात विद्यार्थ्यांना stipend support मिळतो — शिकता शिकता कमवता.',
   },
   {
-    q: 'Practical BBA किंवा BBA-IB नंतर कुठले jobs मिळतात?',
-    a: 'Practical BBA: HR Executive, Marketing Manager, Operations Coordinator, CRM Manager, Business Analyst (₹2.5–7 LPA). Practical BBA-IB: Import-Export Manager, International Sales Executive, Global Trade Analyst, Supply Chain Specialist (₹3–7 LPA) — उत्तम विद्यार्थ्यांसाठी Dubai placement पथ.',
+    q: 'Practical BBA नंतर कुठले jobs मिळतात?',
+    a: 'Practical BBA graduates ना HR Executive, Marketing Manager, Operations Coordinator, CRM Manager, Business Analyst, Import-Export Manager, International Sales Executive, Global Trade Analyst असे jobs मिळतात (₹2.5–7 LPA) — उत्तम विद्यार्थ्यांसाठी Dubai placement पथ.',
   },
   {
     q: 'कुठले certifications आणि tools शिकता येतात?',
@@ -86,7 +86,7 @@ const FAQS_MR = [
   },
   {
     q: 'Practical BBA साठी PES Training Centre कुठे आहे?',
-    a: 'Practical BBA आणि BBA-IB आमच्या Practical EduSkills Head Office येथे चालतात: 3rd Floor, Butte Patil Complex, Warje Malwadi Rd, Erandwane, Pune – 411052. नेमके directions साठी 98909 59990 वर call किंवा WhatsApp करा.',
+    a: 'Practical BBA आमच्या Practical EduSkills Head Office येथे चालतो: 3rd Floor, Butte Patil Complex, Warje Malwadi Rd, Erandwane, Pune – 411052. नेमके directions साठी 98909 59990 वर call किंवा WhatsApp करा.',
   },
 ];
 
@@ -95,7 +95,7 @@ export default function FAQ() {
   const { lang } = useLanguage();
   const faqs = lang === 'mr' ? FAQS_MR : FAQS_EN;
   const heading = lang === 'mr' ? 'वारंवार विचारले जाणारे प्रश्न' : 'Frequently Asked Questions';
-  const sub = lang === 'mr' ? 'तुमच्या मनातील प्रश्नांची उत्तरे' : 'Everything you need to know about Practical BBA & BBA-IB';
+  const sub = lang === 'mr' ? 'तुमच्या मनातील प्रश्नांची उत्तरे' : 'Everything you need to know about Practical BBA';
 
   return (
     <section className="py-8 md:py-12 bg-white">

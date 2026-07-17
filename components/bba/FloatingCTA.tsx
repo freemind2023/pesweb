@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, ArrowRight, X } from 'lucide-react';
 
-const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA%2FBBA-IB+admissions+at+Practical+EduSkills+Head+Office';
+const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA+admissions+at+Practical+EduSkills+Head+Office';
 
 export default function FloatingCTA({ onApply }: { onApply: () => void }) {
   const [showBar, setShowBar] = useState(false);
@@ -51,7 +51,7 @@ export default function FloatingCTA({ onApply }: { onApply: () => void }) {
             style={{ background: 'linear-gradient(135deg,#071232,#0B1F5C)', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
             <div className="flex-1 min-w-0">
               <p className="text-white font-black text-sm truncate">2026–27 Admissions Open!</p>
-              <p className="text-white/50 text-[10px] truncate">Practical BBA & BBA-IB — Limited seats</p>
+              <p className="text-white/50 text-[10px] truncate">Practical BBA — Limited seats</p>
             </div>
             <button
               onClick={onApply}

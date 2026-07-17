@@ -18,7 +18,7 @@ const HOME_VIDEOS = [
   { id: 'VDNnuV5UH6Q', title: 'Parent Testimonial', label: 'Parent Testimonial — Why Practical B.Com is the best choice' },
   { id: 'yhwcDimW9Bs', title: 'Success Story — Shraddha Koli', label: 'Shraddha Koli — आत्मनिर्भर मी! Student Success Story' },
   { id: 'btKD_SOFydQ', title: 'Our success speaks — Swarali Vasekar', label: 'Swarali Vasekar — Our Success Speaks for Us' },
-  { id: 'fCsEanchWy8', title: 'Zee 24 Taas Interview — Sanmit Shah', label: 'Zee 24 Taas Interview — Sanmit Shah on BBA, BCom & BBA-IB' },
+  { id: 'fCsEanchWy8', title: 'Zee 24 Taas Interview — Sanmit Shah', label: 'Zee 24 Taas Interview — Sanmit Shah on BBA & BCom' },
   { id: 'xvbMCDvBKqE', title: 'Industrialist Jayant Pawar Testimonial', label: 'Renowned Industrialist Jayant Pawar on Practical EduSkills' },
 ];
 

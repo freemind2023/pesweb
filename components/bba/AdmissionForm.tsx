@@ -6,7 +6,7 @@ import { submitToGoogleSheets } from '@/lib/googleSheets';
 import toast from 'react-hot-toast';
 
 const WA_BASE = 'https://wa.me/919890959990?text=';
-const COURSES = ['Practical BBA – Strategic Operations & Business Administration', 'Practical BBA-IB – International Business'];
+const COURSES = ['Practical BBA – Strategic Operations & Business Administration', 'Practical BBA – International Business Specialisation'];
 const STREAMS = ['Science (PCM/PCB)', 'Commerce', 'Arts', 'Other'];
 
 function Field({ label, id, error, children }: { label: string; id: string; error?: string; children: React.ReactNode }) {
@@ -33,7 +33,7 @@ const INITIAL: FormData = { name: '', phone: '', email: '', city: '', course: ''
 
 function buildWAMessage(f: FormData) {
   return encodeURIComponent(
-    `Hi, I want to apply for Practical BBA / BBA-IB at Practical EduSkills Head Office!\n\nName: ${f.name}\nPhone: ${f.phone}\nEmail: ${f.email}\nCity: ${f.city}\nCourse: ${f.course}\nStream: ${f.stream}\n12th %: ${f.percentage}%\n\nPlease guide me on the admission process.`
+    `Hi, I want to apply for Practical BBA at Practical EduSkills Head Office!\n\nName: ${f.name}\nPhone: ${f.phone}\nEmail: ${f.email}\nCity: ${f.city}\nCourse: ${f.course}\nStream: ${f.stream}\n12th %: ${f.percentage}%\n\nPlease guide me on the admission process.`
   );
 }
 
@@ -167,7 +167,7 @@ const AdmissionForm = forwardRef<HTMLDivElement>(function AdmissionForm(_, ref) 
               {loading ? <Loader2 size={16} className="animate-spin" /> : <ArrowRight size={16} />}
               {loading ? 'Submitting…' : 'Submit & Connect on WhatsApp'}
             </button>
-            <a href={`${WA_BASE}Hi%2C+I+want+to+know+about+Practical+BBA%2FBBA-IB+admissions+at+Practical+EduSkills+Head+Office`}
+            <a href={`${WA_BASE}Hi%2C+I+want+to+know+about+Practical+BBA+admissions+at+Practical+EduSkills+Head+Office`}
               target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-bold text-white text-sm border-2 hover:bg-[#25D366] hover:border-[#25D366] transition-all"
               style={{ borderColor: '#25D366', color: '#25D366' }}>

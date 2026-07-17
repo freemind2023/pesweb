@@ -15,7 +15,7 @@ export default function UrgencyBanner() {
     >
       <AlertCircle size={14} className="flex-shrink-0" />
       <span className="devanagari">मर्यादित जागा —</span>
-      <span>Practical BBA & BBA-IB Admissions Open 2026–27 | Head Office, Pune</span>
+      <span>Practical BBA Admissions Open 2026–27 | Head Office, Pune</span>
       <button
         onClick={() => setVisible(false)}
         className="absolute right-3 top-1/2 -translate-y-1/2 opacity-60 hover:opacity-100"

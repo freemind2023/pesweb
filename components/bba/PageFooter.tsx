@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Phone, MessageCircle, MapPin, Mail } from 'lucide-react';
 import { FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
-const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA%2FBBA-IB+admissions+at+Practical+EduSkills+Head+Office';
+const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA+admissions+at+Practical+EduSkills+Head+Office';
 
 export default function PageFooter() {
   return (
@@ -23,7 +23,7 @@ export default function PageFooter() {
               </div>
             </div>
             <p className="text-white/60 text-xs leading-relaxed mb-4">
-              Skill-oriented undergraduate programs bridging academic learning with industry expectations — Practical BBA & BBA-IB at our Head Office, Pune.
+              Skill-oriented undergraduate program bridging academic learning with industry expectations — Practical BBA at our Head Office, Pune.
             </p>
             <div className="flex gap-3">
               {[
@@ -46,7 +46,7 @@ export default function PageFooter() {
             <ul className="space-y-2">
               {[
                 'Practical BBA — Strategic Operations & Business Administration',
-                'Practical BBA-IB — International Business',
+                'International Business & Import-Export Specialisation',
                 '3-Year Program with 2 Yrs OJT',
                 '12+ Industry Certifications',
                 'SPPU-Aligned Curriculum',

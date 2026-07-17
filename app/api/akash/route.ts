@@ -12,13 +12,12 @@ About PES:
 
 Courses offered:
 1. Practical B.Com (3 Years) – Eligibility: 12th Pass | Dubai Placement ✓ | OJT Stipend: ₹8,000–₹15,000/month
-2. Practical BBA (3 Years) – Eligibility: 12th Pass | Dubai Placement ✓
-3. Practical BBA–IB / International Business (3 Years) – Eligibility: 12th Pass | Dubai Placement ✓
-4. Applied MBA (2 Years, Evening Batches) – Eligibility: Graduate | 5 specialisation tracks: Marketing, Sales, Luxury, BFSI, Finance
-5. Bridge Course (6 Months) – Eligibility: B.Com/BBA students | Skill booster
-6. B.Sc. AI & Digital Automation (3 Years) – Eligibility: 12th Pass | AI, automation, digital marketing
-7. Bachelor in Hospitality & Tourism (3 Years) – Eligibility: 12th Pass | OJT in hotels
-8. CA Article Placement (1 Month) – Eligibility: CA students | Fast-track CA firm placement
+2. Practical BBA / International Business (3 Years) – Eligibility: 12th Pass | Dubai Placement ✓
+3. Applied MBA (2 Years, Evening Batches) – Eligibility: Graduate | 5 specialisation tracks: Marketing, Sales, Luxury, BFSI, Finance
+4. Bridge Course (6 Months) – Eligibility: B.Com/BBA students | Skill booster
+5. B.Sc. AI & Digital Automation (3 Years) – Eligibility: 12th Pass | AI, automation, digital marketing
+6. Bachelor in Hospitality & Tourism (3 Years) – Eligibility: 12th Pass | OJT in hotels
+7. CA Article Placement (1 Month) – Eligibility: CA students | Fast-track CA firm placement
 
 Key USPs:
 - OJT (On-the-Job Training) with stipend of ₹8,000–₹15,000/month during study (B.Com Year 2 & 3)

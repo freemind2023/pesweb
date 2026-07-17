@@ -6,7 +6,7 @@ import { MessageCircle, ArrowRight, Phone, ChevronDown, Sparkles, Briefcase, Ind
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const PHRASES = ['STRATEGIC OPERATIONS.', 'BUSINESS ADMINISTRATION.', 'GLOBAL CAREERS.'];
-const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA%2FBBA-IB+admissions+at+Practical+EduSkills+Head+Office';
+const WA = 'https://wa.me/919890959990?text=Hi%2C+I+want+to+know+about+Practical+BBA+admissions+at+Practical+EduSkills+Head+Office';
 const PARTICLES = Array.from({ length: 36 }, (_, i) => ({
   id: i,
   x: Math.random() * 100,
@@ -103,7 +103,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
             </h1>
 
             <p className="text-lg sm:text-2xl font-bold text-[#F5B400] mb-3">
-              PRACTICAL BBA <span className="text-white/40">&amp;</span> BBA-IB
+              PRACTICAL BBA
             </p>
 
             <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-2 max-w-lg">
@@ -112,7 +112,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
               <span className="text-white font-semibold">Head Office, Pune.</span>
             </p>
             <p className="text-white/50 text-xs mb-6 border-l-2 border-[#F5B400] pl-3">
-              Practical BBA — Strategic Operations &amp; Business Administration &nbsp;·&nbsp; Practical BBA-IB — International Business
+              Practical BBA — Strategic Operations, Business Administration &amp; International Business
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -163,7 +163,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
                 className="mt-3 rounded-xl overflow-hidden relative shadow-lg" style={{ border: '1.5px solid rgba(255,255,255,0.15)' }}>
-                <Image src="/brand/courses/bba-ib.jpg" alt="Practical BBA-IB International Business" width={480} height={260} className="w-full h-52 sm:h-64 object-cover object-center" />
+                <Image src="/brand/courses/bba-ib.jpg" alt="Practical BBA International Business" width={480} height={260} className="w-full h-52 sm:h-64 object-cover object-center" />
                 <div className="absolute inset-0 flex flex-col items-center justify-end pb-4 px-3" style={{ background: 'linear-gradient(to top, rgba(11,31,92,0.75) 0%, transparent 55%)' }}>
                   <span className="text-white text-xs font-bold drop-shadow-md text-center">Practical EduSkills Head Office, Pune</span>
                   <span className="text-[#F5B400] text-[10px] font-semibold mt-0.5">Strategic Operations · International Business</span>

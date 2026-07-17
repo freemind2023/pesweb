@@ -9,9 +9,9 @@ const PATHS: { title: string; program: string; salary: string; Icon: React.Eleme
   { title: 'Operations Coordinator',     program: 'BBA', salary: '₹3–5.5 LPA', Icon: Settings2,       color: '#10B981', bg: '#ecfdf5' },
   { title: 'CRM Manager',                program: 'BBA', salary: '₹3–6 LPA',   Icon: HeartHandshake,  color: '#EF4444', bg: '#fef2f2' },
   { title: 'Business Analyst',           program: 'BBA', salary: '₹3.5–7 LPA', Icon: BarChart2,       color: '#8B5CF6', bg: '#f5f3ff' },
-  { title: 'Import-Export Manager',      program: 'BBA-IB', salary: '₹3.5–7 LPA', Icon: Ship,         color: '#6366F1', bg: '#eef0ff' },
-  { title: 'International Sales Exec.',  program: 'BBA-IB', salary: '₹3–6 LPA', Icon: Globe2,         color: '#14B8A6', bg: '#f0fdfa' },
-  { title: 'Global Trade Analyst',       program: 'BBA-IB', salary: '₹3.5–7 LPA', Icon: TrendingUp,   color: '#F59E0B', bg: '#fffbeb' },
+  { title: 'Import-Export Manager',      program: 'BBA', salary: '₹3.5–7 LPA', Icon: Ship,         color: '#6366F1', bg: '#eef0ff' },
+  { title: 'International Sales Exec.',  program: 'BBA', salary: '₹3–6 LPA', Icon: Globe2,         color: '#14B8A6', bg: '#f0fdfa' },
+  { title: 'Global Trade Analyst',       program: 'BBA', salary: '₹3.5–7 LPA', Icon: TrendingUp,   color: '#F59E0B', bg: '#fffbeb' },
 ];
 
 export default function Careers() {
