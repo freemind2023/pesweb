@@ -65,7 +65,7 @@ export default function Hero() {
           className="sc-eyebrow inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase mb-6 border"
           style={{ color: SC.yellow, borderColor: `${SC.yellow}55`, background: `${SC.yellow}14`, letterSpacing: '0.14em' }}
         >
-          2 Days · 1 Night · Pawna Lake
+          Once a Month · 2 Days · 1 Night · Pawna Lake
         </motion.span>
 
         <motion.h1
@@ -87,8 +87,9 @@ export default function Hero() {
           className="max-w-xl text-base sm:text-lg leading-relaxed mb-9"
           style={{ color: SC.mist, textShadow: `0 2px 16px ${SC.ink}` }}
         >
-          A 2-day AI + startup camp with 3 expert faculty, a real mentor, 100+ AI tools, and a lakeside
-          trek — built for students who want more than a certificate.
+          A digital literacy camp for the AI era — hands-on with tools from our growing 100+ AI
+          library, a real founder mentor, and a lakeside trek. Hosted once a month, built for students
+          who want more than a certificate.
         </motion.p>
 
         <motion.a

@@ -52,7 +52,7 @@ export default function AIToolsShowcase() {
           className="font-bold mb-4"
           style={{ color: SC.mist, fontSize: 'clamp(1.75rem, 4vw, 3rem)' }}
         >
-          Every tool. <span style={{ color: SC.accent }}>One weekend.</span>
+          One toolkit. <span style={{ color: SC.accent }}>Always growing.</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -62,7 +62,8 @@ export default function AIToolsShowcase() {
           className="text-base sm:text-lg leading-relaxed"
           style={{ color: SC.slate }}
         >
-          From ChatGPT to Midjourney — get hands-on with the AI tools shaping how Gen Z will build, work, and start companies.
+          We&apos;re building a library of 100+ AI tools spanning every field — from HR to marketing to
+          tech — and adding more each month. Every camp goes hands-on with a working set from it.
         </motion.p>
       </div>
 

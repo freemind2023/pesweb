@@ -6,6 +6,14 @@ import { SC } from './constants';
 
 const FAQS = [
   {
+    q: 'How often does GenAI Basecamp run?',
+    a: 'Once a month, in small batches — so you get real hands-on time with faculty and the mentor instead of sitting in a crowd.',
+  },
+  {
+    q: 'Will I learn all 100+ AI tools in one camp?',
+    a: "No — 100+ tools is our growing pipeline, not a one-weekend syllabus. Each monthly camp goes hands-on with a working set from that library, so you build real fluency with the fast-moving AI landscape, not a rushed tour.",
+  },
+  {
     q: "What's included in the price?",
     a: 'Return travel from Pune, tent stay, all meals including dinner, the camp kit, certificate, and the guided trek.',
   },
