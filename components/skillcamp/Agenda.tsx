@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SC } from './constants';
 
@@ -29,38 +28,6 @@ export default function Agenda() {
           <h2 className="font-bold mt-2" style={{ color: SC.ink, fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}>
             Two days. Zero downtime.
           </h2>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-12 max-w-lg mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg"
-          >
-            <Image
-              src="/skillcamp/gallery/feature-1.jpg"
-              alt="Students working together on laptops during the Hands-on AI Lab"
-              fill
-              sizes="(max-width: 640px) 45vw, 260px"
-              className="object-cover"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg mt-6"
-          >
-            <Image
-              src="/skillcamp/gallery/feature-2.jpg"
-              alt="Faculty leading a packed GenAI Foundations session at the lakeside camp"
-              fill
-              sizes="(max-width: 640px) 45vw, 260px"
-              className="object-cover"
-            />
-          </motion.div>
         </div>
 
         <div className="flex justify-center gap-2 mb-10">
