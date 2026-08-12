@@ -15,7 +15,7 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-20 sm:py-28 px-4 sm:px-6" style={{ background: SC.ink }}>
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.teal }}>Pricing</span>
+        <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.accent }}>Pricing</span>
         <h2 className="font-bold mt-2" style={{ color: SC.mist, fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}>
           One weekend. Every essential covered.
         </h2>
@@ -32,9 +32,9 @@ export default function Pricing() {
             whileHover={{ y: -6 }}
             className="relative rounded-3xl p-7 flex flex-col transition-shadow"
             style={{
-              background: t.highlight ? `linear-gradient(180deg, ${SC.teal}22, ${SC.ink})` : `${SC.mist}0A`,
-              border: t.highlight ? `1.5px solid ${SC.teal}` : `1px solid ${SC.slate}33`,
-              boxShadow: t.highlight ? `0 0 32px ${SC.teal}33` : 'none',
+              background: t.highlight ? `linear-gradient(180deg, ${SC.accent}22, ${SC.ink})` : `${SC.mist}0A`,
+              border: t.highlight ? `1.5px solid ${SC.accent}` : `1px solid ${SC.slate}33`,
+              boxShadow: t.highlight ? `0 0 32px ${SC.accent}33` : 'none',
             }}
           >
             {t.highlight && (
@@ -59,7 +59,7 @@ export default function Pricing() {
             <ul className="space-y-2.5 mb-8 flex-1">
               {INCLUDES.map((inc) => (
                 <li key={inc} className="flex items-center gap-2 text-sm" style={{ color: `${SC.mist}CC` }}>
-                  <Check size={15} style={{ color: SC.teal, flexShrink: 0 }} /> {inc}
+                  <Check size={15} style={{ color: SC.accent, flexShrink: 0 }} /> {inc}
                 </li>
               ))}
             </ul>

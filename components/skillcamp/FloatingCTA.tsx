@@ -16,7 +16,7 @@ export default function FloatingCTA() {
   if (!show) return null;
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3" style={{ background: `${SC.ink}F2`, backdropFilter: 'blur(8px)', borderTop: `1px solid ${SC.teal}44` }}>
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3" style={{ background: `${SC.ink}F2`, backdropFilter: 'blur(8px)', borderTop: `1px solid ${SC.accent}44` }}>
       <a
         href={RESERVE_WA}
         target="_blank"

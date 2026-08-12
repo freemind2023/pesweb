@@ -22,8 +22,8 @@ function Row({ files, dir }: { files: string[]; dir: 'left' | 'right' }) {
           <div
             key={`${f}-${i}`}
             className="group h-16 w-16 sm:h-20 sm:w-20 rounded-2xl flex-shrink-0 flex items-center justify-center p-2 transition-all duration-300 border"
-            style={{ background: SC.mist, borderColor: `${SC.teal}33` }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = `0 0 0 2px ${SC.teal}, 0 8px 24px ${SC.teal}44`; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)'; }}
+            style={{ background: SC.mist, borderColor: `${SC.accent}33` }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = `0 0 0 2px ${SC.accent}, 0 8px 24px ${SC.accent}44`; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)'; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = 'none'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}
           >
             <Image
@@ -52,7 +52,7 @@ export default function AIToolsShowcase() {
           className="font-bold mb-4"
           style={{ color: SC.mist, fontSize: 'clamp(1.75rem, 4vw, 3rem)' }}
         >
-          Every tool. <span style={{ color: SC.teal }}>One weekend.</span>
+          Every tool. <span style={{ color: SC.accent }}>One weekend.</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 12 }}

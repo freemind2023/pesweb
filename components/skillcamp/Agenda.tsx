@@ -25,7 +25,7 @@ export default function Agenda() {
     <section id="agenda" className="py-20 sm:py-28 px-4 sm:px-6" style={{ background: SC.mist }}>
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
-          <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.teal }}>The Agenda</span>
+          <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.accent }}>The Agenda</span>
           <h2 className="font-bold mt-2" style={{ color: SC.ink, fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}>
             Two days. Zero downtime.
           </h2>
@@ -89,14 +89,14 @@ export default function Agenda() {
             transition={{ duration: 0.3 }}
             className="relative pl-8"
           >
-            <div className="absolute left-[9px] top-2 bottom-2 w-0.5" style={{ background: `${SC.teal}44` }} />
+            <div className="absolute left-[9px] top-2 bottom-2 w-0.5" style={{ background: `${SC.accent}44` }} />
             {items.map((it, i) => (
               <div key={it.time} className={`relative ${i !== items.length - 1 ? 'pb-9' : ''}`}>
                 <div
                   className="absolute -left-8 top-1 h-5 w-5 rounded-full flex items-center justify-center"
                   style={{ background: SC.ink }}
                 >
-                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: SC.teal }} />
+                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: SC.accent }} />
                 </div>
                 <span className="sc-eyebrow block text-xs font-bold uppercase mb-1" style={{ color: SC.orange, letterSpacing: '0.1em' }}>
                   {it.time}
