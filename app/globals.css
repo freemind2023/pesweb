@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -52,6 +52,19 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
 .awards-scroll-right { animation: awards-right 60s linear infinite; }
 .awards-marquee-wrap:hover .awards-scroll-left,
 .awards-marquee-wrap:hover .awards-scroll-right { animation-play-state: paused; }
+
+/* SkillCamp landing page — scoped typography */
+.skillcamp-page { font-family: 'Inter', sans-serif; }
+.skillcamp-page h1, .skillcamp-page h2, .skillcamp-page h3, .skillcamp-page h4 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.skillcamp-page .sc-eyebrow { font-family: 'Inter', sans-serif; letter-spacing: 0.14em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .skillcamp-page .awards-scroll-left,
+  .skillcamp-page .awards-scroll-right,
+  .skillcamp-page .sc-fade-up { animation: none !important; transition: none !important; }
+}
 
 @keyframes pulse-gold {
   0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
