@@ -123,6 +123,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
 .form-input:focus { outline: none; border-color: var(--navy); }
 .form-input.error { border-color: #EF4444; }
 
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
 .association-logo {
   opacity: 0.65;
   transition: opacity 0.3s ease, transform 0.3s ease;

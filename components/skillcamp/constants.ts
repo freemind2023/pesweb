@@ -1,10 +1,10 @@
 export const SC = {
-  ink: '#10171F',
-  teal: '#12726E',
-  orange: '#FF6A3D',
+  ink: '#0D1530',
+  accent: '#3E5C94',
+  orange: '#F5A623',
   yellow: '#FFC94A',
   mist: '#F4F7F5',
-  slate: '#7C8B93',
+  slate: '#8891A8',
 };
 
 export const WA_NUMBER = '919049793232';

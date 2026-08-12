@@ -27,16 +27,26 @@ export default function Navbar() {
       style={{
         background: scrolled ? 'rgba(16,23,31,0.92)' : 'rgba(16,23,31,0.35)',
         backdropFilter: 'blur(10px)',
-        borderBottom: scrolled ? `1px solid ${SC.teal}33` : '1px solid transparent',
+        borderBottom: scrolled ? `1px solid ${SC.accent}33` : '1px solid transparent',
       }}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-2.5">
         <a href="#top" className="flex items-center gap-2.5 flex-shrink-0">
-          <div className="bg-white rounded-lg p-1 shadow-md">
-            <Image src="/skillcamp/brand/skillcamp-logo.png" alt="SkillCamp by Practical EduSkills" width={36} height={36} className="h-8 w-8 object-contain" />
-          </div>
-          <span className="hidden sm:block text-sm font-bold tracking-tight" style={{ color: SC.mist, fontFamily: "'Space Grotesk', sans-serif" }}>
-            GenAI Basecamp
+          <Image
+            src="/skillcamp/brand/skillcamp-icon.png"
+            alt="SkillCamp by Practical EduSkills"
+            width={124}
+            height={48}
+            priority
+            className="h-9 sm:h-10 w-auto"
+          />
+          <span className="leading-tight">
+            <span className="block text-sm sm:text-base font-bold tracking-tight" style={{ color: SC.mist, fontFamily: "'Space Grotesk', sans-serif" }}>
+              SkillCamp
+            </span>
+            <span className="hidden sm:block text-[10px] font-semibold uppercase" style={{ color: SC.orange, letterSpacing: '0.08em' }}>
+              GenAI Basecamp
+            </span>
           </span>
         </a>
 
@@ -62,7 +72,7 @@ export default function Navbar() {
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((o) => !o)}
             className="md:hidden p-2 rounded-lg focus:outline-none focus-visible:ring-2"
-            style={{ color: SC.mist, background: `${SC.teal}22` }}
+            style={{ color: SC.mist, background: `${SC.accent}22` }}
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>

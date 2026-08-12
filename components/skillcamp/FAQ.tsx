@@ -30,7 +30,7 @@ export default function FAQ() {
     <section className="py-20 sm:py-28 px-4 sm:px-6" style={{ background: SC.mist }}>
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-10">
-          <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.teal }}>FAQ</span>
+          <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.accent }}>FAQ</span>
           <h2 className="font-bold mt-2" style={{ color: SC.ink, fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}>
             Good questions.
           </h2>
@@ -45,10 +45,10 @@ export default function FAQ() {
                   onClick={() => setOpenIdx(isOpen ? null : i)}
                   aria-expanded={isOpen}
                   className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left focus:outline-none focus-visible:ring-2"
-                  style={{ ['--tw-ring-color' as string]: SC.teal }}
+                  style={{ ['--tw-ring-color' as string]: SC.accent }}
                 >
                   <span className="font-semibold text-sm sm:text-base" style={{ color: SC.ink }}>{f.q}</span>
-                  <motion.span animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }} style={{ color: SC.teal, flexShrink: 0 }}>
+                  <motion.span animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }} style={{ color: SC.accent, flexShrink: 0 }}>
                     <ChevronDown size={18} />
                   </motion.span>
                 </button>

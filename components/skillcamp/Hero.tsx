@@ -22,22 +22,24 @@ export default function Hero() {
         <div className="absolute inset-0" style={{ background: `linear-gradient(180deg, ${SC.ink}CC 0%, ${SC.ink}E6 55%, ${SC.ink} 100%)` }} />
       </div>
 
-      {/* Drifting AI-tool collage behind headline */}
-      <div className="absolute inset-0 flex flex-col justify-center gap-4 opacity-[0.14] pointer-events-none" aria-hidden="true">
+      {/* Drifting AI-tool collage — framing top & bottom edges only, well clear of the headline */}
+      <div className="absolute top-20 sm:top-24 left-0 right-0 opacity-[0.16] pointer-events-none" aria-hidden="true">
         <div className="awards-marquee-wrap overflow-hidden">
-          <div className="flex gap-4 w-max awards-scroll-left">
+          <div className="flex gap-3 w-max awards-scroll-left">
             {[...DRIFT, ...DRIFT].map((f, i) => (
-              <div key={`d1-${i}`} className="h-16 w-16 rounded-xl flex-shrink-0" style={{ background: SC.teal, filter: 'saturate(0.6)' }}>
-                <Image src={`/skillcamp/ai-tools/${f}`} alt="" width={64} height={64} className="h-16 w-16 object-contain rounded-xl" />
+              <div key={`d1-${i}`} className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg flex-shrink-0" style={{ background: SC.accent, filter: 'saturate(0.5)' }}>
+                <Image src={`/skillcamp/ai-tools/${f}`} alt="" width={48} height={48} className="h-full w-full object-contain rounded-lg" />
               </div>
             ))}
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 opacity-[0.16] pointer-events-none" aria-hidden="true">
         <div className="awards-marquee-wrap overflow-hidden">
-          <div className="flex gap-4 w-max awards-scroll-right">
+          <div className="flex gap-3 w-max awards-scroll-right">
             {[...DRIFT.slice().reverse(), ...DRIFT.slice().reverse()].map((f, i) => (
-              <div key={`d2-${i}`} className="h-16 w-16 rounded-xl flex-shrink-0" style={{ background: SC.teal, filter: 'saturate(0.6)' }}>
-                <Image src={`/skillcamp/ai-tools/${f}`} alt="" width={64} height={64} className="h-16 w-16 object-contain rounded-xl" />
+              <div key={`d2-${i}`} className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg flex-shrink-0" style={{ background: SC.accent, filter: 'saturate(0.5)' }}>
+                <Image src={`/skillcamp/ai-tools/${f}`} alt="" width={48} height={48} className="h-full w-full object-contain rounded-lg" />
               </div>
             ))}
           </div>
@@ -46,6 +48,15 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-28">
+        <motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-5"
+        >
+          <Image src="/skillcamp/brand/skillcamp-lockup.png" alt="SkillCamp by Practical EduSkills" width={310} height={175} priority className="h-14 sm:h-16 w-auto" />
+        </motion.div>
+
         <motion.span
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,7 +97,7 @@ export default function Hero() {
           href={RESERVE_WA}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-base transition-transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#10171F]"
+          className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-base transition-transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1530]"
           style={{ background: SC.orange, color: SC.mist, boxShadow: `0 0 32px ${SC.orange}55` }}
         >
           Reserve My Seat <ArrowRight size={18} />

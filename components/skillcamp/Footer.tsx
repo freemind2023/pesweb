@@ -13,14 +13,13 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="px-4 sm:px-6 pt-14 pb-8" style={{ background: SC.ink, borderTop: `1px solid ${SC.teal}33` }}>
+    <footer className="px-4 sm:px-6 pt-14 pb-8" style={{ background: SC.ink, borderTop: `1px solid ${SC.accent}33` }}>
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 mb-10">
-        <div className="flex items-center gap-3">
-          <div className="bg-white rounded-xl p-1.5">
-            <Image src="/skillcamp/brand/peslogo.png" alt="Practical EduSkills" width={40} height={40} className="h-10 w-10 object-contain" />
-          </div>
-          <div className="bg-white rounded-xl p-1.5">
-            <Image src="/skillcamp/brand/skillcamp-logo.png" alt="SkillCamp" width={40} height={40} className="h-10 w-10 object-contain" />
+        <div className="flex items-center gap-4">
+          <Image src="/skillcamp/brand/skillcamp-icon.png" alt="SkillCamp" width={124} height={48} className="h-11 w-auto" />
+          <div className="h-9 w-px" style={{ background: `${SC.slate}44` }} />
+          <div className="bg-white rounded-lg p-1">
+            <Image src="/skillcamp/brand/peslogo-trimmed.png" alt="Practical EduSkills" width={40} height={40} className="h-9 w-9 object-contain" />
           </div>
           <div className="leading-tight">
             <p className="font-bold text-sm" style={{ color: SC.mist }}>SkillCamp by Practical EduSkills</p>
@@ -30,10 +29,10 @@ export default function Footer() {
 
         <div className="flex flex-col items-center sm:items-end gap-2 text-sm" style={{ color: `${SC.mist}CC` }}>
           <a href="tel:+919049793232" className="flex items-center gap-2 hover:opacity-80">
-            <Phone size={14} style={{ color: SC.teal }} /> +91 90497 93232
+            <Phone size={14} style={{ color: SC.accent }} /> +91 90497 93232
           </a>
           <a href="mailto:info@practicaleduskills.com" className="flex items-center gap-2 hover:opacity-80">
-            <Mail size={14} style={{ color: SC.teal }} /> info@practicaleduskills.com
+            <Mail size={14} style={{ color: SC.accent }} /> info@practicaleduskills.com
           </a>
           <div className="flex items-center gap-3 mt-1">
             {SOCIALS.map((s) => (
@@ -45,7 +44,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto pt-6 text-center" style={{ borderTop: `1px solid ${SC.teal}22` }}>
+      <div className="max-w-5xl mx-auto pt-6 text-center" style={{ borderTop: `1px solid ${SC.accent}22` }}>
         <p className="text-xs" style={{ color: SC.slate }}>
           © {new Date().getFullYear()} Practical EduSkills Pvt. Ltd. All rights reserved.
         </p>

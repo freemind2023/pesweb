@@ -77,7 +77,7 @@ export default function Gallery() {
             transition={{ delay: (i % 8) * 0.05 }}
             onClick={() => { setIndex(i); setOpen(true); }}
             className="group relative block w-full break-inside-avoid overflow-hidden rounded-2xl focus:outline-none focus-visible:ring-2"
-            style={{ ['--tw-ring-color' as string]: SC.teal }}
+            style={{ ['--tw-ring-color' as string]: SC.accent }}
           >
             <div className={`relative w-full ${ASPECTS[i % ASPECTS.length]}`}>
               <Image

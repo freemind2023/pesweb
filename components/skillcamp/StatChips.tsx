@@ -21,9 +21,9 @@ export default function StatChips() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
             className="flex items-center justify-center gap-2.5 rounded-2xl px-5 py-4 border"
-            style={{ background: `${SC.ink}F2`, borderColor: `${SC.teal}44`, boxShadow: '0 8px 24px rgba(0,0,0,0.25)' }}
+            style={{ background: `${SC.ink}F2`, borderColor: `${SC.accent}44`, boxShadow: '0 8px 24px rgba(0,0,0,0.25)' }}
           >
-            <s.icon size={20} style={{ color: SC.teal }} />
+            <s.icon size={20} style={{ color: SC.accent }} />
             <span className="font-bold text-sm sm:text-base" style={{ color: SC.mist }}>{s.label}</span>
           </motion.div>
         ))}

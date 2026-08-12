@@ -29,7 +29,7 @@ export default function FinalCTA() {
           href={RESERVE_WA}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-9 py-4 rounded-full font-bold text-base transition-transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#10171F]"
+          className="inline-flex items-center gap-2 px-9 py-4 rounded-full font-bold text-base transition-transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1530]"
           style={{ background: SC.orange, color: SC.mist, boxShadow: `0 0 32px ${SC.orange}55` }}
         >
           Reserve My Seat <ArrowRight size={18} />

@@ -15,7 +15,7 @@ export default function WhyThisCamp() {
     <section className="py-20 sm:py-28 px-4 sm:px-6" style={{ background: SC.mist }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.teal }}>Why This Camp</span>
+          <span className="sc-eyebrow text-xs font-bold uppercase" style={{ color: SC.accent }}>Why This Camp</span>
           <h2 className="font-bold mt-2" style={{ color: SC.ink, fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}>
             More than a certificate.
           </h2>
@@ -30,10 +30,10 @@ export default function WhyThisCamp() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="rounded-2xl p-6 bg-white border transition-shadow hover:shadow-lg"
-              style={{ borderColor: `${SC.teal}22` }}
+              style={{ borderColor: `${SC.accent}22` }}
             >
-              <div className="h-12 w-12 rounded-xl flex items-center justify-center mb-4" style={{ background: `${SC.teal}18` }}>
-                <c.icon size={22} style={{ color: SC.teal }} />
+              <div className="h-12 w-12 rounded-xl flex items-center justify-center mb-4" style={{ background: `${SC.accent}18` }}>
+                <c.icon size={22} style={{ color: SC.accent }} />
               </div>
               <h3 className="font-bold text-base mb-2" style={{ color: SC.ink }}>{c.title}</h3>
               <p className="text-sm leading-relaxed" style={{ color: SC.slate }}>{c.desc}</p>
