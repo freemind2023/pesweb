@@ -4,14 +4,14 @@ import { Sparkles, Clock, Tent } from 'lucide-react';
 import { SC } from './constants';
 
 const STATS = [
-  { icon: Sparkles, label: '100+ AI Tools' },
+  { icon: Sparkles, label: '100+ Tools & Growing' },
   { icon: Clock, label: '7 Hours Hands-On' },
   { icon: Tent, label: '1 Night, 1 Trek' },
 ];
 
 export default function StatChips() {
   return (
-    <section className="relative -mt-10 sm:-mt-12 z-20 px-4 sm:px-6">
+    <section className="relative py-10 sm:py-14 px-4 sm:px-6" style={{ background: SC.ink }}>
       <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         {STATS.map((s, i) => (
           <motion.div

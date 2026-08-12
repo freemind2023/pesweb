@@ -4,7 +4,7 @@ import { Brain, Rocket, Users, Tent } from 'lucide-react';
 import { SC } from './constants';
 
 const CARDS = [
-  { icon: Brain, title: 'Learn AI tools that matter', desc: 'Hands-on with the exact AI tools employers and founders actually use.' },
+  { icon: Brain, title: 'Build real digital literacy', desc: 'Get hands-on with fast-moving AI tools that matter for every field — HR, marketing, ops, and tech.' },
   { icon: Rocket, title: 'Pitch your own startup idea', desc: 'Build and pitch a real mini-startup with your team, using AI to move fast.' },
   { icon: Users, title: 'Meet a real founder', desc: 'Direct Q&A access most students never get in college.' },
   { icon: Tent, title: 'Camp + trek by the lake', desc: 'Tents, bonfire, and a guided trek — not a conference hall.' },
