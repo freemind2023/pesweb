@@ -32,14 +32,16 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-2.5">
         <a href="#top" className="flex items-center gap-2.5 flex-shrink-0">
-          <Image
-            src="/skillcamp/brand/skillcamp-icon.png"
-            alt="SkillCamp by Practical EduSkills"
-            width={124}
-            height={48}
-            priority
-            className="h-9 sm:h-10 w-auto"
-          />
+          <div className="bg-white rounded-lg px-2 py-1.5 shadow-md">
+            <Image
+              src="/skillcamp/brand/skillcamp-icon.png"
+              alt="SkillCamp by Practical EduSkills"
+              width={124}
+              height={48}
+              priority
+              className="h-6 sm:h-7 w-auto"
+            />
+          </div>
           <span className="leading-tight">
             <span className="block text-sm sm:text-base font-bold tracking-tight" style={{ color: SC.mist, fontFamily: "'Space Grotesk', sans-serif" }}>
               SkillCamp

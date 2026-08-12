@@ -17,9 +17,10 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-30"
+          className="object-cover object-center opacity-60"
         />
-        <div className="absolute inset-0" style={{ background: `linear-gradient(180deg, ${SC.ink}CC 0%, ${SC.ink}E6 55%, ${SC.ink} 100%)` }} />
+        <div className="absolute inset-0" style={{ background: `linear-gradient(180deg, ${SC.ink}66 0%, ${SC.ink}99 45%, ${SC.ink}E6 100%)` }} />
+        <div className="absolute inset-0" style={{ background: `radial-gradient(60% 55% at 50% 45%, ${SC.ink}CC 0%, transparent 100%)` }} />
       </div>
 
       {/* Drifting AI-tool collage — framing top & bottom edges only, well clear of the headline */}
@@ -52,9 +53,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-5"
+          className="mb-5 bg-white rounded-2xl px-5 py-3 shadow-xl inline-block"
         >
-          <Image src="/skillcamp/brand/skillcamp-lockup.png" alt="SkillCamp by Practical EduSkills" width={310} height={175} priority className="h-14 sm:h-16 w-auto" />
+          <Image src="/skillcamp/brand/skillcamp-lockup.png" alt="SkillCamp by Practical EduSkills" width={310} height={175} priority className="h-12 sm:h-14 w-auto" />
         </motion.div>
 
         <motion.span
@@ -72,7 +73,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-bold leading-[1.05] max-w-4xl mb-5"
-          style={{ color: SC.mist, fontSize: 'clamp(2.25rem, 6vw, 5.5rem)', letterSpacing: '-0.02em' }}
+          style={{ color: SC.mist, fontSize: 'clamp(2.25rem, 6vw, 5.5rem)', letterSpacing: '-0.02em', textShadow: `0 4px 32px ${SC.ink}` }}
         >
           Learn AI. Pitch a startup.
           <br />
@@ -84,7 +85,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-xl text-base sm:text-lg leading-relaxed mb-9"
-          style={{ color: SC.slate }}
+          style={{ color: SC.mist, textShadow: `0 2px 16px ${SC.ink}` }}
         >
           A 2-day AI + startup camp with 3 expert faculty, a real mentor, 100+ AI tools, and a lakeside
           trek — built for students who want more than a certificate.
