@@ -16,7 +16,9 @@ export default function Footer() {
     <footer className="px-4 sm:px-6 pt-14 pb-8" style={{ background: SC.ink, borderTop: `1px solid ${SC.accent}33` }}>
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 mb-10">
         <div className="flex items-center gap-4">
-          <Image src="/skillcamp/brand/skillcamp-icon.png" alt="SkillCamp" width={124} height={48} className="h-11 w-auto" />
+          <div className="bg-white rounded-lg px-2.5 py-2">
+            <Image src="/skillcamp/brand/skillcamp-icon.png" alt="SkillCamp" width={124} height={48} className="h-8 w-auto" />
+          </div>
           <div className="h-9 w-px" style={{ background: `${SC.slate}44` }} />
           <div className="bg-white rounded-lg p-1">
             <Image src="/skillcamp/brand/peslogo-trimmed.png" alt="Practical EduSkills" width={40} height={40} className="h-9 w-9 object-contain" />
