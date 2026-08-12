@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navbar from '@/components/skillcamp/Navbar';
 import Hero from '@/components/skillcamp/Hero';
 import StatChips from '@/components/skillcamp/StatChips';
+import FeatureBanner from '@/components/skillcamp/FeatureBanner';
 import AIToolsShowcase from '@/components/skillcamp/AIToolsShowcase';
 import Agenda from '@/components/skillcamp/Agenda';
 import Gallery from '@/components/skillcamp/Gallery';
@@ -24,6 +25,7 @@ export default function SkillCampPage() {
       <Navbar />
       <Hero />
       <StatChips />
+      <FeatureBanner />
       <AIToolsShowcase />
       <Agenda />
       <Gallery />
