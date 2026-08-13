@@ -2,17 +2,16 @@
 import { useReducer } from 'react';
 import LandingScreen from './LandingScreen';
 import LeadForm, { type LeadData } from './LeadForm';
-import QuizMap from './QuizMap';
+import CareerMap from './CareerMap';
 import ReportScreen from './ReportScreen';
 import { questions } from '@/lib/career-mantra/questions';
 import { computeResult, type QuizResult } from '@/lib/career-mantra/scoring';
 
-type Stage = 'landing' | 'lead-form' | 'quiz' | 'report';
+type Stage = 'landing' | 'lead-form' | 'map' | 'report';
 
 type State = {
   stage: Stage;
   lead: LeadData | null;
-  currentIndex: number;
   answers: Record<string, string>;
   result: QuizResult | null;
 };
@@ -20,13 +19,11 @@ type State = {
 type Action =
   | { type: 'START_QUIZ' }
   | { type: 'SUBMIT_LEAD'; lead: LeadData }
-  | { type: 'ANSWER'; questionId: string; optionId: string }
-  | { type: 'COMPLETE' };
+  | { type: 'ANSWER'; questionId: string; optionId: string };
 
 const initialState: State = {
   stage: 'landing',
   lead: null,
-  currentIndex: 0,
   answers: {},
   result: null,
 };
@@ -36,14 +33,14 @@ function reducer(state: State, action: Action): State {
     case 'START_QUIZ':
       return { ...state, stage: 'lead-form' };
     case 'SUBMIT_LEAD':
-      return { ...state, stage: 'quiz', lead: action.lead };
+      return { ...state, stage: 'map', lead: action.lead };
     case 'ANSWER': {
       const answers = { ...state.answers, [action.questionId]: action.optionId };
-      const isLast = state.currentIndex >= questions.length - 1;
-      if (isLast) {
+      const isComplete = questions.every((q) => answers[q.id]);
+      if (isComplete) {
         return { ...state, answers, result: computeResult(answers), stage: 'report' };
       }
-      return { ...state, answers, currentIndex: state.currentIndex + 1 };
+      return { ...state, answers };
     }
     default:
       return state;
@@ -61,12 +58,17 @@ export default function CareerMantraApp() {
     return <LeadForm onSubmitted={(lead) => dispatch({ type: 'SUBMIT_LEAD', lead })} />;
   }
 
-  if (state.stage === 'quiz') {
-    const currentQuestion = questions[state.currentIndex];
+  if (state.stage === 'map') {
+    const completedIds = new Set(Object.keys(state.answers));
+    const score = questions.reduce((sum, q) => {
+      const selected = q.options.find((o) => o.id === state.answers[q.id]);
+      return sum + (selected ? selected.weight * 10 : 0);
+    }, 0);
     return (
-      <QuizMap
-        currentIndex={state.currentIndex}
-        onAnswer={(optionId) => dispatch({ type: 'ANSWER', questionId: currentQuestion.id, optionId })}
+      <CareerMap
+        completedIds={completedIds}
+        score={score}
+        onAnswer={(questionId, optionId) => dispatch({ type: 'ANSWER', questionId, optionId })}
       />
     );
   }

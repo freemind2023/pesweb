@@ -1,10 +1,11 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-import { Trophy, MessageCircle } from 'lucide-react';
+import { Trophy, MessageCircle, Download, Loader2 } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { submitToGoogleSheets } from '@/lib/googleSheets';
+import { generateCareerMantraPDF } from '@/lib/career-mantra/generateCareerMantraPDF';
 import type { QuizResult } from '@/lib/career-mantra/scoring';
 import type { LeadData } from './LeadForm';
 import { questions } from '@/lib/career-mantra/questions';
@@ -25,6 +26,8 @@ export default function ReportScreen({
   result: QuizResult;
 }) {
   const submittedRef = useRef(false);
+  const pdfTriggeredRef = useRef(false);
+  const [downloading, setDownloading] = useState(false);
 
   useEffect(() => {
     if (submittedRef.current) return;
@@ -47,6 +50,24 @@ export default function ReportScreen({
       },
       'career-mantra-result'
     ).catch((err) => console.error('[career-mantra] result submit failed', err));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const downloadReport = async () => {
+    setDownloading(true);
+    try {
+      await generateCareerMantraPDF({ ...lead, answers, result });
+    } catch (err) {
+      console.error('[career-mantra] PDF generation failed', err);
+    } finally {
+      setDownloading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (pdfTriggeredRef.current) return;
+    pdfTriggeredRef.current = true;
+    downloadReport();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -96,6 +117,22 @@ export default function ReportScreen({
           </p>
         </div>
 
+        <button
+          onClick={downloadReport}
+          disabled={downloading}
+          className="w-full mb-3 py-3.5 border-2 border-navy text-navy font-bold text-sm rounded-xl hover:bg-navy hover:text-white transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+        >
+          {downloading ? (
+            <>
+              <Loader2 size={16} className="animate-spin" /> Preparing PDF...
+            </>
+          ) : (
+            <>
+              <Download size={16} /> Download Report
+            </>
+          )}
+        </button>
+
         <div className="flex flex-col sm:flex-row gap-3">
           <a
             href="/courses"
@@ -114,7 +151,7 @@ export default function ReportScreen({
         </div>
 
         <p className="text-text-muted text-xs mt-4 flex items-center justify-center gap-1">
-          <MessageCircle size={12} /> Our team will also reach out to you shortly.
+          <MessageCircle size={12} /> Your report was downloaded automatically. Our team will also reach out to you shortly.
         </p>
       </motion.div>
     </div>

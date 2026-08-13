@@ -32,13 +32,13 @@ export default function LandingScreen({ onStart }: { onStart: () => void }) {
           What’s Your Commerce Readiness Score?
         </h1>
         <p className="text-white/70 text-sm sm:text-base mb-8">
-          A 2-minute gamified mission for 12th students. Answer 10 quick challenges, level up on the map, and get an
-          instant personalized report on your commerce career readiness.
+          A 2-minute gamified mission for 12th students. Explore the career map, clear 10 stages, and get an
+          instant personalized report — downloadable as a PDF — on your commerce career readiness.
         </p>
 
         <div className="flex justify-center gap-6 mb-8 text-white/80 text-xs sm:text-sm">
           <div className="flex items-center gap-1.5">
-            <Sparkles size={16} className="text-gold" /> 10 quick levels
+            <Sparkles size={16} className="text-gold" /> 10 map stages
           </div>
           <div className="flex items-center gap-1.5">
             <Trophy size={16} className="text-gold" /> Instant report
