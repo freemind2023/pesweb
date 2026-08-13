@@ -77,7 +77,9 @@ export async function generateCareerMantraPDF(data: CareerMantraPDFData): Promis
 
   const logoData = await loadImageAsBase64('/brand/logo.png');
   if (logoData) {
-    doc.addImage(logoData, 'PNG', M, 7, 28, 28);
+    doc.setFillColor(...WHITE);
+    doc.roundedRect(M - 1, 6, 30, 30, 2, 2, 'F');
+    doc.addImage(logoData, 'PNG', M + 0.5, 7.5, 27, 27);
   }
 
   const tx = M + (logoData ? 34 : 0);
@@ -144,36 +146,41 @@ export async function generateCareerMantraPDF(data: CareerMantraPDFData): Promis
   y += 3;
 
   // ── SCORE BLOCK ──────────────────────────────────────────────
+  const SCORE_CARD_H = 46;
   doc.setFillColor(...BG);
-  doc.roundedRect(M, y, CW, 34, 3, 3, 'F');
+  doc.roundedRect(M, y, CW, SCORE_CARD_H, 3, 3, 'F');
   doc.setDrawColor(...GOLD);
   doc.setLineWidth(0.5);
-  doc.roundedRect(M, y, CW, 34, 3, 3, 'S');
+  doc.roundedRect(M, y, CW, SCORE_CARD_H, 3, 3, 'S');
 
   doc.setTextColor(...NAVY);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(26);
-  doc.text(`${data.result.percentage}%`, M + 10, y + 22);
+  doc.text(`${data.result.percentage}%`, M + 10, y + 18);
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(7.5);
   doc.setTextColor(...MUTED);
-  doc.text('COMMERCE READINESS SCORE', M + 10, y + 28);
+  doc.text('COMMERCE READINESS SCORE', M + 10, y + 24);
 
   doc.setFillColor(...GOLD_LIGHT);
-  doc.roundedRect(PW - M - 55, y + 8, 45, 10, 2, 2, 'F');
+  doc.roundedRect(PW - M - 46, y + 6, 36, 9, 2, 2, 'F');
   doc.setTextColor(...NAVY);
   doc.setFont('helvetica', 'bold');
-  doc.setFontSize(10);
-  doc.text(data.result.tier, PW - M - 32.5, y + 14.5, { align: 'center' });
+  doc.setFontSize(9.5);
+  doc.text(data.result.tier, PW - M - 28, y + 11.7, { align: 'center' });
+
+  doc.setDrawColor(...RULE);
+  doc.setLineWidth(0.25);
+  doc.line(M + 8, y + 30, PW - M - 8, y + 30);
 
   doc.setFont('helvetica', 'normal');
-  doc.setFontSize(7.2);
+  doc.setFontSize(7.5);
   doc.setTextColor(...DARK);
-  const blurbLines = doc.splitTextToSize(data.result.blurb, CW - 70);
-  doc.text(blurbLines, M + 65, y + 12);
+  const blurbLines = doc.splitTextToSize(data.result.blurb, CW - 20);
+  doc.text(blurbLines, M + 10, y + 36);
 
-  y += 40;
+  y += SCORE_CARD_H + 6;
 
   // ── CATEGORY BREAKDOWN ────────────────────────────────────────
   sectionHeader('Category Breakdown');
