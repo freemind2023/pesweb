@@ -41,7 +41,7 @@ export default function SPPURecognition() {
               }}
             >
               <Image
-                src="/modern-college/sppu-logo.jpg"
+                src="/brand/sppu-logo.jpg"
                 alt="Savitribai Phule Pune University"
                 width={160}
                 height={160}
@@ -88,7 +88,7 @@ export default function SPPURecognition() {
             <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 max-w-2xl">
               SPPU is Maharashtra&apos;s largest and most respected state university — recognised by the
               Government of India, UGC, and NAAC. Every degree awarded under the AEDP program
-              at Modern College carries the full legal and academic weight of this institution.
+              carries the full legal and academic weight of this institution.
               Your qualification is accepted everywhere — from private companies to government
               services to postgraduate admissions.
             </p>
