@@ -92,7 +92,7 @@ export default function PageFooter() {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={24} height={24} className="h-6 w-auto rounded opacity-70" />
+            <Image src="/brand/sppu-logo.jpg" alt="SPPU" width={24} height={24} className="h-6 w-auto rounded opacity-70" />
             <span className="text-white/40 text-[10px]">Affiliated to Savitribai Phule Pune University (SPPU)</span>
           </div>
           <p className="text-white/30 text-[10px]">

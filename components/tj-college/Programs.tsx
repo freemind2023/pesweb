@@ -82,7 +82,7 @@ export default function Programs({ onApply }: { onApply: () => void }) {
           {/* Trust logos bar */}
           <div className="flex items-center justify-center gap-4 mt-6">
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-2xl shadow-md border border-gray-100">
-              <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={36} height={36} className="h-9 w-auto rounded-lg object-contain" />
+              <Image src="/brand/sppu-logo.jpg" alt="SPPU" width={36} height={36} className="h-9 w-auto rounded-lg object-contain" />
               <div className="text-left">
                 <p className="text-[#0B1F5C] font-black text-xs leading-tight">SPPU Affiliated</p>
                 <p className="text-gray-400 text-[10px]">Govt. University Degree</p>
@@ -115,7 +115,7 @@ export default function Programs({ onApply }: { onApply: () => void }) {
                 {/* Top-right SPPU + TJ logos */}
                 <div className="absolute top-3 right-3 flex items-center gap-1.5">
                   <div className="bg-white/95 rounded-xl p-1 shadow-lg">
-                    <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={28} height={28} className="h-7 w-7 rounded-lg object-contain" />
+                    <Image src="/brand/sppu-logo.jpg" alt="SPPU" width={28} height={28} className="h-7 w-7 rounded-lg object-contain" />
                   </div>
                   <div className="bg-white/95 rounded-xl p-1 shadow-lg">
                     <Image src="/tj-college/tj-logo.png" alt="TJ College" width={28} height={28} className="h-7 w-7 rounded-lg object-contain" />
@@ -198,7 +198,7 @@ export default function Programs({ onApply }: { onApply: () => void }) {
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
             <div className="flex items-center gap-3 mb-2">
               <div className="bg-white rounded-xl p-1">
-                <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={36} height={36} className="h-8 w-auto rounded-lg object-contain" />
+                <Image src="/brand/sppu-logo.jpg" alt="SPPU" width={36} height={36} className="h-8 w-auto rounded-lg object-contain" />
               </div>
               <div className="w-px h-8 bg-white/30" />
               <div className="bg-white rounded-xl p-1">

@@ -11,11 +11,11 @@ const FAQS_EN = [
   },
   {
     q: 'What courses does PES offer?',
-    a: 'PES offers: (1) B.Sc. AI & Business Automation — 3 years, SPPU degree, at Modern College & TJ College; (2) B.Com Accounting & Business Practices (AEDP) — 3 years, SPPU degree, at Modern College & TJ College; (3) Practical B.COM Fintech & Digital Accounting — 3 years, at MMCC Pune & Baramati campus. All programs include Apprenticeship with stipend.',
+    a: 'PES offers: (1) B.Sc. AI & Business Automation — 3 years, SPPU degree, at TJ College; (2) B.Com Accounting & Business Practices (AEDP) — 3 years, SPPU degree, at TJ College; (3) Practical B.COM Fintech & Digital Accounting — 3 years, at MMCC Pune & Baramati campus. All programs include Apprenticeship with stipend.',
   },
   {
     q: 'Which university gives the degree? Is it valid for government jobs and higher studies?',
-    a: 'Degrees at Modern College and TJ College are affiliated to Savitribai Phule Pune University (SPPU) — a fully recognized state government university. Valid for all government jobs, MBA, MSc, M.Com, and PG programs. NAAC accredited colleges. Your PES degree is equal to any other SPPU degree.',
+    a: 'Degrees at TJ College are affiliated to Savitribai Phule Pune University (SPPU) — a fully recognized state government university. Valid for all government jobs, MBA, MSc, M.Com, and PG programs. NAAC accredited college. Your PES degree is equal to any other SPPU degree.',
   },
   {
     q: 'What is an Apprenticeship Embedded Degree Program (AEDP)?',
@@ -59,7 +59,7 @@ const FAQS_EN = [
   },
   {
     q: 'Where are the PES training centres located?',
-    a: 'PES has 4 training centres: (1) Modern College of Arts, Science & Commerce, Ganeshkhind, Pune; (2) Tikaram Jagannath (TJ) College, 491 Elphinstone Road, Kirkee, Pune; (3) Marathwada Mitra Mandal\'s College of Commerce (MMCC), Pune; (4) College of Practical Commerce & Management, Vidyanagari MIDC, Baramati. Call +91-98909-59990 for directions to any centre.',
+    a: 'PES has 3 training centres: (1) Tikaram Jagannath (TJ) College, 491 Elphinstone Road, Kirkee, Pune; (2) Marathwada Mitra Mandal\'s College of Commerce (MMCC), Pune; (3) College of Practical Commerce & Management, Vidyanagari MIDC, Baramati. Call +91-98909-59990 for directions to any centre.',
   },
   {
     q: 'How is PES different from other colleges?',
@@ -74,11 +74,11 @@ const FAQS_MR = [
   },
   {
     q: 'PES मध्ये कुठले courses आहेत?',
-    a: 'PES देतात: (1) B.Sc. AI & Business Automation — 3 वर्षे, SPPU पदवी, Modern College व TJ College येथे; (2) B.Com Accounting & Business Practices (AEDP) — 3 वर्षे, SPPU पदवी, Modern College व TJ College येथे; (3) Practical B.COM Fintech & Digital Accounting — 3 वर्षे, MMCC Pune व Baramati campus येथे. सर्व programs मध्ये stipend सह Apprenticeship समाविष्ट आहे.',
+    a: 'PES देतात: (1) B.Sc. AI & Business Automation — 3 वर्षे, SPPU पदवी, TJ College येथे; (2) B.Com Accounting & Business Practices (AEDP) — 3 वर्षे, SPPU पदवी, TJ College येथे; (3) Practical B.COM Fintech & Digital Accounting — 3 वर्षे, MMCC Pune व Baramati campus येथे. सर्व programs मध्ये stipend सह Apprenticeship समाविष्ट आहे.',
   },
   {
     q: 'कुठल्या विद्यापीठाची पदवी मिळते? सरकारी नोकरी आणि higher studies साठी valid आहे का?',
-    a: 'Modern College आणि TJ College मधील degrees सावित्रीबाई फुले पुणे विद्यापीठ (SPPU) शी संलग्न आहेत — पूर्णतः मान्यताप्राप्त राज्य सरकारी विद्यापीठ. सरकारी नोकऱ्या, MBA, MSc, M.Com आणि सर्व PG programs साठी valid. NAAC accredited colleges. PES पदवी कुठल्याही SPPU पदवी इतकीच ग्राह्य आहे.',
+    a: 'TJ College मधील degrees सावित्रीबाई फुले पुणे विद्यापीठ (SPPU) शी संलग्न आहेत — पूर्णतः मान्यताप्राप्त राज्य सरकारी विद्यापीठ. सरकारी नोकऱ्या, MBA, MSc, M.Com आणि सर्व PG programs साठी valid. NAAC accredited college. PES पदवी कुठल्याही SPPU पदवी इतकीच ग्राह्य आहे.',
   },
   {
     q: 'AEDP म्हणजे काय?',
@@ -122,7 +122,7 @@ const FAQS_MR = [
   },
   {
     q: 'PES Training Centres कुठे आहेत?',
-    a: 'PES चे 4 training centres आहेत: (1) Modern College of Arts, Science & Commerce, Ganeshkhind, Pune; (2) Tikaram Jagannath (TJ) College, 491 Elphinstone Road, Kirkee, Pune; (3) Marathwada Mitra Mandal\'s College of Commerce (MMCC), Pune; (4) College of Practical Commerce & Management, Vidyanagari MIDC, Baramati. कुठल्याही centre चे directions साठी +91-98909-59990 वर call करा.',
+    a: 'PES चे 3 training centres आहेत: (1) Tikaram Jagannath (TJ) College, 491 Elphinstone Road, Kirkee, Pune; (2) Marathwada Mitra Mandal\'s College of Commerce (MMCC), Pune; (3) College of Practical Commerce & Management, Vidyanagari MIDC, Baramati. कुठल्याही centre चे directions साठी +91-98909-59990 वर call करा.',
   },
   {
     q: 'PES इतर colleges पेक्षा कसे वेगळे आहे?',

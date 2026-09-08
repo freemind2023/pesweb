@@ -32,7 +32,7 @@ Practical EduSkills (PES) बद्दल:
 - शिकत असताना दरमहा stipend मिळतो.
 - उत्तम विद्यार्थ्यांसाठी दुबई International Placement.
 - पहिल्या दिवसापासून practical, industry-ready अभ्यासक्रम.
-- 4 centres: Garware Night College, Modern College Ganesh Khind, Head Office Erandwane, Baramati.`;
+- 3 centres: Garware Night College, Head Office Erandwane, Baramati.`;
 
 export async function POST(req: NextRequest) {
   const apiKey = process.env.ANTHROPIC_API_KEY;

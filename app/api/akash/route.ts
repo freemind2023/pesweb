@@ -23,7 +23,7 @@ Key USPs:
 - OJT (On-the-Job Training) with stipend of ₹8,000–₹15,000/month during study (B.Com Year 2 & 3)
 - Dubai international placement for top performers
 - Practical, industry-ready curriculum from Day 1
-- 4 centres: Garware Night College (NSDC), Modern College Ganesh Khind, Head Office Erandwane, College of Commerce Baramati
+- 3 centres: Garware Night College (NSDC), Head Office Erandwane, College of Commerce Baramati
 
 Associations: MCCIA, BNI, Rotary Club, Gulf Mahratta Corporation, NSDC, ISO
 

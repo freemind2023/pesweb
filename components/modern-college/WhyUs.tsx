@@ -61,7 +61,7 @@ export default function WhyUs() {
           className="text-center mb-12">
           <span className="text-[#F5B400] font-bold text-xs uppercase tracking-widest">Why AEDP?</span>
           <h2 className="text-[#0B1F5C] text-3xl md:text-4xl font-black mt-1">
-            Why Choose Modern College AEDP
+            Why Choose Our AEDP
           </h2>
           <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto devanagari text-base">
             फक्त डिग्री नाही — करिअर बनवा

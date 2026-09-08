@@ -57,7 +57,7 @@ export default function Hero({ onApply }: { onApply: () => void }) {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="bg-white rounded-xl p-1 shadow-lg flex-shrink-0">
-              <Image src="/modern-college/sppu-logo.jpg" alt="SPPU" width={40} height={40} className="h-9 w-auto rounded-lg object-contain" />
+              <Image src="/brand/sppu-logo.jpg" alt="SPPU" width={40} height={40} className="h-9 w-auto rounded-lg object-contain" />
             </div>
             <div className="w-px h-8 bg-white/20 hidden sm:block" />
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-1 shadow-lg flex-shrink-0">

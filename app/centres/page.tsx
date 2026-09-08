@@ -7,7 +7,6 @@ import { t } from '@/lib/translations';
 
 const centres = [
   { name: 'Garware Night College', type: 'NSDC Skill Centre', address: 'Garware Night College, Near Law College Road, Erandwane, Pune – 411004', img: '/brand/centres/garware-college.jpg', mapsLink: 'https://maps.google.com', badge: 'NSDC Certified', badgeColor: 'bg-success' },
-  { name: 'Modern College, Ganesh Khind', type: 'Training Centre', address: 'Modern College of Arts, Science & Commerce, Shivajinagar, Pune – 411005', img: '/brand/centres/modern-college.webp', mapsLink: 'https://maps.google.com', badge: 'Active Centre', badgeColor: 'bg-navy' },
   { name: 'Practical EduSkills Head Office', type: 'Head Office & Main Centre', address: '3rd Floor, Butte Patil Complex, Warje Malwadi Rd, Erandwane, Pune – 411052', img: '/brand/hero-poster.jpg', mapsLink: 'https://maps.google.com', badge: 'Main Office', badgeColor: 'bg-gold' },
   { name: 'College of Commerce, Baramati', type: 'Affiliate Centre', address: 'College of Practical B.Com, Baramati, Dist. Pune – 413102', img: '/brand/centres/baramati-college.jpg', mapsLink: 'https://maps.google.com', badge: 'Baramati Campus', badgeColor: 'bg-accent' },
 ];
