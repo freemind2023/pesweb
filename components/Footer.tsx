@@ -126,6 +126,8 @@ export default function Footer() {
             <span>{tr.footer.nsdc}</span>
             <span>|</span>
             <span>{tr.footer.est}</span>
+            <span>|</span>
+            <Link href="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </div>
